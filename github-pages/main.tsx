@@ -9,7 +9,7 @@ import PasswordForm from "../app/admin/security/ui";
 import {demos,type Article,type Contact} from "../lib/content";
 import "../app/globals.css";
 
-configurePages(import.meta.env.VITE_API_ORIGIN??"https://lifanghui-apec-hub.jazzymoon32.chatgpt.site");
+configurePages(import.meta.env.VITE_API_ORIGIN??"https://lifanghui-apec-hub.jazzymoon32.chatgpt.site",import.meta.env.BASE_URL);
 type Data={articles:Article[];contact:Contact;aiEnabled:boolean;username:string};
 function route(){return location.hash.startsWith("#/")?location.hash.slice(1):"/";}
 function App(){

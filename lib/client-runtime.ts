@@ -1,7 +1,8 @@
-type ClientRuntime={apiOrigin:string};
+type ClientRuntime={apiOrigin:string;assetBase:string};
 let runtime:ClientRuntime|null=null;
 const TOKEN_KEY="apec-pages-session";
-export function configurePages(apiOrigin:string){runtime={apiOrigin};}
+export function configurePages(apiOrigin:string,assetBase="/"){runtime={apiOrigin,assetBase};}
+export function assetHref(path:string){return `${runtime?.assetBase??"/"}${path.replace(/^\/+/,"")}`;}
 export function isPages(){return runtime!==null;}
 export function setClientToken(token:string|null){if(runtime){if(token)sessionStorage.setItem(TOKEN_KEY,token);else sessionStorage.removeItem(TOKEN_KEY);}}
 export function siteHref(path:string){return runtime?(path.startsWith("/#")?path.slice(1):`#${path}`):path;}
