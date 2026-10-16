@@ -2,11 +2,11 @@ import { env } from "cloudflare:workers";
 import { listArticles } from "../../../lib/server";
 import { retrieve } from "../../../lib/content";
 import { z } from "zod";
-import { requireApiAccess } from "../../../lib/auth";
+import { requireApiAccess,sameOrigin } from "../../../lib/auth";
 const inputSchema = z.object({message:z.string().trim().min(1).max(2000),language:z.enum(["zh-CN","zh-TW","en"]),history:z.array(z.object({role:z.enum(["user","assistant"]),content:z.string().max(6000)})).max(12).default([])});
 export async function POST(request: Request) {
   const denied=await requireApiAccess(request);if(denied)return denied;
-  if (request.headers.get("origin") !== new URL(request.url).origin) return Response.json({error:"invalid_origin"},{status:403});
+  if (!sameOrigin(request)) return Response.json({error:"invalid_origin"},{status:403});
   if (!env.DEEPSEEK_API_KEY) return Response.json({error:"not_configured"},{status:503});
   let input;
   try {const body=await request.text();if(body.length>80000)throw Error();input=inputSchema.parse(JSON.parse(body));}

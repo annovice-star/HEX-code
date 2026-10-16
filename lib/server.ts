@@ -1,7 +1,7 @@
 import { eq, desc } from "drizzle-orm";
 import { getDb } from "../db";
 import { articles, settings } from "../db/schema";
-import { requireApiAccess } from "./auth";
+import { requireApiAccess,sameOrigin } from "./auth";
 import { emptyContact, type Article, type Contact } from "./content";
 export async function listArticles(publishedOnly = true): Promise<Article[]> {
   const query = getDb().select().from(articles);
@@ -13,7 +13,6 @@ export async function contactSettings(): Promise<Contact> {
 }
 export async function requireAdmin(request: Request) {
   const denied=await requireApiAccess(request,true);if(denied)return denied;
-  const origin = request.headers.get("origin");
-  if (!origin || origin !== new URL(request.url).origin) return Response.json({error:"请求来源无效。"}, {status:403});
+  if (!sameOrigin(request)) return Response.json({error:"请求来源无效。"}, {status:403});
   return null;
 }

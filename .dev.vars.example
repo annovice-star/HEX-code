@@ -6,3 +6,5 @@ ADMIN_BOOTSTRAP_HASH=
 ADMIN_BOOTSTRAP_SALT=
 SITE_VISIBILITY=internal
 DEEPSEEK_API_KEY=
+# GitHub Pages frontend origin; configure as a server runtime value.
+PAGES_ORIGIN=https://annovice-star.github.io

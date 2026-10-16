@@ -47,3 +47,15 @@ node tests/http-smoke.mjs
 展示的设计示例均有标识，不进入知识库。正式资讯、服务内容、品牌素材、联系方式待审核补充。首版采用关键词与同义词检索；未实现向量库、自动采集、机器翻译、附件上传、活动报名或深知政策查询。同篇多语言关联需后续完善。
 
 数据库迁移部署后保持不变，后续调整追加迁移。
+
+## GitHub Pages 前端
+
+目标仓库 `annovice-star/HEX-code`，地址 `https://annovice-star.github.io/HEX-code/`。`github-pages/` 是独立静态入口，复用现有首页和后台组件。`pnpm run build:pages` 生成 `pages-dist/`，GitHub Actions 工作流只发布这个目录。仓库 Settings → Pages 需选择 GitHub Actions；私有仓库需支持 Pages 的 GitHub 付费方案。不要为了发布页面将业务源码仓库自动改为公开。
+
+Pages 仅承载前端资源；内容和管理数据通过现有 Workers/D1 后端获取。后端运行环境配置 `PAGES_ORIGIN=https://annovice-star.github.io`。跨域仅放行该精确来源，登录返回随机会话令牌，前端仅在当前标签页的 sessionStorage 中保存；API 使用 Authorization，避免依赖第三方 Cookie。令牌复用既有 8 小时有效期、数据库哈希和改密版本撤销机制。退出后立即撤销令牌。
+
+网页静态包中不包含真实业务内容、管理员密码或 API Key。打开新标签页可能需要重新登录。站内文章和后台预览在当前标签页打开，避免丢失登录状态。
+
+前端采用哈希路由，如 `/HEX-code/#/admin`，刷新不会触发 Pages 404。部署基础路径通过 `VITE_PAGES_BASE` 指定，后端通过 `VITE_API_ORIGIN` 指定；这两个值均为公开地址，不是密钥。
+
+本地生产后端启动后可用 `node tests/pages-api.mjs` 检查精确来源预检、跨域登录、匿名拦截、令牌篡改和退出撤销。本地测试用 `.dev.vars` 应配置上述 PAGES_ORIGIN，且 `.dev.vars` 需位于 Wrangler 配置所在目录。此测试文件只用于本地，不要对线上运行清理或改密测试。

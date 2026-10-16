@@ -7,5 +7,6 @@ declare namespace Cloudflare {
     ADMIN_BOOTSTRAP_HASH?: string;
     ADMIN_BOOTSTRAP_SALT?: string;
     SITE_VISIBILITY?: string;
+    PAGES_ORIGIN?: string;
   }
 }

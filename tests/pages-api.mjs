@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const base=process.env.TEST_ORIGIN??'http://127.0.0.1:8787';
+if(!['127.0.0.1','localhost'].includes(new URL(base).hostname))throw Error('Local test only');
+const origin='https://annovice-star.github.io';
+const credential=JSON.parse(await readFile(new URL('../outputs/auth-test.json',import.meta.url),'utf8'));
+const request=(path,options={})=>fetch(base+path,{...options,signal:AbortSignal.timeout(20000),headers:{Origin:origin,Connection:"close",...options.headers}});
+const post=(path,data,token)=>request(path,{method:'POST',headers:{'Content-Type':'application/json',...(token?{Authorization:'Bearer '+token}:{})},body:JSON.stringify(data)});
+let r=await request('/api/auth/login',{method:'OPTIONS',headers:{'Access-Control-Request-Method':'POST','Access-Control-Request-Headers':'content-type,authorization'}});
+assert.equal(r.status,204);assert.equal(r.headers.get('access-control-allow-origin'),origin);assert.equal(r.headers.get('access-control-allow-credentials'),null);
+r=await request('/api/auth/login',{method:'OPTIONS',headers:{Origin:'https://untrusted.example'}});assert.equal(r.status,403);assert.equal(r.headers.get('access-control-allow-origin'),null);
+for(const path of ['/api/content','/api/admin','/api/search?q=test'])assert.equal((await request(path)).status,401);
+r=await post('/api/auth/login',credential);assert.equal(r.status,200,await r.clone().text());const {token}=await r.json();assert.match(token,/^[0-9a-f]{64}$/);assert.equal(r.headers.get('set-cookie'),null);
+for(const path of ['/api/content','/api/admin','/api/search?q=test']){r=await request(path,{headers:{Authorization:'Bearer '+token}});assert.equal(r.status,200);assert.equal(r.headers.get('access-control-allow-origin'),origin);assert.match(r.headers.get('cache-control'),/no-store/);}
+r=await request('/api/admin',{method:'POST',headers:{Origin:'https://untrusted.example',Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({action:'invalid'})});assert.equal(r.status,403);
+r=await post('/api/admin',{action:'invalid'},token);assert.equal(r.status,400);
+r=await request('/api/content',{headers:{Authorization:'Bearer '+token+'0'}});assert.equal(r.status,401);
+assert.equal((await post('/api/auth/logout',{},token)).status,200);
+assert.equal((await request('/api/content',{headers:{Authorization:'Bearer '+token}})).status,401);
+console.log('PASS: exact-origin CORS, preflight, no anonymous data, token login without cookies, protected content/admin/search, CSRF, tamper rejection and logout revocation');

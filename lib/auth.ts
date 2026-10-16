@@ -2,6 +2,7 @@ import { env } from "cloudflare:workers";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { hashPassword, sha256, randomHex, equalHash, safeReturnTo } from "./password";
+import { allowedWriteOrigin } from "./cors";
 
 export const SESSION_SECONDS=8*60*60;
 export type Account={username:string;password_hash:string;salt:string;version:number};
@@ -10,7 +11,9 @@ const db=()=>{if(!env.DB)throw Error("Storage unavailable");return env.DB;};
 export function isPublic(){return env.SITE_VISIBILITY==="public";}
 function rawCookie(header:string|null){return header?.split(";").map(v=>v.trim()).find(v=>v.startsWith("apec_session="))?.slice("apec_session=".length)??"";}
 export async function session(request?:Request):Promise<Session|null>{
-  const h=request?.headers??await headers(), token=rawCookie(h.get("cookie"));
+  const h=request?.headers??await headers();
+  const bearer=request?.headers.get("authorization");
+  const token=bearer?.startsWith("Bearer ")?bearer.slice(7):rawCookie(h.get("cookie"));
   if(!/^[a-f0-9]{64}$/.test(token))return null;
   const tokenHash=await sha256(token);
   const row=await db().prepare("SELECT s.username,s.version FROM admin_sessions s JOIN admin_accounts a ON s.username=a.username AND s.version=a.version WHERE s.token_hash=? AND s.expires_at>?").bind(tokenHash,Date.now()).first<{username:string;version:number}>();
@@ -24,7 +27,7 @@ export async function requireApiAccess(request:Request,admin=false){
   if(!admin&&isPublic())return null;
   return await session(request)?null:Response.json({error:"请先使用管理员账号登录。"},{status:401,headers:{"Cache-Control":"no-store"}});
 }
-export function sameOrigin(request:Request){return request.headers.get("origin")===new URL(request.url).origin;}
+export const sameOrigin=allowedWriteOrigin;
 export async function ensureAdmin(){
   const username=env.ADMIN_BOOTSTRAP_USERNAME,salt=env.ADMIN_BOOTSTRAP_SALT,hash=env.ADMIN_BOOTSTRAP_HASH;
   if(!username||!salt||!hash)return;
@@ -41,7 +44,7 @@ export async function createSession(account:Account,request:Request){
   const token=randomHex(),tokenHash=await sha256(token),expires=Date.now()+SESSION_SECONDS*1000;
   await db().prepare("DELETE FROM admin_sessions WHERE expires_at<=?").bind(Date.now()).run();
   await db().prepare("INSERT INTO admin_sessions (token_hash,username,version,expires_at) SELECT ?,username,version,? FROM admin_accounts WHERE username=? AND version=?").bind(tokenHash,expires,account.username,account.version).run();
-  return cookie(token,request,SESSION_SECONDS);
+  return {token,cookie:cookie(token,request,SESSION_SECONDS)};
 }
 export function cookie(token:string,request:Request,age:number){return `apec_session=${token}; Path=/; HttpOnly; SameSite=Strict; Max-Age=${age}${new URL(request.url).protocol==="https:"?"; Secure":""}`;}
 export async function removeSession(request:Request){const current=await session(request);if(current)await db().prepare("DELETE FROM admin_sessions WHERE token_hash=?").bind(current.tokenHash).run();}

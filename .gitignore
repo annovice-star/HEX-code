@@ -50,6 +50,8 @@ next-env.d.ts
 !/build/sites-worker.ts
 
 /dist/
+/pages-dist/
+*.tsbuildinfo
 /.wrangler/
 # Checkout-local execution profile and tool state; never publish them.
 /.sites-runtime/
@@ -57,6 +59,3 @@ next-env.d.ts
 /.codex/
 /outputs/
 /work/
-
-# Incremental compiler cache
-*.tsbuildinfo

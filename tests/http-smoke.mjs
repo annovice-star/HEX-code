@@ -3,7 +3,7 @@ import {readFile} from 'node:fs/promises';
 const base=process.env.TEST_ORIGIN??'http://127.0.0.1:5173';
 if(!['127.0.0.1','localhost'].includes(new URL(base).hostname))throw Error('This mutation test only runs locally.');
 const credentials=JSON.parse(await readFile(new URL('../outputs/auth-test.json',import.meta.url),'utf8'));
-const get=(path,cookie='',extra={})=>fetch(base+path,{redirect:'manual',...extra,headers:{Cookie:cookie,...extra.headers}});
+const get=(path,cookie='',extra={})=>fetch(base+path,{redirect:'manual',...extra,signal:AbortSignal.timeout(20000),headers:{Cookie:cookie,Connection:"close",...extra.headers}});
 const post=(path,data,cookie='',origin=base)=>get(path,cookie,{method:'POST',headers:{'Content-Type':'application/json',Origin:origin},body:JSON.stringify(data)});
 const login=(password=credentials.password,next='/')=>post('/api/auth/login',{username:credentials.username,password,next});
 const cookieOf=r=>r.headers.getSetCookie().map(v=>v.split(';')[0]).join('; ');
