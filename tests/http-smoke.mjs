@@ -1,0 +1,51 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const base=process.env.TEST_ORIGIN??'http://127.0.0.1:5173';
+if(!['127.0.0.1','localhost'].includes(new URL(base).hostname))throw Error('This mutation test only runs locally.');
+const credentials=JSON.parse(await readFile(new URL('../outputs/auth-test.json',import.meta.url),'utf8'));
+const get=(path,cookie='',extra={})=>fetch(base+path,{redirect:'manual',...extra,headers:{Cookie:cookie,...extra.headers}});
+const post=(path,data,cookie='',origin=base)=>get(path,cookie,{method:'POST',headers:{'Content-Type':'application/json',Origin:origin},body:JSON.stringify(data)});
+const login=(password=credentials.password,next='/')=>post('/api/auth/login',{username:credentials.username,password,next});
+const cookieOf=r=>r.headers.getSetCookie().map(v=>v.split(';')[0]).join('; ');
+for(const path of ['/','/article/demo-apec','/admin','/admin/security']){
+ const r=await get(path);assert.ok([302,303,307,308].includes(r.status),`${path}: ${r.status}`);assert.match(r.headers.get('location'),/^\/login/);
+}
+assert.equal((await get('/login')).status,200);
+assert.equal((await get('/api/search?q=test')).status,401);
+assert.equal((await post('/api/chat',{message:'test'})).status,401);
+assert.equal((await post('/api/admin',{action:'delete',id:'nonexistent'})).status,401);
+assert.equal((await get('/api/search?q=test','', {headers:{'x-openai-user-email':'seedy@sites.test'}})).status,401);
+assert.equal((await post('/api/auth/login',credentials,'','https://untrusted.example')).status,403);
+assert.equal((await login('wrong-password')).status,401);
+const r=await login(credentials.password,'//untrusted.example');assert.equal(r.status,200,await r.clone().text());assert.equal((await r.json()).next,'/admin');
+assert.match(r.headers.get('set-cookie'),/HttpOnly/);assert.match(r.headers.get('set-cookie'),/SameSite=Strict/);
+let cookie=cookieOf(r),secondCookie=cookieOf(await login());
+const home=await get('/',cookie);assert.equal(home.status,200);assert.match(home.headers.get('cache-control'),/no-store/);
+const admin=await get('/admin',cookie);assert.equal(admin.status,200);assert.match(await admin.text(),/专题内容管理/);
+assert.equal((await get('/api/search?q=test',cookie+'1')).status,401);
+const id='smoke-'+Date.now();
+const article={id,title:'测试企业落地资料',summary:'仅供自动化验证',body:'测试企业办公空间需求与服务资料。',category:'business',kind:'service',language:'zh-CN',source:'自动化测试',sourceUrl:'',date:'2026-10-15',status:'draft',featured:false,demo:false};
+try{
+ assert.equal((await post('/api/admin',{action:'save',article},cookie,'https://untrusted.example')).status,403);
+ assert.equal((await post('/api/admin',{action:'save',article},cookie)).status,200);
+ assert.equal((await get('/article/'+id,cookie)).status,404);
+ let search=await(await get('/api/search?q=测试企业',cookie)).json();assert.ok(!search.sources.some(s=>s.id===id));
+ assert.equal((await post('/api/admin',{action:'save',article:{...article,status:'published'}},cookie)).status,200);
+ assert.equal((await get('/article/'+id,cookie)).status,200);
+ search=await(await get('/api/search?q=测试企业',cookie)).json();assert.ok(search.sources.some(s=>s.id===id));
+ assert.equal((await post('/api/admin',{action:'save',article:{...article,status:'published',demo:true}},cookie)).status,200);
+ search=await(await get('/api/search?q=测试企业',cookie)).json();assert.ok(!search.sources.some(s=>s.id===id));
+ const chat=await post('/api/chat',{message:'测试',language:'zh-CN'},cookie);assert.equal(chat.status,503);assert.equal((await chat.json()).error,'not_configured');
+}finally{assert.equal((await post('/api/admin',{action:'delete',id},cookie)).status,200);}
+assert.equal((await post('/api/auth/password',{currentPassword:'incorrect',newPassword:'changed-test-password'},cookie)).status,401);
+assert.equal((await post('/api/auth/password',{currentPassword:credentials.password,newPassword:'short'},cookie)).status,400);
+const newPassword=credentials.password+'-changed';
+assert.equal((await post('/api/auth/password',{currentPassword:credentials.password,newPassword},cookie)).status,200);
+for(const old of [cookie,secondCookie])assert.equal((await get('/api/search?q=test',old)).status,401);
+assert.equal((await login()).status,401);
+const updated=await login(newPassword);assert.equal(updated.status,200);cookie=cookieOf(updated);
+assert.equal((await post('/api/auth/password',{currentPassword:newPassword,newPassword:credentials.password},cookie)).status,200);
+cookie=cookieOf(await login());
+assert.equal((await post('/api/auth/logout',{},cookie)).status,200);
+assert.equal((await get('/api/search?q=test',cookie)).status,401);
+console.log('PASS: whole-site gate, API access, CSRF, cookie, tampering, CRUD, draft isolation, AI fallback, password change, all-device revocation and logout');

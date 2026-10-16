@@ -1,0 +1,19 @@
+import { eq, desc } from "drizzle-orm";
+import { getDb } from "../db";
+import { articles, settings } from "../db/schema";
+import { requireApiAccess } from "./auth";
+import { emptyContact, type Article, type Contact } from "./content";
+export async function listArticles(publishedOnly = true): Promise<Article[]> {
+  const query = getDb().select().from(articles);
+  return await (publishedOnly ? query.where(eq(articles.status,"published")) : query).orderBy(desc(articles.date)) as Article[];
+}
+export async function contactSettings(): Promise<Contact> {
+  const [row] = await getDb().select().from(settings).where(eq(settings.id,"contact"));
+  return row ? JSON.parse(row.value) : emptyContact;
+}
+export async function requireAdmin(request: Request) {
+  const denied=await requireApiAccess(request,true);if(denied)return denied;
+  const origin = request.headers.get("origin");
+  if (!origin || origin !== new URL(request.url).origin) return Response.json({error:"请求来源无效。"}, {status:403});
+  return null;
+}

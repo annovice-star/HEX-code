@@ -1,0 +1,8 @@
+# Copy to .dev.vars; never commit generated credentials.
+# Run node scripts/create-admin-config.mjs privately to create a random password,
+# salt and hash. Store the password safely; configure only its salt/hash below.
+ADMIN_BOOTSTRAP_USERNAME=admin
+ADMIN_BOOTSTRAP_HASH=
+ADMIN_BOOTSTRAP_SALT=
+SITE_VISIBILITY=internal
+DEEPSEEK_API_KEY=

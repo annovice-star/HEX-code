@@ -1,0 +1,12 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {randomBytes} from 'node:crypto';
+import {hashPassword,randomHex} from '../lib/password.ts';
+await mkdir('outputs',{recursive:true});
+const password=randomBytes(18).toString('base64url'),salt=randomHex(16);
+const username='test-'+randomBytes(6).toString('hex');
+const hash=await hashPassword(password,salt);
+const previous=await readFile('.dev.vars','utf8').catch(()=> 'DEEPSEEK_API_KEY=\n');
+const retained=previous.split(/\r?\n/).filter(line=>! /^(ADMIN_EMAIL|ADMIN_BOOTSTRAP_USERNAME|ADMIN_BOOTSTRAP_HASH|ADMIN_BOOTSTRAP_SALT|SITE_VISIBILITY)=/.test(line)).join('\n');
+await writeFile('.dev.vars',retained+`\nADMIN_BOOTSTRAP_USERNAME=${username}\nADMIN_BOOTSTRAP_HASH=${hash}\nADMIN_BOOTSTRAP_SALT=${salt}\nSITE_VISIBILITY=internal\n`);
+await writeFile('outputs/auth-test.json',JSON.stringify({username,password}));
+console.log('Local test credentials prepared in ignored files.');
