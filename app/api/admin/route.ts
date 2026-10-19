@@ -9,7 +9,7 @@ export async function GET(request:Request){
   const denied=await requireApiAccess(request,true);if(denied)return denied;
   const current=await session(request);
   const [articles,contact]=await Promise.all([listArticles(false),contactSettings()]);
-  return Response.json({articles,contact,aiEnabled:!!env.DEEPSEEK_API_KEY,username:current!.username},{headers:{"Cache-Control":"no-store"}});
+  return Response.json({articles,contact,aiEnabled:false,username:current!.username},{headers:{"Cache-Control":"no-store"}});
 }
 export async function POST(request: Request) {
   const denied = await requireAdmin(request); if (denied) return denied;
@@ -28,8 +28,13 @@ export async function POST(request: Request) {
       return Response.json({ok:true});
     }
     if (input.action !== "save") throw Error();
-    const article = articleSchema.parse(input.article), values = {...article,updatedAt:new Date().toISOString()};
+    const article = articleSchema.parse(input.article), values = {...article,guide:article.guide??null,updatedAt:new Date().toISOString()};
+    if(article.guide?.reviewState==="verified"&&(!article.source||!article.sourceUrl||!article.guide.reviewedAt))return Response.json({error:"标记已核验前，请补充来源、原文链接和核验日期。"},{status:400});
+    if(article.guide?.groupId){
+      const siblings=await listArticles(false);
+      if(siblings.some(a=>a.id!==article.id&&(a.guide?.groupId||a.id)===article.guide?.groupId&&a.language===article.language))return Response.json({error:"同一主题的同一种语言只能有一篇内容，请编辑已有版本。"},{status:400});
+    }
     await getDb().insert(articles).values(values).onConflictDoUpdate({target:articles.id,set:values});
-    return Response.json({ok:true,article:values});
+    return Response.json({ok:true,article:{...values,guide:values.guide??undefined}});
   } catch {return Response.json({error:"保存失败，请检查必填内容、日期和链接格式后重试。"},{status:400});}
 }

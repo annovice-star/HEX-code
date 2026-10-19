@@ -15,6 +15,13 @@
       "when": 1792050787426,
       "tag": "0001_nebulous_lady_vermin",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1792376533116,
+      "tag": "0002_wet_ultragirl",
+      "breakpoints": true
     }
   ]
 }

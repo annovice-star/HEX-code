@@ -1,10 +1,20 @@
 import { z } from "zod";
+const optionalDate = z.union([z.literal(""), z.string().regex(/^\d{4}-\d{2}-\d{2}$/)]);
+export const guideSchema = z.object({
+  groupId:z.string().max(80).regex(/^[a-zA-Z0-9_-]*$/).default(""),
+  audience:z.string().max(1000).default(""),steps:z.string().max(6000).default(""),
+  materials:z.string().max(6000).default(""),notes:z.string().max(4000).default(""),
+  faqs:z.array(z.object({q:z.string().trim().min(1).max(300),a:z.string().trim().min(1).max(2000)})).max(20).default([]),
+  reviewedAt:optionalDate.default(""),reviewDue:optionalDate.default(""),
+  reviewState:z.enum(["pending","verified","outdated"]).default("pending"),
+});
+export type Guide = z.infer<typeof guideSchema>;
 export const articleSchema = z.object({
   id: z.string().min(1).max(80).regex(/^[a-zA-Z0-9_-]+$/),
   title: z.string().trim().min(1).max(180),summary: z.string().trim().min(1).max(700),body: z.string().trim().min(1).max(30000),
   category: z.enum(["apec", "business", "talent", "innovation"]),kind: z.enum(["news", "insight", "service", "event"]),language: z.enum(["zh-CN", "zh-TW", "en"]),
   source: z.string().max(120),sourceUrl: z.string().max(1000).refine(v => !v || /^https?:\/\//.test(v), "链接须以 https:// 或 http:// 开头"),
-  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),status: z.enum(["draft", "published"]),featured: z.boolean(),demo: z.boolean(),updatedAt: z.string().optional(),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),status: z.enum(["draft", "published"]),featured: z.boolean(),demo: z.boolean(),updatedAt: z.string().optional(),guide:guideSchema.optional(),
 });
 export type Article = z.infer<typeof articleSchema>;
 export type Language = "zh-CN" | "zh-TW" | "en";
@@ -24,7 +34,7 @@ export function retrieve(query: string, all: Article[], language: Language, limi
   const groups = [["企业", "企業", "business", "company", "落地"],["人才", "talent", "团队", "團隊", "team"],["创业", "創業", "startup", "孵化", "incubator"],["空间", "空間", "space", "office", "办公", "辦公"],["联系", "聯繫", "contact", "服务", "服務", "service"]];
   const expanded = [...new Set([...tokens, ...groups.filter(g=>g.some(t=>q.includes(t))).flat()])];
   return all.filter(a=>a.status === "published" && !a.demo).map(a=>{
-    const title = a.title.toLowerCase(), summary = a.summary.toLowerCase(), body = a.body.toLowerCase();
+    const title = a.title.toLowerCase(), summary = a.summary.toLowerCase(), body = [a.body,a.guide?.audience,a.guide?.steps,a.guide?.materials,a.guide?.notes,...(a.guide?.faqs??[]).flatMap(f=>[f.q,f.a])].filter(Boolean).join(" ").toLowerCase();
     return {a,score:expanded.reduce((s,t)=>s+(title.includes(t)?5:0)+(summary.includes(t)?3:0)+(body.includes(t)?1:0),0)};
   }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score || Number(b.a.language===language)-Number(a.a.language===language)).slice(0,limit).map(x=>x.a);
 }

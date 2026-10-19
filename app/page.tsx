@@ -6,5 +6,5 @@ export const dynamic = "force-dynamic";
 export default async function Home(){
   await requirePageAccess("/");
   const [articles,contact]=await Promise.all([listArticles(),contactSettings()]);
-  return <Hub articles={articles} contact={contact} aiEnabled={!!env.DEEPSEEK_API_KEY}/>;
+  return <Hub articles={articles} contact={contact} aiEnabled={false}/>;
 }

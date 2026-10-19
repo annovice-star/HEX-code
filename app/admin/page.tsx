@@ -8,5 +8,5 @@ export default async function AdminPage(){
   await requirePageAccess("/admin",true);
   const current=await session();
   const [articles,contact]=await Promise.all([listArticles(false),contactSettings()]);
-  return <><AccountBar username={current!.username}/><Admin initialArticles={articles} initialContact={contact} aiEnabled={!!env.DEEPSEEK_API_KEY}/></>;
+  return <><AccountBar username={current!.username}/><Admin initialArticles={articles} initialContact={contact} aiEnabled={false}/></>;
 }

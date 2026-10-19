@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const base=process.env.TEST_ORIGIN??'http://127.0.0.1:5173';
+if(!['localhost','127.0.0.1'].includes(new URL(base).hostname))throw Error('Local test only');
+const credentials=JSON.parse(await readFile(new URL('../outputs/auth-test.json',import.meta.url),'utf8'));
+const request=async(path,token='',extra={})=>{const response=await fetch(base+path,{...extra,signal:AbortSignal.timeout(20000),headers:{Origin:base,...(token?{Cookie:token}:{}),...extra.headers}});await response.clone().arrayBuffer();return response;};
+const post=(path,data,token='')=>request(path,token,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+assert.equal((await request('/api/inquiries')).status,401);
+assert.equal((await post('/api/inquiries',{})).status,401);
+const login=await post('/api/auth/login',credentials);assert.equal(login.status,200);const token=login.headers.getSetCookie().map(c=>c.split(';')[0]).join('; ');
+const id='guide-test-'+Date.now(),group=id+'-group';
+const article={id,title:'Local test guide',summary:'Local automated validation only',body:'Guide details',category:'business',kind:'insight',language:'zh-CN',source:'Test',sourceUrl:'https://example.com/',date:'2026-10-19',status:'published',featured:false,demo:false,guide:{groupId:group,audience:'Businesses',steps:'Step one\nStep two',materials:'Checklist',notes:'Check the source',faqs:[{q:'What is required?',a:'Test-only document checklist'}],reviewState:'verified',reviewedAt:'2026-10-19',reviewDue:'2026-10-20'}};
+try{
+ let response=await post('/api/admin',{action:'save',article},token);assert.equal(response.status,200,await response.clone().text());
+ response=await post('/api/admin',{action:'save',article:{...article,id:id+'-en',language:'en'}},token);assert.equal(response.status,200);
+ assert.equal((await post('/api/admin',{action:'save',article:{...article,id:id+'-duplicate'}},token)).status,400);
+ assert.equal((await post('/api/admin',{action:'save',article:{...article,sourceUrl:''}},token)).status,400);
+ const content=await(await request('/api/content',token)).json();assert.equal(content.aiEnabled,false);assert.equal(content.articles.find(a=>a.id===id).guide.faqs[0].a,article.guide.faqs[0].a);
+ const hits=await(await request('/api/search?q=document&lang=en',token)).json();assert.ok(hits.sources.some(s=>s.id===id));
+ const enquiry={articleId:id,name:'LOCAL TEST ONLY',email:'test@example.com',message:'Local validation, no follow-up required',language:'en',consent:true};
+ assert.equal((await post('/api/inquiries',{...enquiry,consent:false},token)).status,400);
+ assert.equal((await post('/api/inquiries',{...enquiry,articleId:'sample-guide-business-en'},token)).status,400);
+ const created=await post('/api/inquiries',enquiry,token);assert.equal(created.status,201,await created.clone().text());
+ const inbox=await(await request('/api/inquiries',token)).json();const row=inbox.inquiries.find(r=>r.articleId===id);assert.ok(row);assert.equal(row.topic,article.title);assert.equal(row.status,'pending');
+ for(const status of ['contacted','completed'])assert.equal((await post('/api/inquiries',{action:'status',id:row.id,status},token)).status,200);
+ assert.equal((await post('/api/inquiries',{action:'status',id:row.id,status:'invalid'},token)).status,400);
+ assert.equal((await post('/api/chat',{message:'test',language:'en'},token)).status,503);
+ const denied=await request('/api/inquiries',token,{method:'POST',headers:{Origin:'https://untrusted.example','Content-Type':'application/json'},body:JSON.stringify(enquiry)});assert.equal(denied.status,403);
+}finally{for(const suffix of ['', '-en'])await post('/api/admin',{action:'delete',id:id+suffix},token);await post('/api/auth/logout',{},token);}
+console.log('PASS: persisted guide fields, translations, duplicate prevention, review validation, FAQ retrieval, enquiry consent/topic binding/status/CSRF, admin-only inbox and disabled generation');

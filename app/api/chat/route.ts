@@ -1,3 +1,4 @@
+import {publicAIEnabled} from "../../../lib/features";
 import { env } from "cloudflare:workers";
 import { listArticles } from "../../../lib/server";
 import { retrieve } from "../../../lib/content";
@@ -7,7 +8,7 @@ const inputSchema = z.object({message:z.string().trim().min(1).max(2000),languag
 export async function POST(request: Request) {
   const denied=await requireApiAccess(request);if(denied)return denied;
   if (!sameOrigin(request)) return Response.json({error:"invalid_origin"},{status:403});
-  if (!env.DEEPSEEK_API_KEY) return Response.json({error:"not_configured"},{status:503});
+  if (!publicAIEnabled() || !env.DEEPSEEK_API_KEY) return Response.json({error:"not_configured"},{status:503});
   let input;
   try {const body=await request.text();if(body.length>80000)throw Error();input=inputSchema.parse(JSON.parse(body));}
   catch{return Response.json({error:"invalid_input"},{status:400});}

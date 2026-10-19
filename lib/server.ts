@@ -5,7 +5,8 @@ import { requireApiAccess,sameOrigin } from "./auth";
 import { emptyContact, type Article, type Contact } from "./content";
 export async function listArticles(publishedOnly = true): Promise<Article[]> {
   const query = getDb().select().from(articles);
-  return await (publishedOnly ? query.where(eq(articles.status,"published")) : query).orderBy(desc(articles.date)) as Article[];
+  const rows=await (publishedOnly ? query.where(eq(articles.status,"published")) : query).orderBy(desc(articles.date));
+  return rows.map(row=>({...row,guide:row.guide??undefined})) as Article[];
 }
 export async function contactSettings(): Promise<Contact> {
   const [row] = await getDb().select().from(settings).where(eq(settings.id,"contact"));
