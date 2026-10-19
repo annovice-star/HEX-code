@@ -1,13 +1,14 @@
 "use client";
 import CompanyBrand from "../company-brand";
-import { apiFetch,navigate,setClientToken } from "../../lib/client-runtime";
+import { apiFetch,navigate,setClientToken,connectionHelp } from "../../lib/client-runtime";
 import { useState,type FormEvent } from "react";
 import { LockKeyhole,ArrowRight,Eye,EyeOff } from "lucide-react";
 export default function Login({next,changed}:{next:string;changed:boolean}){
   const[username,setUsername]=useState(""),[password,setPassword]=useState(""),[visible,setVisible]=useState(false),[busy,setBusy]=useState(false),[error,setError]=useState("");
   async function submit(e:FormEvent){e.preventDefault();if(busy)return;setBusy(true);setError("");try{
     const r=await apiFetch("/api/auth/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({username,password,next})});
-    const data=await r.json() as {error?:string;next?:string;token?:string};if(!r.ok)throw Error(data.error??"登录失败，请重试。");setClientToken(data.token??null);navigate(data.next??"/admin");
-  }catch(e){setError((e as Error).message);setBusy(false);}}
+    if(!r.headers.get("content-type")?.includes("application/json"))throw Error(connectionHelp);
+    const data=await r.json() as {error?:string;next?:string;token?:string};if(!r.ok)throw Error(data.error??"登录失败，请稍后重试。");setClientToken(data.token??null);navigate(data.next??"/admin");
+  }catch(e){setError(e instanceof TypeError||e instanceof SyntaxError?connectionHelp:(e as Error).message||connectionHelp);setBusy(false);}}
   return <main className="login-shell"><section className="login-intro"><div className="brand"><CompanyBrand/></div><div className="login-vision"><div className="eyebrow">CONNECTING POSSIBILITIES</div><h1>从亚太视野，<br/><em>发现深圳机遇。</em></h1><p>连接企业、人才与城市的更多可能。</p><div className="login-lines" aria-hidden="true"><span/><span/><span/></div></div><span className="login-edition">SHENZHEN · APEC HUB</span></section><section className="login-panel"><form className="login-card" onSubmit={submit}><div className="login-lock"><LockKeyhole size={24}/></div><div className="eyebrow">WELCOME BACK</div><h2>登录专题平台</h2><p className="login-sub">使用管理员账号和密码访问内部专题。</p>{changed&&<p className="success" role="status">密码已更新，请使用新密码重新登录。</p>}{error&&<p className="error" role="alert">{error}</p>}<label className="field">账号<input name="username" autoComplete="username" autoCapitalize="none" spellCheck={false} required maxLength={64} value={username} onChange={e=>setUsername(e.target.value)} placeholder="请输入管理员账号"/></label><label className="field">密码<div className="password-input"><input name="password" type={visible?"text":"password"} autoComplete="current-password" required maxLength={128} value={password} onChange={e=>setPassword(e.target.value)} placeholder="请输入密码"/><button type="button" aria-label={visible?"隐藏密码":"显示密码"} onClick={()=>setVisible(!visible)}>{visible?<EyeOff size={18}/>:<Eye size={18}/>}</button></div></label><button className="button primary login-submit" disabled={busy} type="submit">{busy?"正在登录…":"登录平台"}<ArrowRight size={17}/></button><p className="login-help">无需 ChatGPT 账号。登录状态最长保留 8 小时。</p></form><p className="login-footer">立方匯独立专题 · 内部访问</p></section></main>;
 }

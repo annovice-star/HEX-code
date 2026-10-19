@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from "react";
 import {createRoot} from "react-dom/client";
-import {configurePages,apiFetch,navigate,siteHref} from "../lib/client-runtime";
+import {configurePages,apiFetch,navigate,siteHref,getClientToken,connectionHelp} from "../lib/client-runtime";
 import Hub from "../app/hub";
 import Login from "../app/login/ui";
 import Admin from "../app/admin/ui";
@@ -19,8 +19,9 @@ function App(){
   const url=new URL(path,"https://pages.local"),isLogin=url.pathname==="/login",admin=url.pathname.startsWith("/admin");
   useEffect(()=>{
     if(isLogin){setData(null);setError("");return;}
+    if(!getClientToken()){navigate("/login?next="+encodeURIComponent(path));return;}
     const controller=new AbortController();setData(null);setError("");
-    apiFetch(admin?"/api/admin":"/api/content",{signal:controller.signal}).then(async response=>{if(response.status===401)return;if(!response.ok)throw Error("加载失败，请稍后重试。");setData(await response.json() as Data);}).catch(e=>{if(e.name!=="AbortError")setError("暂时无法连接服务，请检查网络后重试。");});
+    apiFetch(admin?"/api/admin":"/api/content",{signal:controller.signal}).then(async response=>{if(response.status===401)return;if(!response.ok)throw Error("加载失败，请稍后重试。");setData(await response.json() as Data);}).catch(e=>{if(e.name!=="AbortError")setError(connectionHelp);});
     return()=>controller.abort();
   },[path,isLogin,admin]);
   useEffect(()=>{if(data&&!location.hash.startsWith("#/")){document.getElementById(location.hash.slice(1))?.scrollIntoView();}},[data]);
