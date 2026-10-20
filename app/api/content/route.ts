@@ -1,9 +1,7 @@
-import { env } from "cloudflare:workers";
-import { requireApiAccess,session } from "../../../lib/auth";
+import { requireApiAccess } from "../../../lib/auth";
 import { listArticles,contactSettings } from "../../../lib/server";
 export async function GET(request:Request){
-  const denied=await requireApiAccess(request,true);if(denied)return denied;
-  const current=await session(request);
+  const denied=await requireApiAccess(request);if(denied)return denied;
   const [articles,contact]=await Promise.all([listArticles(),contactSettings()]);
-  return Response.json({articles,contact,aiEnabled:false,username:current!.username},{headers:{"Cache-Control":"no-store"}});
+  return Response.json({articles,contact,aiEnabled:false},{headers:{"Cache-Control":"no-store"}});
 }

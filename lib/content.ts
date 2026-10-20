@@ -20,6 +20,8 @@ export type Article = z.infer<typeof articleSchema>;
 export type Language = "zh-CN" | "zh-TW" | "en";
 export const settingsSchema = z.object({email: z.union([z.literal(""), z.string().email()]),phone: z.string().max(60),wechat: z.string().max(100),address: z.string().max(250)});
 export type Contact = z.infer<typeof settingsSchema>;
+// The static preview contains only published articles and public contact details.
+export const publicContentSchema=z.object({articles:z.array(articleSchema).transform(items=>items.filter(article=>article.status==="published")),contact:settingsSchema,aiEnabled:z.literal(false)});
 export const emptyContact: Contact = { email: "", phone: "", wechat: "", address: "" };
 export const demos: Article[] = [
   { id: "demo-apec", title: "从亚太视野，发现深圳机遇", summary: "以区域合作为起点，关注与企业发展、人才流动和创新创业有关的议题。", body: "这是用于展示页面结构的示例文章，不代表已核实的新闻或活动公告。\n\n正式内容将由管理员精选、审核后发布，并附上来源与原文入口。\n\n你可以从 APEC 动态、企业发展、人才服务和创新创业四个方向浏览内容。", category: "apec", kind: "news", language: "zh-CN", source: "编辑示例", sourceUrl: "", date: "2026-10-15", status: "draft", featured: true, demo: true },

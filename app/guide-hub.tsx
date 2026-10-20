@@ -12,8 +12,8 @@ const keys=["all","apec","business","talent","innovation"];
 export default function GuideHub({articles,contact,initialArticle}:{articles:Article[];contact:Contact;aiEnabled:boolean;initialArticle?:Article}){
  const [lang,setLang]=useState<Language>("zh-CN"),[category,setCategory]=useState("all"),[query,setQuery]=useState(""),[mobile,setMobile]=useState(false);
  const t=guideCopy[lang],isDemo=articles.filter(a=>!a.demo).length===0,all=isDemo?[...guideSamples,...articles]:articles;
- useEffect(()=>{const path=isPages()?location.hash.slice(1):location.href;const param=new URL(path||"/",location.origin).searchParams.get("lang");const saved=param??localStorage.getItem("apec-language");if(saved&&saved in guideCopy)setLang(saved as Language);const section=new URL(path||"/",location.origin).searchParams.get("section");if(section)document.getElementById(section)?.scrollIntoView();},[]);
- useEffect(()=>{document.documentElement.lang=lang;localStorage.setItem("apec-language",lang);},[lang]);
+ useEffect(()=>{const path=isPages()?location.hash.slice(1):location.href;const param=new URL(path||"/",location.origin).searchParams.get("lang");let saved=param;try{saved??=localStorage.getItem("apec-language");}catch{/* Browser storage is optional. */}if(saved&&saved in guideCopy)setLang(saved as Language);const section=new URL(path||"/",location.origin).searchParams.get("section");if(section)document.getElementById(section)?.scrollIntoView();},[]);
+ useEffect(()=>{document.documentElement.lang=lang;try{localStorage.setItem("apec-language",lang);}catch{/* Browsing works without storage. */}},[lang]);
  const shown=useMemo(()=>selectLanguage(all,lang).filter(a=>(category==="all"||a.category===category)&&searchable(a).includes(query.normalize("NFKC").trim().toLowerCase())).sort((a,b)=>Number(b.featured)-Number(a.featured)||b.date.localeCompare(a.date)),[all,lang,category,query]);
  const article=initialArticle?(translationOf(initialArticle,all,lang)??initialArticle):undefined;
  const faqs=shown.flatMap(a=>(a.guide?.faqs??[]).map(f=>({...f,article:a}))).filter((f,i,list)=>!f.article.demo||list.findIndex(x=>x.q===f.q)===i);

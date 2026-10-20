@@ -26,6 +26,8 @@ test('Pages transport avoids preflight headers and keeps token out of URL; block
     const [url,options]=calls[1];assert.equal(url,'https://backend.example/api/gateway');assert.deepEqual(options.headers,{'Content-Type':'text/plain;charset=UTF-8'});
     assert.equal(options.signal,controller.signal);assert.equal(options.credentials,'omit');assert.equal(options.cache,'no-store');
     assert.deepEqual(JSON.parse(options.body),{path:'/api/auth/password',method:'POST',token,body:'{"test":true}'});
+    globalThis.fetch=async(...args)=>{calls.push(args);return Response.json({error:'unavailable'},{status:401});};
+    const publicResponse=await apiFetch('/api/content',{},false);assert.equal(publicResponse.status,401);assert.equal(JSON.parse(calls[2][1].body).token,null);assert.equal(getClientToken(),token);
     setClientToken(null);assert.equal(getClientToken(),null);
   }finally{globalThis.fetch=originalFetch;if(descriptor)Object.defineProperty(globalThis,'sessionStorage',descriptor);else delete globalThis.sessionStorage;}
 });

@@ -1,10 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { articleSchema, retrieve, demos } from '../lib/content.ts';
+import { articleSchema, retrieve, demos,publicContentSchema,emptyContact } from '../lib/content.ts';
 import {selectLanguage,translationOf,reviewDue,searchable} from '../lib/guides.ts';
 import {inquirySchema} from '../lib/inquiries.ts';
 
 const base = {...demos[0], id:'real-article',status:'published',demo:false,title:'企业落地与办公空间',summary:'团队落地前的准备',body:'企业可按团队规模梳理办公空间需求。'};
+test('public preview excludes drafts and administrative data and keeps AI disabled',()=>{
+  const data=publicContentSchema.parse({articles:[base,{...base,id:'draft',status:'draft'}],contact:emptyContact,aiEnabled:false,username:'admin',inquiries:[{email:'private@example.com'}],token:'private'});
+  assert.deepEqual(data.articles.map(a=>a.id),['real-article']);assert.deepEqual(Object.keys(data),['articles','contact','aiEnabled']);
+  assert.throws(()=>publicContentSchema.parse({...data,aiEnabled:true}));
+});
 test('retrieval excludes drafts and demo materials even when they match exactly',()=>{
   const hits=retrieve('企业落地',[base,{...base,id:'draft',status:'draft'},{...base,id:'demo',demo:true}],'zh-CN');
   assert.deepEqual(hits.map(a=>a.id),['real-article']);
