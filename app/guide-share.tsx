@@ -1,7 +1,7 @@
 "use client";
 import {useEffect,useRef,useState} from "react";
 import qrcode from "../vendor/qrcode-generator/qrcode.mjs";
-import {siteHref} from "../lib/client-runtime";
+import {siteHref,isPages} from "../lib/client-runtime";
 import {guideCopy} from "../lib/guide-copy";
 import {reviewDue} from "../lib/guides";
 import type {Article,Language} from "../lib/content";
@@ -25,6 +25,7 @@ export default function GuideShare({article:a,lang}:{article:Article;lang:Langua
   add("立方匯 · HEX CUBES",true);if(a.demo)add(t.sample,true);add(a.title,true);add(a.summary);
   const g=a.guide;for(const [heading,body] of [[t.audience,g?.audience],[t.overview,a.body],[t.steps,g?.steps],[t.materials,g?.materials],[t.notes,g?.notes]] as const){if(body){add(heading,true);add(body);}}
   if(g?.faqs.length){add(t.faq,true);g.faqs.forEach(f=>{add(f.q,true);add(f.a);});}
+  if(a.guide?.editorial){add("参考来源 / References",true);a.guide.editorial.sources.forEach((source,i)=>{add(`[${i+1}] ${source.title}`);add(`${source.publisher} · ${source.publishedAt}`);add(source.url);});add("本长图为文字版；配图及AI生成说明请查看原文页面。");}
   if(reviewDue(a))add(t.outdated);add(`${t.source}: ${a.source||t.sourceMissing}`);if(a.sourceUrl)add(a.sourceUrl);
   add(`${t.published}: ${a.date}`);add(`${t.reviewed}: ${g?.reviewedAt||t.pending}`);if(g?.reviewDue)add(`${t.due}: ${g.reviewDue}`);
   add(t.disclaimer);add(t.qrHint);
@@ -37,5 +38,5 @@ export default function GuideShare({article:a,lang}:{article:Article;lang:Langua
    const blob=await new Promise<Blob>((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error()),"image/png"));const url=URL.createObjectURL(blob),link=document.createElement("a");link.href=url;link.download=`${a.id}-${i+1}.png`;document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
   }
  }catch{setMessage(t.exportFailed);}finally{setBusy(false);}}
- return <div className="share-block"><div className="article-tools">{!a.demo&&<a className="button primary" href="#topic-contact">{t.consult}</a>}{a.sourceUrl&&<a className="button primary" href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{t.original} ↗</a>}<button className="button light" onClick={async()=>{try{await navigator.clipboard.writeText(absoluteGuideUrl(a,lang));setMessage(t.copied);}catch{setMessage(absoluteGuideUrl(a,lang));}}}>{t.copy}</button><button className="button light" disabled={!qr} onClick={()=>dialog.current?.showModal()}>{t.qr}</button><button className="button light" disabled={busy} onClick={download}>{busy?t.exporting:t.download}</button><button className="button light" onClick={()=>window.print()}>{t.print}</button></div><p className="editor-note">{t.shareHint}</p>{message&&<p role="status" className="notice">{message}</p>}<dialog className="share-dialog" ref={dialog}><h2>{t.qr}</h2><p>{a.title}</p>{qr&&<img src={qr} width={240} height={240} alt={t.qr}/>}<p>{t.qrHint}</p><button className="button primary" onClick={()=>dialog.current?.close()}>{t.close}</button></dialog></div>;
+ return <div className="share-block"><div className="article-tools">{!a.demo&&<a className="button primary" href="#topic-contact" onClick={event=>{event.preventDefault();document.getElementById("topic-contact")?.scrollIntoView({behavior:"smooth"});}}>{t.consult}</a>}{a.sourceUrl&&<a className="button primary" href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{t.original} ↗</a>}<button className="button light" onClick={async()=>{try{await navigator.clipboard.writeText(absoluteGuideUrl(a,lang));setMessage(t.copied);}catch{setMessage(absoluteGuideUrl(a,lang));}}}>{t.copy}</button><button className="button light" disabled={!qr} onClick={()=>dialog.current?.showModal()}>{t.qr}</button><button className="button light" disabled={busy} onClick={download}>{busy?t.exporting:a.guide?.editorial?(lang==="en"?"Download text image":lang==="zh-TW"?"下載文字長圖":"下载文字长图"):t.download}</button><button className="button light" onClick={()=>window.print()}>{t.print}</button></div><p className="editor-note">{isPages()?(lang==="en"?"The public preview link can be shared. Downloaded text images can be forwarded separately.":lang==="zh-TW"?"預覽連結可直接分享；下載的文字圖片可單獨轉發。":"预览链接可直接分享；下载的文字图片可单独转发。"):t.shareHint}</p>{message&&<p role="status" className="notice">{message}</p>}<dialog className="share-dialog" ref={dialog}><h2>{t.qr}</h2><p>{a.title}</p>{qr&&<img src={qr} width={240} height={240} alt={t.qr}/>}<p>{isPages()?(lang==="en"?"Scan to open this topic in the public preview.":lang==="zh-TW"?"掃碼查看此主題，公開預覽無需登入。":"扫码查看此主题，公开预览无需登录。"):t.qrHint}</p><button className="button primary" onClick={()=>dialog.current?.close()}>{t.close}</button></dialog></div>;
 }

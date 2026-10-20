@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { articleSchema, retrieve, demos,publicContentSchema,emptyContact } from '../lib/content.ts';
 import {selectLanguage,translationOf,reviewDue,searchable} from '../lib/guides.ts';
 import {inquirySchema} from '../lib/inquiries.ts';
+import {readFileSync,existsSync} from 'node:fs';
 
 const base = {...demos[0], id:'real-article',status:'published',demo:false,title:'企业落地与办公空间',summary:'团队落地前的准备',body:'企业可按团队规模梳理办公空间需求。'};
 test('public preview excludes drafts and administrative data and keeps AI disabled',()=>{
@@ -24,6 +25,31 @@ test('unrelated questions return no evidence instead of filler documents',()=>{
 test('source links reject executable URL protocols',()=>{
   assert.equal(articleSchema.safeParse({...base,sourceUrl:'javascript:alert(1)'}).success,false);
   assert.equal(articleSchema.safeParse({...base,sourceUrl:'https://example.com/article'}).success,true);
+});
+test('published launch edition retains source citations and labelled local images',()=>{
+ const bundle=JSON.parse(readFileSync(new URL('../lib/launch-articles.json',import.meta.url),'utf8'));
+ const snapshot=publicContentSchema.parse(JSON.parse(readFileSync(new URL('../github-pages/public-content.json',import.meta.url),'utf8')));
+ assert.equal(bundle.length,5);
+ assert.equal(bundle.flatMap(a=>a.guide.editorial.sources).length,17);
+ assert.equal(bundle.flatMap(a=>a.guide.editorial.figures).length,7);
+ for(const raw of bundle){
+  const a=articleSchema.parse(raw);
+  assert.deepEqual(snapshot.articles.find(b=>b.id===a.id),a);
+  assert.equal(a.status,'published');assert.equal(a.demo,false);
+  for(const match of a.body.matchAll(/\[(\d+)\]/g))assert.ok(a.guide.editorial.sources[Number(match[1])-1]);
+  for(const figure of a.guide.editorial.figures){
+   assert.ok(existsSync(new URL('../public'+figure.file,import.meta.url)));
+   if(figure.aiGenerated){assert.match(figure.caption,/^AI生成/);assert.match(figure.alt,/^AI生成/);}
+  }
+ }
+ const policy=bundle.find(a=>a.id==='apec-2026-shenzhen-official-navigation');
+ for(const source of policy.guide.editorial.sources)assert.match(new URL(source.url).hostname,/(^|\.)sz\.gov\.cn$/);
+ const malicious=structuredClone(bundle[0]);
+ malicious.guide.editorial.sources[0].url='javascript:alert(1)';
+ assert.equal(articleSchema.safeParse(malicious).success,false);
+ malicious.guide.editorial.sources[0].url=bundle[0].guide.editorial.sources[0].url;
+ malicious.guide.editorial.figures[0].file='//untrusted.example/tracker.png';
+ assert.equal(articleSchema.safeParse(malicious).success,false);
 });
 test('empty content and oversized bodies cannot be published',()=>{
   assert.equal(articleSchema.safeParse({...base,title:'   '}).success,false);

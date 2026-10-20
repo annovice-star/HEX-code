@@ -1,5 +1,18 @@
 import { z } from "zod";
 const optionalDate = z.union([z.literal(""), z.string().regex(/^\d{4}-\d{2}-\d{2}$/)]);
+export const editorialSchema = z.object({
+  preparedAt:z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  figures:z.array(z.object({
+    file:z.string().regex(/^\/article-images\/[a-zA-Z0-9_-]+\.(?:png|webp|svg)$/),
+    alt:z.string().trim().min(1).max(500),caption:z.string().trim().min(1).max(1000),
+    aiGenerated:z.boolean(),afterParagraph:z.number().int().min(-1).max(500),
+  })).max(10),
+  sources:z.array(z.object({
+    title:z.string().trim().min(1).max(500),publisher:z.string().trim().min(1).max(200),
+    url:z.string().max(1500).url().refine(v=>/^https?:\/\//.test(v)),
+    publishedAt:z.string().max(40),supports:z.string().max(1500),
+  })).max(30),
+});
 export const guideSchema = z.object({
   groupId:z.string().max(80).regex(/^[a-zA-Z0-9_-]*$/).default(""),
   audience:z.string().max(1000).default(""),steps:z.string().max(6000).default(""),
@@ -7,6 +20,7 @@ export const guideSchema = z.object({
   faqs:z.array(z.object({q:z.string().trim().min(1).max(300),a:z.string().trim().min(1).max(2000)})).max(20).default([]),
   reviewedAt:optionalDate.default(""),reviewDue:optionalDate.default(""),
   reviewState:z.enum(["pending","verified","outdated"]).default("pending"),
+  editorial:editorialSchema.optional(),
 });
 export type Guide = z.infer<typeof guideSchema>;
 export const articleSchema = z.object({
