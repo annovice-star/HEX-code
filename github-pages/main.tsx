@@ -40,6 +40,6 @@ function App(){
   const article=id?[...data.articles,...demos,...guideSamples].find(a=>a.id===id):undefined;
   if(id&&!article)return <main className="editor"><h1>文章不存在或尚未发布</h1><a href={siteHref("/")}>返回首页</a></main>;
   if(url.pathname!=="/"&&!id){navigate("/");return null;}
-  return <>{snapshot&&<p className="preview-notice" role="status">免登录预览 · 当前显示随网页发布的内容，在线服务可用时自动同步最新资料。</p>}<Hub key={path} articles={data.articles} contact={data.contact} aiEnabled={data.aiEnabled} initialArticle={article}/></>;
+  return <><Hub previewNotice={snapshot} key={path} articles={data.articles} contact={data.contact} aiEnabled={data.aiEnabled} initialArticle={article}/></>;
 }
 createRoot(document.getElementById("root")!).render(<App/>);

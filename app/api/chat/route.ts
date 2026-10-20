@@ -2,9 +2,11 @@ import {publicAIEnabled} from "../../../lib/features";
 import { env } from "cloudflare:workers";
 import { listArticles } from "../../../lib/server";
 import { retrieve } from "../../../lib/content";
+import {languageSchema} from "../../../lib/languages";
+import {guideCopy} from "../../../lib/guide-copy";
 import { z } from "zod";
 import { requireApiAccess,sameOrigin } from "../../../lib/auth";
-const inputSchema = z.object({message:z.string().trim().min(1).max(2000),language:z.enum(["zh-CN","zh-TW","en"]),history:z.array(z.object({role:z.enum(["user","assistant"]),content:z.string().max(6000)})).max(12).default([])});
+const inputSchema = z.object({message:z.string().trim().min(1).max(2000),language:languageSchema,history:z.array(z.object({role:z.enum(["user","assistant"]),content:z.string().max(6000)})).max(12).default([])});
 export async function POST(request: Request) {
   const denied=await requireApiAccess(request);if(denied)return denied;
   if (!sameOrigin(request)) return Response.json({error:"invalid_origin"},{status:403});
@@ -23,8 +25,7 @@ export async function POST(request: Request) {
   const searchText=[...input.history.filter(m=>m.role==="user").slice(-2).map(m=>m.content),input.message].join(" ");
   const hits=retrieve(searchText,await listArticles(),input.language);
   const sources=hits.map((a,i)=>({number:i+1,id:a.id,title:a.title,source:a.source,date:a.date}));
-  const missing={"zh-CN":"目前已发布的资料中没有找到可靠依据。请换个关键词，或通过联系入口咨询。","zh-TW":"目前已發布的資料中沒有找到可靠依據。請換個關鍵詞，或透過聯絡入口諮詢。",en:"No reliable match was found in the published materials. Try a different keyword or use the contact section."};
-  if(!hits.length)return Response.json({answer:missing[input.language],sources:[]});
+  if(!hits.length)return Response.json({answer:guideCopy[input.language].empty,sources:[]});
   const evidence=hits.map((a,i)=>`[${i+1}] ${a.title}\n${a.date} | ${a.source}\n${a.body.slice(0,9000)}`).join("\n\n");
   try {
     const upstream=await fetch("https://api.deepseek.com/chat/completions",{

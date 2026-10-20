@@ -1,4 +1,6 @@
 import { z } from "zod";
+import {languageSchema,type Language} from "./languages.ts";
+export type {Language} from "./languages";
 const optionalDate = z.union([z.literal(""), z.string().regex(/^\d{4}-\d{2}-\d{2}$/)]);
 export const editorialSchema = z.object({
   preparedAt:z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
@@ -26,12 +28,11 @@ export type Guide = z.infer<typeof guideSchema>;
 export const articleSchema = z.object({
   id: z.string().min(1).max(80).regex(/^[a-zA-Z0-9_-]+$/),
   title: z.string().trim().min(1).max(180),summary: z.string().trim().min(1).max(700),body: z.string().trim().min(1).max(30000),
-  category: z.enum(["apec", "business", "talent", "innovation"]),kind: z.enum(["news", "insight", "service", "event"]),language: z.enum(["zh-CN", "zh-TW", "en"]),
+  category: z.enum(["apec", "business", "talent", "innovation"]),kind: z.enum(["news", "insight", "service", "event"]),language: languageSchema,
   source: z.string().max(120),sourceUrl: z.string().max(1000).refine(v => !v || /^https?:\/\//.test(v), "链接须以 https:// 或 http:// 开头"),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),status: z.enum(["draft", "published"]),featured: z.boolean(),demo: z.boolean(),updatedAt: z.string().optional(),guide:guideSchema.optional(),
 });
 export type Article = z.infer<typeof articleSchema>;
-export type Language = "zh-CN" | "zh-TW" | "en";
 export const settingsSchema = z.object({email: z.union([z.literal(""), z.string().email()]),phone: z.string().max(60),wechat: z.string().max(100),address: z.string().max(250)});
 export type Contact = z.infer<typeof settingsSchema>;
 // The static preview contains only published articles and public contact details.
