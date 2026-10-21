@@ -1,0 +1,38 @@
+{
+  "zh-TW": {
+    "edition": "立方匯編輯整理 · 繁體中文版",
+    "notice": "本篇為簡體中文編輯文章的 AI 輔助繁體版本（2026-10-21），未經母語專家覆核，不是官方譯文。保留原始資料標題與連結供核查；具體事項請以來源原文及主管機關最新公布為準。",
+    "agenda": {"title":"深圳會期閱讀卡","subtitle":"專題編輯整理 · 截至2026年10月20日","cards":[["11月17—18日","APEC工商領導人峰會","企業界相關討論"],["11月18—19日","APEC領導人非正式會議","區域合作重要會期"],["三大優先領域","開放 · 創新 · 合作","全年議題閱讀座標"]],"footer":"依據參考資料[1]—[3]整理 · 非官方日程表"},
+    "navigation": {"title":"按問題找官方入口","subtitle":"深圳官方資料導航 · 閱讀順序建議","cards":[["了解背景","市商務局 · 投資深圳","城市與投資資料"],["核對方向","市級主管部門 · 政策原文","具體文件與責任單位"],["查辦理事項","市市場監管局 · 前海管理局","事項指南與申報通知"]],"footer":"依據深圳官方入口整理 · 非統一辦事流程"}
+  },
+  "en": {
+    "edition":"HEX CUBES editorial · English translation",
+    "notice":"AI-assisted translation of the Chinese editorial article, prepared on 21 October 2026; not reviewed by a native-language specialist and not an official translation. Original source titles and links are retained for checking. For specific matters, consult the source texts and the responsible agencies’ latest publications.",
+    "agenda":{"title":"Reading Shenzhen’s meeting dates","subtitle":"Editorial compilation · Information published by 20 October 2026","cards":[["17–18 November","APEC CEO Summit","Business-related discussions"],["18–19 November","APEC Economic Leaders’ Meeting","Key dates for regional cooperation"],["Three priorities","Openness · Innovation · Cooperation","A guide to the year’s agenda"]],"footer":"Compiled from references [1]–[3] · Not an official timetable"},
+    "navigation":{"title":"Find official portals by your question","subtitle":"Official Shenzhen information · Suggested reading sequence","cards":[["Understand the context","Commerce Bureau · Invest Shenzhen","City and investment information"],["Check the direction","Municipal agencies · Original policy texts","Specific documents and responsible agencies"],["Check procedures","Market regulator · Qianhai Authority","Service guides and application notices"]],"footer":"Compiled from official Shenzhen portals · Not a unified procedure"}
+  },
+  "ja": {
+    "edition":"HEX CUBES編集 · 日本語訳",
+    "notice":"中国語の編集記事を基にしたAI支援翻訳（2026年10月21日作成）です。母語専門家による確認は未実施で、公式訳ではありません。照合のため資料の原題とリンクを保持しています。具体的な事項は原文と担当機関の最新発表をご確認ください。",
+    "agenda":{"title":"深圳の会期を読む","subtitle":"編集部による整理 · 2026年10月20日までの公開情報","cards":[["11月17～18日","APEC CEOサミット","企業関係の議論"],["11月18～19日","APEC首脳会議","地域協力の重要な会期"],["三つの重点分野","開放・イノベーション・協力","年間議題の読み方"]],"footer":"参考資料[1]～[3]に基づく · 公式日程表ではありません"},
+    "navigation":{"title":"問いに合わせて公式窓口へ","subtitle":"深圳の公式情報案内 · 読む順序の提案","cards":[["背景を知る","市商務局・投資深圳","都市と投資の資料"],["方向性を確かめる","市の担当部門・政策原文","具体的な文書と担当機関"],["手続きを調べる","市市場監督管理局・前海管理局","手続きガイドと申請通知"]],"footer":"深圳の公式窓口に基づく · 統一手続きではありません"}
+  },
+  "ko": {
+    "edition":"HEX CUBES 편집 · 한국어 번역",
+    "notice":"중국어 편집 기사를 바탕으로 2026년 10월 21일 작성한 AI 보조 번역입니다. 원어민 전문가 검토를 거치지 않았으며 공식 번역이 아닙니다. 확인을 위해 자료의 원제와 링크를 유지했습니다. 구체적인 사항은 원문과 담당 기관의 최신 발표를 확인해 주세요.",
+    "agenda":{"title":"선전 회의 일정 읽기","subtitle":"편집 정리 · 2026년 10월 20일까지 공개된 정보","cards":[["11월 17~18일","APEC CEO 서밋","기업계 관련 논의"],["11월 18~19일","APEC 정상회의","지역 협력의 주요 일정"],["세 가지 우선 분야","개방 · 혁신 · 협력","연중 의제 읽기의 기준"]],"footer":"참고자료 [1]~[3] 기반 · 공식 일정표가 아닙니다"},
+    "navigation":{"title":"질문에 맞는 공식 창구 찾기","subtitle":"선전 공식 정보 안내 · 권장 읽기 순서","cards":[["배경 이해","시 상무국 · 선전 투자","도시와 투자 자료"],["방향 확인","시 담당 부서 · 정책 원문","구체적인 문서와 책임 기관"],["업무 절차 확인","시 시장감독관리국 · 첸하이관리국","업무 가이드와 신청 통지"]],"footer":"선전 공식 창구 기반 · 통합 업무 절차가 아닙니다"}
+  },
+  "es": {
+    "edition":"HEX CUBES editorial · Traducción al español",
+    "notice":"Traducción asistida por IA del artículo editorial chino, preparada el 21 de octubre de 2026. No ha sido revisada por un especialista nativo ni es una traducción oficial. Se conservan los títulos originales y enlaces de las fuentes. Para asuntos concretos, consulte los originales y las publicaciones más recientes de los organismos competentes.",
+    "agenda":{"title":"Las fechas de Shenzhen, de un vistazo","subtitle":"Recopilación editorial · Información hasta el 20 de octubre de 2026","cards":[["17–18 de noviembre","Cumbre de CEO de APEC","Debates del sector empresarial"],["18–19 de noviembre","Reunión de Líderes Económicos de APEC","Fechas clave de cooperación regional"],["Tres prioridades","Apertura · Innovación · Cooperación","Guía de la agenda anual"]],"footer":"Basado en las referencias [1]–[3] · No es un programa oficial"},
+    "navigation":{"title":"Buscar portales oficiales según la pregunta","subtitle":"Información oficial de Shenzhen · Orden de lectura sugerido","cards":[["Conocer el contexto","Oficina de Comercio · Invertir en Shenzhen","Información sobre ciudad e inversión"],["Verificar la orientación","Organismos municipales · Políticas originales","Documentos y organismos responsables"],["Consultar trámites","Regulador del mercado · Autoridad de Qianhai","Guías y avisos de solicitudes"]],"footer":"Basado en portales oficiales de Shenzhen · No es un trámite unificado"}
+  },
+  "pt": {
+    "edition":"HEX CUBES editorial · Tradução portuguesa",
+    "notice":"Tradução assistida por IA do artigo editorial chinês, preparada em 21 de outubro de 2026. Não foi revista por um especialista nativo e não é uma tradução oficial. Mantêm-se os títulos originais e as ligações das fontes para verificação. Para assuntos concretos, consulte os originais e as publicações mais recentes dos organismos competentes.",
+    "agenda":{"title":"As datas de Shenzhen num relance","subtitle":"Compilação editorial · Informação até 20 de outubro de 2026","cards":[["17–18 de novembro","Cúpula de CEOs da APEC","Debates do setor empresarial"],["18–19 de novembro","Reunião de Líderes Económicos da APEC","Datas-chave da cooperação regional"],["Três prioridades","Abertura · Inovação · Cooperação","Guia da agenda anual"]],"footer":"Com base nas referências [1]–[3] · Não é um calendário oficial"},
+    "navigation":{"title":"Encontrar entradas oficiais por pergunta","subtitle":"Informação oficial de Shenzhen · Ordem de leitura sugerida","cards":[["Compreender o contexto","Gabinete de Comércio · Investir em Shenzhen","Informação sobre cidade e investimento"],["Confirmar a orientação","Organismos municipais · Políticas originais","Documentos e entidades responsáveis"],["Consultar procedimentos","Regulador do mercado · Autoridade de Qianhai","Guias e avisos de candidatura"]],"footer":"Com base em entradas oficiais de Shenzhen · Não é um procedimento único"}
+  }
+}
