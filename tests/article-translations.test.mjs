@@ -9,10 +9,12 @@ const read=async path=>JSON.parse(await readFile(new URL(path,import.meta.url),'
 const originals=await read('../lib/launch-articles.json');
 const translations=await read('../lib/article-translations.json');
 const snapshot=publicContentSchema.parse(await read('../github-pages/public-content.json'));
+const editionIds=new Set([...originals,...translations].map(a=>a.id));
+const launchSnapshot=snapshot.articles.filter(a=>editionIds.has(a.id));
 
 test('five topics each have seven complete, selectable language versions',()=>{
  assert.equal(originals.length,5);assert.equal(translations.length,30);
- assert.equal(new Set(snapshot.articles.map(a=>a.id)).size,35);
+ assert.equal(new Set(launchSnapshot.map(a=>a.id)).size,35);
  for(const original of originals){
   assert.deepEqual(snapshot.articles.find(a=>a.id===original.id),articleSchema.parse(original));
   for(const lang of languageCodes){
@@ -23,7 +25,7 @@ test('five topics each have seven complete, selectable language versions',()=>{
   }
  }
  for(const lang of languageCodes){
-  const selected=selectLanguage(snapshot.articles,lang);
+  const selected=selectLanguage(launchSnapshot,lang);
   assert.equal(selected.length,5);assert.ok(selected.every(a=>a.language===lang));
  }
 });
@@ -61,5 +63,39 @@ test('all illustration assets exist and translated captions retain image provena
     assert.ok(svg.includes(`lang="${a.language}"`));assert.ok(svg.includes('<desc>'));
    }
   }
+ }
+});
+
+test('new business, talent and innovation topics are published in all seven languages',async()=>{
+ const edition=await read('../lib/section-articles.json');
+ assert.equal(edition.length,21);
+ assert.equal(new Set(snapshot.articles.map(a=>a.id)).size,snapshot.articles.length);
+ const originals=edition.filter(a=>a.language==='zh-CN');
+ assert.deepEqual(originals.map(a=>a.category).sort(),['business','innovation','talent']);
+ for(const source of originals){
+  assert.ok(source.body.length>=600);
+  assert.ok(source.guide.editorial.sources.length>=3);
+  for(const ref of source.guide.editorial.sources){
+   const host=new URL(ref.url).hostname;
+   assert.ok(host.endsWith('.sz.gov.cn')||host==='www.apec.org');
+  }
+  for(const lang of languageCodes){
+   const version=articleSchema.parse(translationOf(source,edition,lang));
+   assert.equal(version.status,'published');assert.equal(version.demo,false);
+   assert.equal(version.category,source.category);
+   assert.deepEqual(snapshot.articles.find(a=>a.id===version.id),version);
+   assert.equal(version.body.split(/\n\n+/).length,source.body.split(/\n\n+/).length);
+   assert.deepEqual(version.body.match(/\[\d+\]/g),source.body.match(/\[\d+\]/g));
+   assert.deepEqual(version.guide.editorial.sources.map(({supports,...s})=>s),source.guide.editorial.sources.map(({supports,...s})=>s));
+   for(const f of version.guide.editorial.figures){
+    await access(new URL(`../public${f.file}`,import.meta.url));
+    assert.equal(f.aiGenerated,true);assert.ok(/AI|IA/.test(f.caption));
+   }
+  }
+ }
+ for(const lang of languageCodes){
+  const selected=selectLanguage(snapshot.articles,lang);
+  assert.equal(selected.length,8);assert.ok(selected.every(a=>a.language===lang));
+  for(const category of ['business','talent','innovation'])assert.equal(selected.filter(a=>a.category===category).length,1);
  }
 });

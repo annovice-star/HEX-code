@@ -2365,6 +2365,1357 @@
           ]
         }
       }
+    },
+    {
+      "id": "apec-shenzhen-business-preparation",
+      "title": "APEC带来关注之后：企业落地深圳，先把三件事准备清楚",
+      "summary": "从国际展示到实际经营，中间还隔着业务定位、登记准备与日常运营。结合深圳官方产业计划、投资资料和企业开办入口，梳理中小团队可以先做的准备。",
+      "body": "## 把关注转化为具体业务问题\n\n深圳人工智能行动计划提到借助APEC会议展示解决方案、推动国际合作。[1] 对考虑来深发展的企业，这提供了观察产业方向的线索，但并不自动带来订单、参会资格或落地优惠。先写清目标客户、产品用途和服务范围，才容易判断公开信息与自身业务的关系。\n\n企业可以先做一页能力说明：解决什么问题、有哪些可核查案例、希望寻找什么伙伴。跨境沟通时，产品名称、报价口径和交付边界应在不同语言中保持一致。以上是编辑建议，不是政府规定的申请材料。\n\n## 投资阅读、登记办理与日常运营要分开\n\n市商务局发布了2026年中文版投资指南及附件入口。[2] 它适合用作了解城市的资料起点；阅读时应核对版本。本篇只确认发布页面，不从未完整核读的附件中提取政策金额或资格。\n\n市市场监管局“开办企业一窗通”集中提供企业开办入口及相关服务导航。[3] 具体事项仍需按企业类型查对应指南；看见同一个入口，不代表所有业务都适用，也不意味着可以省略个别手续。\n\n## 专题观察：预算有限，先建立一份准备清单\n\n可以把准备工作分成三栏：业务栏记录客户、产品与预期收入来源；办理栏记录需要确认的事项、官方入口与责任人；运营栏梳理办公需求、人员安排、财税服务和持续成本。先标出未确认的问题，再决定需要向哪个部门或专业人员咨询。\n\n在签约或扩大投入前，建议先验证一个小范围服务场景，保留需求记录与实际交付结果。不要因为活动热度就把尚未确定的客户、场地或补贴列为已落实资源。资料齐全有助于沟通，但不等于登记、审批或商业合作一定成功。\n\n## 阅读提示\n\n把产业方向当线索，把官方事项指南当核查入口，把经营判断放回自身条件。本篇为编辑整理，不提供统一办理流程或优惠资格结论。",
+      "category": "business",
+      "kind": "insight",
+      "language": "zh-CN",
+      "source": "立方匯编辑整理",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-business-preparation",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "公开资料核查于2026年10月21日。“专题观察”为编辑分析；原始报道中的后续计划不代表已经完成，页面入口不代表所有对象均符合条件。",
+        "faqs": [],
+        "reviewedAt": "2026-10-21",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-sme-cooperation-1.webp",
+              "alt": "AI生成 · 虚构企业协作场景，非本文企业、登记窗口或APEC现场。",
+              "caption": "AI生成 · 虚构企业协作场景，非本文企业、登记窗口或APEC现场。",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "关于印发《深圳市推动人工智能与应用发展行动计划（2026—2028年）》的通知",
+              "publisher": "深圳市工业和信息化局、深圳市发展和改革委员会、深圳市科技创新局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+              "publishedAt": "2026-09-04",
+              "supports": "支持人工智能行动计划与APEC展示、国际合作的关联；不据此判断企业资格或扶持金额。"
+            },
+            {
+              "title": "投资深圳（2026年中文版）",
+              "publisher": "深圳市商务局",
+              "url": "https://commerce.sz.gov.cn/tzfw/tzzn/content/post_12849198.html",
+              "publishedAt": "2026-06-18",
+              "supports": "仅确认2026版投资指南的发布及附件入口，未完整核读PDF。"
+            },
+            {
+              "title": "开办企业一窗通",
+              "publisher": "深圳市市场监督管理局",
+              "url": "https://amr.sz.gov.cn/xxgk/qt/ztlm/qykb/index.html",
+              "publishedAt": "",
+              "supports": "支持企业开办及相关服务入口介绍；具体要求须查对应事项指南。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-talent-work",
+      "title": "从APEC人才议题到来深工作：先分清能力准备与办事要求",
+      "summary": "跨境协作需要语言、数字技能和清晰的岗位沟通，来深工作还要核对适用的办事要求。结合APEC声明与深圳官方服务入口，给求职者和用人团队一份阅读框架。",
+      "body": "## 区域议题关心技能，岗位仍要具体匹配\n\nAPEC数字和人工智能部长声明将数字素养与技能列为讨论内容。[1] 对求职者，这可以转化为一个实际问题：能否用具体案例说明自己如何使用工具、处理信息并与团队协作。声明不是职位清单，也不构成招聘、人才认定或补贴承诺。\n\n准备简历时，可以围绕目标岗位选取案例，写清自己的职责、做了什么、结果怎样核查；再准备一份语言一致的简短介绍。对用人团队，明确工作内容、沟通语言与交付标准，比只列“国际化人才”等宽泛标签更有帮助。这是编辑建议。\n\n## 求职服务与跨境办事，分别找到对应入口\n\n深圳市人力资源和社会保障局官网提供就业服务、人才及社保等入口。[2] 求职、人才事项和社保查询各有用途，进入栏目后仍需核对适用对象、材料与最新通知，不能把一种服务理解为覆盖所有身份。\n\n市科技创新局的工作许可问答区分了不同入境及申请情形。[3] 市公安局同时明确，停留证件不能代替工作所需许可。[4] 涉及外籍人员来深工作时，请分别核查工作许可及相关居留事项，按本人情形向主管部门确认，不凭活动邀请或交流报道推定可以就业。\n\n## 专题观察：把岗位问题与手续问题分别记录\n\n求职者可以建立两张表：一张记录岗位要求、项目案例、语言能力与待补技能；另一张记录本人需要咨询的事项、主管部门、官方链接与证件有效期。这里是资料整理方式，不是完整材料清单，也不是对任何个人办理结果的判断。\n\n企业接待短期交流人员与正式招聘员工时，也应先讲清实际活动内容、工作地点与预计期限，再核对适用程序。不要把商务交流、实习和正式就业混作同一安排；不确定时，先咨询再作计划。能力准备和手续核对同时推进，才更便于团队衔接。\n\n## 阅读提示\n\n区域讨论帮助理解技能方向，具体岗位要与用人方确认，许可和居留事项回到深圳主管部门的最新指南。本篇不是个人就业资格或法律意见。",
+      "category": "talent",
+      "kind": "insight",
+      "language": "zh-CN",
+      "source": "立方匯编辑整理",
+      "sourceUrl": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-talent-work",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "公开资料核查于2026年10月21日。“专题观察”为编辑分析；原始报道中的后续计划不代表已经完成，页面入口不代表所有对象均符合条件。",
+        "faqs": [],
+        "reviewedAt": "2026-10-21",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-shenzhen-official-navigation-1.webp",
+              "alt": "AI生成 · 虚构资料准备场景，非招聘现场、政府办理界面或许可结果。",
+              "caption": "AI生成 · 虚构资料准备场景，非招聘现场、政府办理界面或许可结果。",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "2026 APEC Digital and AI Ministerial Statement",
+              "publisher": "APEC秘书处",
+              "url": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+              "publishedAt": "2026-07-23",
+              "supports": "支持数字素养和技能的区域讨论方向，不是深圳人才认定或招聘政策。"
+            },
+            {
+              "title": "深圳市人力资源和社会保障局：在线办理与就业创业入口",
+              "publisher": "深圳市人力资源和社会保障局",
+              "url": "https://hrss.sz.gov.cn/",
+              "publishedAt": "",
+              "supports": "仅介绍官网就业、人才与社保服务入口，不推定个人适用资格。"
+            },
+            {
+              "title": "持工作签证入境的外国人怎样办理工作许可证？",
+              "publisher": "深圳市科技创新局",
+              "url": "https://stic.sz.gov.cn/gkmlpt/content/12/12762/post_12762826.html?jump=true",
+              "publishedAt": "2026-04-30",
+              "supports": "支持存在不同入境与工作许可申请情形；具体办理需核查最新指南。"
+            },
+            {
+              "title": "我持停留证件，可以工作吗？",
+              "publisher": "深圳市公安局",
+              "url": "https://ga.sz.gov.cn/gkmlpt/content/12/12366/post_12366883.html",
+              "publishedAt": "2025-09-08",
+              "supports": "支持停留证件不能替代工作所需许可的提示；不评估个人情形。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-innovation-connections",
+      "title": "从南山到前海：沿着APEC交流案例，寻找创新合作的切入点",
+      "summary": "青年共创与技术向善交流，展示了观察深圳创新的两种方式。结合南山、前海官方报道及资料入口，讨论小团队如何从真实问题出发，而不是只追逐区域标签。",
+      "body": "## 南山的交流，把创新放在人与产品之间\n\n南山区官方报道介绍，APEC秘书处代表团5月到访并参与青年创新交流，活动启动了全球共创计划。[1] 这是一则已发生的活动报道；不能据此认定当前招募、参访或项目路演仍可报名。\n\n对希望了解创新生态的读者，值得追问的不只是“去了哪里”，而是交流围绕什么问题展开：一项产品如何解释给不同背景的人，技术需求怎样表达，案例有没有可验证的结果。区域名片可以帮助确定观察范围，具体合作仍需要双方需求匹配。\n\n## 前海的讨论，提醒技术也要考虑使用边界\n\n前海管理局报道介绍，7月开幕的APEC技术向善研讨会围绕科技创新、人工智能、数字经济与科技伦理展开交流。[2] 本篇不把开幕报道中的计划安排写成已经完成的合作成果，也不推断存在面向所有企业开放的项目名额。\n\n“投资前海”官方栏目提供准入目录、惠企政策和申报指南等入口。[3] 活动报道帮助认识讨论方向，具体政策与办理事项则应回到各自文件逐项核对。两种资料用途不同，不能用前者替代后者。\n\n## 专题观察：先带着问题找伙伴，再比较区域条件\n\n小团队可以先选一个能够说明的应用场景，记录使用者、待解决问题、现有方案、验证方式和希望寻找的资源。与园区、企业或研究团队交流时，先问对方能提供什么，以及哪些需求仍未覆盖，再讨论合作方式。\n\n比较空间或平台时，可同步记录产业匹配度、服务范围、沟通成本、交通和后续投入，不仅看宣传中的热度。先开展可评估的小范围验证，再根据结果调整投入；技术交流不等于签约，展示也不意味着效果得到普遍保证。以上属于编辑分析。\n\n## 阅读提示\n\n用活动案例理解创新交流，用官方原文核对具体事项，用自己的场景证据判断合作价值。本篇不构成园区推荐、投资回报或项目准入承诺。",
+      "category": "innovation",
+      "kind": "insight",
+      "language": "zh-CN",
+      "source": "立方匯编辑整理",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-innovation-connections",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "公开资料核查于2026年10月21日。“专题观察”为编辑分析；原始报道中的后续计划不代表已经完成，页面入口不代表所有对象均符合条件。",
+        "faqs": [],
+        "reviewedAt": "2026-10-21",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-tech-for-people-1.webp",
+              "alt": "AI生成 · 虚构科研协作场景，非南山、前海园区或APEC活动实拍。",
+              "caption": "AI生成 · 虚构科研协作场景，非南山、前海园区或APEC活动实拍。",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "南山启动全球共创计划 邀青年创客来深“造物”",
+              "publisher": "南山区；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+              "publishedAt": "2026-05-08",
+              "supports": "支持5月来访、青年创新交流与共创计划启动；不推断当前报名仍开放。"
+            },
+            {
+              "title": "APEC技术向善研讨会在前海开幕",
+              "publisher": "深圳市前海深港现代服务业合作区管理局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/bmdt/content/post_12884461.html",
+              "publishedAt": "2026-07-09",
+              "supports": "支持研讨会开幕及讨论方向；未将后续计划当作已完成成果。"
+            },
+            {
+              "title": "投资前海",
+              "publisher": "深圳市前海深港现代服务业合作区管理局",
+              "url": "https://qh.sz.gov.cn/tzqh/",
+              "publishedAt": "",
+              "supports": "仅介绍准入、惠企政策与申报指南等入口，不推定项目待遇。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-business-preparation-zh-TW",
+      "title": "APEC帶來關注之后：企業落地深圳，先把三件事準備清楚",
+      "summary": "從國際展示到實際經營，中間還隔著業務定位、登記準備與日常運營。結合深圳官方產業計劃、投資資料和企業開辦入口，梳理中小團隊可以先做的準備。",
+      "body": "## 把關注轉化為具體業務問題\n\n深圳人工智能行動計劃提到借助APEC會議展示解決方案、推動國際合作。[1] 對考慮來深發展的企業，這提供了觀察產業方向的線索，但并不自動帶來訂單、參會資格或落地優惠。先寫清目標客戶、產品用途和服務范圍，才容易判斷公開信息與自身業務的關系。\n\n企業可以先做一頁能力說明：解決什么問題、有哪些可核查案例、希望尋找什么伙伴。跨境溝通時，產品名稱、報價口徑和交付邊界應在不同語言中保持一致。以上是編輯建議，不是政府規定的申請材料。\n\n## 投資閱讀、登記辦理與日常運營要分開\n\n市商務局發布了2026年中文版投資指南及附件入口。[2] 它適合用作了解城市的資料起點；閱讀時應核對版本。本篇只確認發布頁面，不從未完整核讀的附件中提取政策金額或資格。\n\n市市場監管局“開辦企業一窗通”集中提供企業開辦入口及相關服務導航。[3] 具體事項仍需按企業類型查對應指南；看見同一個入口，不代表所有業務都適用，也不意味著可以省略個別手續。\n\n## 專題觀察：預算有限，先建立一份準備清單\n\n可以把準備工作分成三欄：業務欄記錄客戶、產品與預期收入來源；辦理欄記錄需要確認的事項、官方入口與責任人；運營欄梳理辦公需求、人員安排、財稅服務和持續成本。先標出未確認的問題，再決定需要向哪個部門或專業人員咨詢。\n\n在簽約或擴大投入前，建議先驗證一個小范圍服務場景，保留需求記錄與實際交付結果。不要因為活動熱度就把尚未確定的客戶、場地或補貼列為已落實資源。資料齊全有助于溝通，但不等于登記、審批或商業合作一定成功。\n\n## 閱讀提示\n\n把產業方向當線索，把官方事項指南當核查入口，把經營判斷放回自身條件。本篇為編輯整理，不提供統一辦理流程或優惠資格結論。",
+      "category": "business",
+      "kind": "insight",
+      "language": "zh-TW",
+      "source": "立方匯編輯整理 · 繁體中文版",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-business-preparation",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "本篇為簡體中文編輯文章的 AI 輔助繁體版本（2026-10-21），未經母語專家覆核，不是官方譯文。保留原始資料標題與連結供核查；具體事項請以來源原文及主管機關最新公布為準。",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-sme-cooperation-1.webp",
+              "alt": "AI生成 · 虛構企業協作場景，非本文企業、登記窗口或APEC現場。",
+              "caption": "AI生成 · 虛構企業協作場景，非本文企業、登記窗口或APEC現場。",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "关于印发《深圳市推动人工智能与应用发展行动计划（2026—2028年）》的通知",
+              "publisher": "深圳市工业和信息化局、深圳市发展和改革委员会、深圳市科技创新局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+              "publishedAt": "2026-09-04",
+              "supports": "支持人工智能行動計劃與APEC展示、國際合作的關聯；不據此判斷企業資格或扶持金額。"
+            },
+            {
+              "title": "投资深圳（2026年中文版）",
+              "publisher": "深圳市商务局",
+              "url": "https://commerce.sz.gov.cn/tzfw/tzzn/content/post_12849198.html",
+              "publishedAt": "2026-06-18",
+              "supports": "僅確認2026版投資指南的發布及附件入口，未完整核讀PDF。"
+            },
+            {
+              "title": "开办企业一窗通",
+              "publisher": "深圳市市场监督管理局",
+              "url": "https://amr.sz.gov.cn/xxgk/qt/ztlm/qykb/index.html",
+              "publishedAt": "",
+              "supports": "支持企業開辦及相關服務入口介紹；具體要求須查對應事項指南。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-talent-work-zh-TW",
+      "title": "從APEC人才議題到來深工作：先分清能力準備與辦事要求",
+      "summary": "跨境協作需要語言、數字技能和清晰的崗位溝通，來深工作還要核對適用的辦事要求。結合APEC聲明與深圳官方服務入口，給求職者和用人團隊一份閱讀框架。",
+      "body": "## 區域議題關心技能，崗位仍要具體匹配\n\nAPEC數字和人工智能部長聲明將數字素養與技能列為討論內容。[1] 對求職者，這可以轉化為一個實際問題：能否用具體案例說明自己如何使用工具、處理信息并與團隊協作。聲明不是職位清單，也不構成招聘、人才認定或補貼承諾。\n\n準備簡歷時，可以圍繞目標崗位選取案例，寫清自己的職責、做了什么、結果怎樣核查；再準備一份語言一致的簡短介紹。對用人團隊，明確工作內容、溝通語言與交付標準，比只列“國際化人才”等寬泛標簽更有幫助。這是編輯建議。\n\n## 求職服務與跨境辦事，分別找到對應入口\n\n深圳市人力資源和社會保障局官網提供就業服務、人才及社保等入口。[2] 求職、人才事項和社保查詢各有用途，進入欄目后仍需核對適用對象、材料與最新通知，不能把一種服務理解為覆蓋所有身份。\n\n市科技創新局的工作許可問答區分了不同入境及申請情形。[3] 市公安局同時明確，停留證件不能代替工作所需許可。[4] 涉及外籍人員來深工作時，請分別核查工作許可及相關居留事項，按本人情形向主管部門確認，不憑活動邀請或交流報道推定可以就業。\n\n## 專題觀察：把崗位問題與手續問題分別記錄\n\n求職者可以建立兩張表：一張記錄崗位要求、項目案例、語言能力與待補技能；另一張記錄本人需要咨詢的事項、主管部門、官方鏈接與證件有效期。這里是資料整理方式，不是完整材料清單，也不是對任何個人辦理結果的判斷。\n\n企業接待短期交流人員與正式招聘員工時，也應先講清實際活動內容、工作地點與預計期限，再核對適用程序。不要把商務交流、實習和正式就業混作同一安排；不確定時，先咨詢再作計劃。能力準備和手續核對同時推進，才更便于團隊銜接。\n\n## 閱讀提示\n\n區域討論幫助理解技能方向，具體崗位要與用人方確認，許可和居留事項回到深圳主管部門的最新指南。本篇不是個人就業資格或法律意見。",
+      "category": "talent",
+      "kind": "insight",
+      "language": "zh-TW",
+      "source": "立方匯編輯整理 · 繁體中文版",
+      "sourceUrl": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-talent-work",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "本篇為簡體中文編輯文章的 AI 輔助繁體版本（2026-10-21），未經母語專家覆核，不是官方譯文。保留原始資料標題與連結供核查；具體事項請以來源原文及主管機關最新公布為準。",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-shenzhen-official-navigation-1.webp",
+              "alt": "AI生成 · 虛構資料準備場景，非招聘現場、政府辦理界面或許可結果。",
+              "caption": "AI生成 · 虛構資料準備場景，非招聘現場、政府辦理界面或許可結果。",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "2026 APEC Digital and AI Ministerial Statement",
+              "publisher": "APEC秘书处",
+              "url": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+              "publishedAt": "2026-07-23",
+              "supports": "支持數字素養和技能的區域討論方向，不是深圳人才認定或招聘政策。"
+            },
+            {
+              "title": "深圳市人力资源和社会保障局：在线办理与就业创业入口",
+              "publisher": "深圳市人力资源和社会保障局",
+              "url": "https://hrss.sz.gov.cn/",
+              "publishedAt": "",
+              "supports": "僅介紹官網就業、人才與社保服務入口，不推定個人適用資格。"
+            },
+            {
+              "title": "持工作签证入境的外国人怎样办理工作许可证？",
+              "publisher": "深圳市科技创新局",
+              "url": "https://stic.sz.gov.cn/gkmlpt/content/12/12762/post_12762826.html?jump=true",
+              "publishedAt": "2026-04-30",
+              "supports": "支持存在不同入境與工作許可申請情形；具體辦理需核查最新指南。"
+            },
+            {
+              "title": "我持停留证件，可以工作吗？",
+              "publisher": "深圳市公安局",
+              "url": "https://ga.sz.gov.cn/gkmlpt/content/12/12366/post_12366883.html",
+              "publishedAt": "2025-09-08",
+              "supports": "支持停留證件不能替代工作所需許可的提示；不評估個人情形。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-innovation-connections-zh-TW",
+      "title": "從南山到前海：沿著APEC交流案例，尋找創新合作的切入點",
+      "summary": "青年共創與技術向善交流，展示了觀察深圳創新的兩種方式。結合南山、前海官方報道及資料入口，討論小團隊如何從真實問題出發，而不是只追逐區域標簽。",
+      "body": "## 南山的交流，把創新放在人與產品之間\n\n南山區官方報道介紹，APEC秘書處代表團5月到訪并參與青年創新交流，活動啟動了全球共創計劃。[1] 這是一則已發生的活動報道；不能據此認定當前招募、參訪或項目路演仍可報名。\n\n對希望了解創新生態的讀者，值得追問的不只是“去了哪里”，而是交流圍繞什么問題展開：一項產品如何解釋給不同背景的人，技術需求怎樣表達，案例有沒有可驗證的結果。區域名片可以幫助確定觀察范圍，具體合作仍需要雙方需求匹配。\n\n## 前海的討論，提醒技術也要考慮使用邊界\n\n前海管理局報道介紹，7月開幕的APEC技術向善研討會圍繞科技創新、人工智能、數字經濟與科技倫理展開交流。[2] 本篇不把開幕報道中的計劃安排寫成已經完成的合作成果，也不推斷存在面向所有企業開放的項目名額。\n\n“投資前海”官方欄目提供準入目錄、惠企政策和申報指南等入口。[3] 活動報道幫助認識討論方向，具體政策與辦理事項則應回到各自文件逐項核對。兩種資料用途不同，不能用前者替代后者。\n\n## 專題觀察：先帶著問題找伙伴，再比較區域條件\n\n小團隊可以先選一個能夠說明的應用場景，記錄使用者、待解決問題、現有方案、驗證方式和希望尋找的資源。與園區、企業或研究團隊交流時，先問對方能提供什么，以及哪些需求仍未覆蓋，再討論合作方式。\n\n比較空間或平臺時，可同步記錄產業匹配度、服務范圍、溝通成本、交通和后續投入，不僅看宣傳中的熱度。先開展可評估的小范圍驗證，再根據結果調整投入；技術交流不等于簽約，展示也不意味著效果得到普遍保證。以上屬于編輯分析。\n\n## 閱讀提示\n\n用活動案例理解創新交流，用官方原文核對具體事項，用自己的場景證據判斷合作價值。本篇不構成園區推薦、投資回報或項目準入承諾。",
+      "category": "innovation",
+      "kind": "insight",
+      "language": "zh-TW",
+      "source": "立方匯編輯整理 · 繁體中文版",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-innovation-connections",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "本篇為簡體中文編輯文章的 AI 輔助繁體版本（2026-10-21），未經母語專家覆核，不是官方譯文。保留原始資料標題與連結供核查；具體事項請以來源原文及主管機關最新公布為準。",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-tech-for-people-1.webp",
+              "alt": "AI生成 · 虛構科研協作場景，非南山、前海園區或APEC活動實拍。",
+              "caption": "AI生成 · 虛構科研協作場景，非南山、前海園區或APEC活動實拍。",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "南山启动全球共创计划 邀青年创客来深“造物”",
+              "publisher": "南山区；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+              "publishedAt": "2026-05-08",
+              "supports": "支持5月來訪、青年創新交流與共創計劃啟動；不推斷當前報名仍開放。"
+            },
+            {
+              "title": "APEC技术向善研讨会在前海开幕",
+              "publisher": "深圳市前海深港现代服务业合作区管理局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/bmdt/content/post_12884461.html",
+              "publishedAt": "2026-07-09",
+              "supports": "支持研討會開幕及討論方向；未將后續計劃當作已完成成果。"
+            },
+            {
+              "title": "投资前海",
+              "publisher": "深圳市前海深港现代服务业合作区管理局",
+              "url": "https://qh.sz.gov.cn/tzqh/",
+              "publishedAt": "",
+              "supports": "僅介紹準入、惠企政策與申報指南等入口，不推定項目待遇。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-business-preparation-en",
+      "title": "After APEC attracts attention: three preparations for establishing a business in Shenzhen",
+      "summary": "Between an international showcase and daily operations lie business positioning, registration preparation and operating arrangements. Official Shenzhen plans, investment materials and business-service portals offer a starting point for small teams.",
+      "body": "## Turn attention into specific business questions\n\nShenzhen’s AI action plan mentions using APEC to showcase solutions and encourage international cooperation.[1] For businesses considering Shenzhen, this is a lead for understanding industry direction, not an automatic source of orders, admission to events or establishment incentives. Define your target customers, product use and service scope before deciding how public information relates to your business.\n\nA one-page capability profile can explain the problem you solve, verifiable examples and the partners you seek. In cross-border communication, keep product names, pricing terms and delivery boundaries consistent across languages. This is editorial advice, not a government-required application document.\n\n## Separate investment research, registration and daily operations\n\nThe municipal Commerce Bureau has published an entry and attachment for the 2026 Chinese investment guide.[2] It is a starting point for learning about the city; check the edition when reading. This article confirms the publication page only and extracts no policy amounts or eligibility rules from an attachment that has not been read in full.\n\nThe market regulator’s “One-stop Business Start-up” page brings together business-starting access and related service navigation.[3] Check the relevant guide for your type of enterprise. A shared entry point does not mean every service applies or that individual procedures can be skipped.\n\n## Editorial perspective: build a preparation checklist before expanding your budget\n\nOrganise preparations into three columns: business, recording customers, products and expected revenue sources; procedures, recording matters to confirm, official portals and responsible people; and operations, outlining workspace, staffing, accounting and tax services, and recurring costs. Mark unresolved questions first, then decide which agency or professional to consult.\n\nBefore signing commitments or increasing investment, consider validating a narrowly defined service scenario and retaining enquiry records and actual delivery results. Event publicity should not turn unconfirmed customers, premises or subsidies into supposedly secured resources. Complete information helps communication, but does not guarantee registration, approval or commercial cooperation.\n\n## Reading tip\n\nTreat industry direction as a lead, official service guides as verification points, and business decisions as dependent on your circumstances. This editorial compilation does not provide a universal procedure or a conclusion on incentive eligibility.",
+      "category": "business",
+      "kind": "insight",
+      "language": "en",
+      "source": "HEX CUBES editorial · English translation",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-business-preparation",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "AI-assisted translation of the Chinese editorial article, prepared on 21 October 2026; not reviewed by a native-language specialist and not an official translation. Original source titles and links are retained for checking. For specific matters, consult the source texts and the responsible agencies’ latest publications.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-sme-cooperation-1.webp",
+              "alt": "AI-generated · A fictional business collaboration scene, not a company described here, a registration counter or an APEC event.",
+              "caption": "AI-generated · A fictional business collaboration scene, not a company described here, a registration counter or an APEC event.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "关于印发《深圳市推动人工智能与应用发展行动计划（2026—2028年）》的通知",
+              "publisher": "深圳市工业和信息化局、深圳市发展和改革委员会、深圳市科技创新局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+              "publishedAt": "2026-09-04",
+              "supports": "The AI action plan’s connection with APEC showcases and international cooperation; no conclusion on company eligibility or support amounts."
+            },
+            {
+              "title": "投资深圳（2026年中文版）",
+              "publisher": "深圳市商务局",
+              "url": "https://commerce.sz.gov.cn/tzfw/tzzn/content/post_12849198.html",
+              "publishedAt": "2026-06-18",
+              "supports": "Publication and attachment entry for the 2026 investment guide only; the PDF was not read in full."
+            },
+            {
+              "title": "开办企业一窗通",
+              "publisher": "深圳市市场监督管理局",
+              "url": "https://amr.sz.gov.cn/xxgk/qt/ztlm/qykb/index.html",
+              "publishedAt": "",
+              "supports": "Business-starting and related service portals; check each relevant guide for specific requirements."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-talent-work-en",
+      "title": "From APEC’s skills agenda to working in Shenzhen: separate preparation from procedures",
+      "summary": "Cross-border collaboration calls for language skills, digital abilities and clear job communication. Working in Shenzhen also requires checking the procedures that apply. An APEC statement and official Shenzhen portals provide a reading framework for jobseekers and employers.",
+      "body": "## Regional discussions address skills; jobs still require a specific match\n\nAPEC’s Digital and AI Ministerial Statement includes digital literacy and skills among its discussion areas.[1] For jobseekers, a practical question follows: can you demonstrate how you use tools, handle information and collaborate through concrete examples? The statement is not a vacancy list or a promise of recruitment, talent recognition or subsidies.\n\nWhen preparing a CV, choose examples relevant to the role and explain your responsibility, actions and how the result can be checked. Prepare a short introduction that is consistent across languages. Employers benefit from specifying tasks, working languages and delivery standards rather than broad labels such as “international talent”. This is editorial advice.\n\n## Find the appropriate portals for job services and cross-border procedures\n\nShenzhen’s human resources and social security website provides access to employment, talent and social insurance services.[2] These sections serve different purposes. Check the intended users, required documents and latest notices rather than assuming one service covers every status.\n\nThe municipal science and technology bureau’s work-permit FAQ distinguishes entry and application circumstances.[3] The public security bureau also clarifies that a stay document does not substitute for the permissions required for work.[4] Foreign nationals considering work in Shenzhen should check work-permit and relevant residence matters separately with the responsible agencies for their own circumstances. An event invitation or exchange report does not establish permission to work.\n\n## Editorial perspective: record job questions and procedural questions separately\n\nJobseekers can keep two lists: one for role requirements, project examples, languages and skills to develop; another for matters to ask about, responsible agencies, official links and document validity dates. This is an organisational method, not a complete application checklist or a judgement on an individual outcome.\n\nWhen hosting short-term exchange visitors or recruiting employees, employers should first clarify the actual activities, locations and expected duration, then check the applicable procedures. Business exchanges, internships and formal employment should not be treated as the same arrangement. Ask before planning when uncertain. Preparing skills alongside checking procedures makes coordination easier.\n\n## Reading tip\n\nRegional discussions help identify skills directions; confirm specific roles with employers, and consult Shenzhen agencies’ latest guidance on permits and residence. This article is not an individual eligibility assessment or legal advice.",
+      "category": "talent",
+      "kind": "insight",
+      "language": "en",
+      "source": "HEX CUBES editorial · English translation",
+      "sourceUrl": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-talent-work",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "AI-assisted translation of the Chinese editorial article, prepared on 21 October 2026; not reviewed by a native-language specialist and not an official translation. Original source titles and links are retained for checking. For specific matters, consult the source texts and the responsible agencies’ latest publications.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-shenzhen-official-navigation-1.webp",
+              "alt": "AI-generated · A fictional document-preparation scene, not a recruitment event, government interface or permit outcome.",
+              "caption": "AI-generated · A fictional document-preparation scene, not a recruitment event, government interface or permit outcome.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "2026 APEC Digital and AI Ministerial Statement",
+              "publisher": "APEC秘书处",
+              "url": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+              "publishedAt": "2026-07-23",
+              "supports": "Regional discussion of digital literacy and skills; not a Shenzhen talent-recognition or recruitment policy."
+            },
+            {
+              "title": "深圳市人力资源和社会保障局：在线办理与就业创业入口",
+              "publisher": "深圳市人力资源和社会保障局",
+              "url": "https://hrss.sz.gov.cn/",
+              "publishedAt": "",
+              "supports": "Employment, talent and social insurance portals only; no assumption about individual eligibility."
+            },
+            {
+              "title": "持工作签证入境的外国人怎样办理工作许可证？",
+              "publisher": "深圳市科技创新局",
+              "url": "https://stic.sz.gov.cn/gkmlpt/content/12/12762/post_12762826.html?jump=true",
+              "publishedAt": "2026-04-30",
+              "supports": "Different entry and work-permit application circumstances; consult current guidance for procedures."
+            },
+            {
+              "title": "我持停留证件，可以工作吗？",
+              "publisher": "深圳市公安局",
+              "url": "https://ga.sz.gov.cn/gkmlpt/content/12/12366/post_12366883.html",
+              "publishedAt": "2025-09-08",
+              "supports": "The reminder that a stay document does not replace required work permissions; no assessment of an individual case."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-innovation-connections-en",
+      "title": "From Nanshan to Qianhai: finding innovation partners through APEC exchange examples",
+      "summary": "Youth co-creation and Tech for Good exchanges offer two ways to observe innovation in Shenzhen. Official Nanshan and Qianhai reports and information portals suggest how small teams can start with real problems rather than district labels.",
+      "body": "## Nanshan’s exchanges connect people and products\n\nAn official Nanshan report describes an APEC Secretariat delegation’s May visit and youth innovation exchanges, including the launch of a global co-creation initiative.[1] This reports an activity that has already taken place; it does not establish that recruitment, visits or project roadshows remain open for registration.\n\nFor readers exploring innovation ecosystems, the useful question is not only where people visited but what problems the exchanges addressed: how a product is explained to people from different backgrounds, how technical needs are expressed and whether case results are verifiable. A district’s profile helps define where to look, but cooperation still requires a match between the parties’ needs.\n\n## Qianhai’s discussions also highlight the boundaries of technology use\n\nThe Qianhai Authority reported that the APEC Tech for Good seminar opened in July, with exchanges on innovation, AI, the digital economy and technology ethics.[2] This article does not present plans in an opening report as completed cooperation outcomes or infer that places in projects are available to all businesses.\n\nThe official “Invest in Qianhai” section provides entry points for access catalogues, business support policies and application guides.[3] Event reports help explain discussion priorities; specific policies and procedures require checking the relevant documents item by item. The two types of material serve different purposes and cannot substitute for one another.\n\n## Editorial perspective: define the problem before comparing locations\n\nA small team can first choose a use case it can explain and record users, the problem, current solutions, a validation method and the resources it seeks. In discussions with parks, companies or research teams, ask what the other party can offer and which needs remain unmet before discussing a cooperation model.\n\nWhen comparing spaces or platforms, record industry fit, service scope, communication costs, transport and later expenditure, rather than publicity alone. Start with a small, assessable validation and adjust investment based on results. A technical exchange is not a signed agreement, and a showcase does not guarantee universal results. These are editorial observations.\n\n## Reading tip\n\nUse event examples to understand innovation exchanges, official texts to check specific matters, and evidence from your own use case to assess cooperation value. This is not a park recommendation, investment-return promise or project-admission commitment.",
+      "category": "innovation",
+      "kind": "insight",
+      "language": "en",
+      "source": "HEX CUBES editorial · English translation",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-innovation-connections",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "AI-assisted translation of the Chinese editorial article, prepared on 21 October 2026; not reviewed by a native-language specialist and not an official translation. Original source titles and links are retained for checking. For specific matters, consult the source texts and the responsible agencies’ latest publications.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-tech-for-people-1.webp",
+              "alt": "AI-generated · A fictional research collaboration scene, not a photograph of Nanshan, Qianhai facilities or an APEC activity.",
+              "caption": "AI-generated · A fictional research collaboration scene, not a photograph of Nanshan, Qianhai facilities or an APEC activity.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "南山启动全球共创计划 邀青年创客来深“造物”",
+              "publisher": "南山区；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+              "publishedAt": "2026-05-08",
+              "supports": "May visit, youth innovation exchanges and co-creation launch; no assumption that registration remains open."
+            },
+            {
+              "title": "APEC技术向善研讨会在前海开幕",
+              "publisher": "深圳市前海深港现代服务业合作区管理局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/bmdt/content/post_12884461.html",
+              "publishedAt": "2026-07-09",
+              "supports": "Seminar opening and discussion topics; later plans are not treated as completed outcomes."
+            },
+            {
+              "title": "投资前海",
+              "publisher": "深圳市前海深港现代服务业合作区管理局",
+              "url": "https://qh.sz.gov.cn/tzqh/",
+              "publishedAt": "",
+              "supports": "Access, business support and application-guide portals only; no assumption about project benefits."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-business-preparation-ja",
+      "title": "APECへの注目をその先へ：深圳進出前に整理したい三つのこと",
+      "summary": "国際的な展示と実際の経営の間には、事業の位置付け、登記準備、日常運営がある。深圳の公式産業計画、投資資料、企業設立窓口から、小規模チームが始められる準備を整理する。",
+      "body": "## 注目を具体的な事業の問いに変える\n\n深圳のAI行動計画は、APEC会議を活用したソリューション展示と国際協力に言及している。[1] 深圳進出を考える企業には産業の方向性を知る手掛かりになるが、受注、参加資格、進出優遇が自動的に得られるわけではない。顧客、製品の用途、サービス範囲を先に明確にしたい。\n\n解決する問題、検証できる事例、求めるパートナーを一枚の能力紹介にまとめられる。国境を越えた意思疎通では、製品名、価格条件、納品範囲を言語間で一致させたい。これは編集上の提案であり、政府が求める申請資料ではない。\n\n## 投資資料、登記、日常運営は分けて考える\n\n市商務局は2026年中国語版投資ガイドの案内と添付資料を公開している。[2] 都市を知る出発点として版を確認して読みたい。本稿は公開ページだけを確認しており、全文を読んでいない添付PDFから政策金額や資格を抽出していない。\n\n市市場監督管理局の企業設立ワンストップページは、設立と関連サービスへの入口をまとめている。[3] 具体的な事項は企業の種類に応じたガイドで確認する。同じ入口があるからといって、すべての業務が対象となる、あるいは個別手続きを省略できるわけではない。\n\n## 編集部の視点：予算が限られるなら準備表から\n\n準備を三つの欄に分けられる。事業欄には顧客、製品、想定収益源、手続き欄には確認事項、公式窓口、担当者、運営欄にはオフィス、配置人員、会計・税務サービス、継続費用を書く。未確認の問いを先に示し、相談すべき機関や専門家を決めたい。\n\n契約や投資拡大の前に、小さなサービス場面を検証し、需要の記録と納品結果を残すことを勧める。イベントの話題性だけで、未確定の顧客、場所、補助金を確保済みとしない。資料は意思疎通に役立つが、登記、許認可、取引の成功を保証しない。\n\n## 読み方のヒント\n\n産業の方向性は手掛かり、公式手続きガイドは確認先とし、経営判断は自社の条件に戻して考える。本稿は編集上の整理であり、統一手続きや優遇資格の結論を示さない。",
+      "category": "business",
+      "kind": "insight",
+      "language": "ja",
+      "source": "HEX CUBES編集 · 日本語訳",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-business-preparation",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "中国語の編集記事を基にしたAI支援翻訳（2026年10月21日作成）です。母語専門家による確認は未実施で、公式訳ではありません。照合のため資料の原題とリンクを保持しています。具体的な事項は原文と担当機関の最新発表をご確認ください。",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-sme-cooperation-1.webp",
+              "alt": "AI生成 · 架空の企業協業場面。本文の企業、登記窓口、APEC現場の写真ではありません。",
+              "caption": "AI生成 · 架空の企業協業場面。本文の企業、登記窓口、APEC現場の写真ではありません。",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "关于印发《深圳市推动人工智能与应用发展行动计划（2026—2028年）》的通知",
+              "publisher": "深圳市工业和信息化局、深圳市发展和改革委员会、深圳市科技创新局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+              "publishedAt": "2026-09-04",
+              "supports": "AI行動計画とAPEC展示・国際協力の関連。企業資格や支援金額は判断していません。"
+            },
+            {
+              "title": "投资深圳（2026年中文版）",
+              "publisher": "深圳市商务局",
+              "url": "https://commerce.sz.gov.cn/tzfw/tzzn/content/post_12849198.html",
+              "publishedAt": "2026-06-18",
+              "supports": "2026年版投資ガイドの公開と添付資料への入口のみ確認。PDF全文は未読です。"
+            },
+            {
+              "title": "开办企业一窗通",
+              "publisher": "深圳市市场监督管理局",
+              "url": "https://amr.sz.gov.cn/xxgk/qt/ztlm/qykb/index.html",
+              "publishedAt": "",
+              "supports": "企業設立と関連サービスへの入口。具体的な要件は各手続きガイドで確認してください。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-talent-work-ja",
+      "title": "APECの技能議題から深圳で働く準備へ：能力と手続きを分けて考える",
+      "summary": "国境を越えた協業には語学、デジタル技能、明確な職務説明が必要だ。深圳での就業には適用される手続きの確認も欠かせない。APEC声明と深圳の公式窓口を基に、求職者と雇用側のための読み方を整理する。",
+      "body": "## 地域の議論は技能を扱い、職務は具体的な適合を求める\n\nAPECデジタル・AI大臣声明はデジタルリテラシーと技能を議題に挙げている。[1] 求職者は、道具の活用、情報処理、チームとの連携を具体例で説明できるかを考えられる。声明は求人一覧でも、採用、人材認定、補助金の約束でもない。\n\n履歴書は目指す職務に合う事例を選び、自らの役割、行動、結果の確認方法を書く。言語間で内容が一致した短い自己紹介も準備したい。雇用側には「国際人材」といった広い呼び方より、業務、使用言語、納品基準を明確にする方が役立つ。これは編集上の提案だ。\n\n## 求職サービスと越境手続きはそれぞれの窓口へ\n\n深圳市人力資源・社会保障局の公式サイトは、就業、人材、社会保険などの入口を提供している。[2] それぞれ用途が異なるため、対象者、資料、最新通知を確認し、一つのサービスがすべての身分に適用されるとは考えないようにしたい。\n\n市科学技術イノベーション局の就労許可FAQは、入境や申請の状況を区別している。[3] 市公安局も、滞在証件が就労に必要な許可に代わるものではないと明示している。[4] 外国籍の方の深圳就業では、就労許可と関連する居留事項を分けて担当機関に確認する。招待状や交流報道だけで就業可能とは判断できない。\n\n## 編集部の視点：職務と手続きの問いを別に記録する\n\n求職者は二つの表を作れる。一つは職務要件、事例、言語、補うべき技能、もう一つは相談事項、担当機関、公式リンク、証件の有効期限だ。資料整理の方法であり、完全な必要書類一覧や個人の申請結果の判断ではない。\n\n企業が短期交流者を迎える場合も従業員を採用する場合も、実際の活動、場所、予定期間を先に明確にし、適用手続きを確認したい。商務交流、インターンシップ、正式雇用を同じ扱いにしない。不明な場合は計画の前に相談し、能力準備と手続き確認を並行させると連携しやすい。\n\n## 読み方のヒント\n\n地域の議論で技能の方向性を理解し、職務は雇用側と確認し、許可と居留は深圳の担当機関の最新ガイドに戻って確認する。本稿は個人の就業資格判断や法律意見ではない。",
+      "category": "talent",
+      "kind": "insight",
+      "language": "ja",
+      "source": "HEX CUBES編集 · 日本語訳",
+      "sourceUrl": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-talent-work",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "中国語の編集記事を基にしたAI支援翻訳（2026年10月21日作成）です。母語専門家による確認は未実施で、公式訳ではありません。照合のため資料の原題とリンクを保持しています。具体的な事項は原文と担当機関の最新発表をご確認ください。",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-shenzhen-official-navigation-1.webp",
+              "alt": "AI生成 · 架空の資料準備場面。採用会場、政府の手続き画面、許可結果ではありません。",
+              "caption": "AI生成 · 架空の資料準備場面。採用会場、政府の手続き画面、許可結果ではありません。",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "2026 APEC Digital and AI Ministerial Statement",
+              "publisher": "APEC秘书处",
+              "url": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+              "publishedAt": "2026-07-23",
+              "supports": "デジタルリテラシーと技能の地域議題。深圳の人材認定や採用政策ではありません。"
+            },
+            {
+              "title": "深圳市人力资源和社会保障局：在线办理与就业创业入口",
+              "publisher": "深圳市人力资源和社会保障局",
+              "url": "https://hrss.sz.gov.cn/",
+              "publishedAt": "",
+              "supports": "就業、人材、社会保険の公式窓口のみ紹介し、個人の適用資格は判断していません。"
+            },
+            {
+              "title": "持工作签证入境的外国人怎样办理工作许可证？",
+              "publisher": "深圳市科技创新局",
+              "url": "https://stic.sz.gov.cn/gkmlpt/content/12/12762/post_12762826.html?jump=true",
+              "publishedAt": "2026-04-30",
+              "supports": "入境や就労許可の申請に異なる状況があること。具体的には最新ガイドを確認してください。"
+            },
+            {
+              "title": "我持停留证件，可以工作吗？",
+              "publisher": "深圳市公安局",
+              "url": "https://ga.sz.gov.cn/gkmlpt/content/12/12366/post_12366883.html",
+              "publishedAt": "2025-09-08",
+              "supports": "滞在証件は就労に必要な許可に代わらないという注意。個人の状況は評価していません。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-innovation-connections-ja",
+      "title": "南山から前海へ：APEC交流事例からイノベーション協力の入口を探す",
+      "summary": "若者の共創と「技術向善」の交流は、深圳のイノベーションを見る二つの切り口になる。南山・前海の公式報道と窓口から、地域の知名度だけでなく実際の課題から協力を考える。",
+      "body": "## 南山の交流は人と製品を結ぶ\n\n南山区の公式報道は、APEC事務局代表団の5月の来訪、若者のイノベーション交流、グローバル共創計画の開始を紹介した。[1] 過去の活動報道であり、現在も募集、訪問、プロジェクト発表への申込が可能とは判断できない。\n\nイノベーション環境を知りたい読者には、訪問先だけでなく、どんな問題を軸に交流したかが重要だ。異なる背景の人へ製品をどう説明するか、技術ニーズをどう伝えるか、結果を検証できるか。地域の特色は観察範囲を絞る助けになるが、協力には双方の需要の一致が必要だ。\n\n## 前海の議論は技術利用の限界にも目を向ける\n\n前海管理局の報道は、7月開幕のAPEC技術向善セミナーが、科学技術、AI、デジタル経済、技術倫理を議論したと紹介した。[2] 本稿は開幕報道の予定を完了済みの協力成果とせず、すべての企業に開かれた案件枠があるとも推測しない。\n\n公式の「投資前海」には、参入目録、企業支援政策、申請ガイドなどの入口がある。[3] 活動報道は議論の方向性を知るため、具体的な政策や手続きは個別文書を確認するために使う。用途の異なる資料を置き換えることはできない。\n\n## 編集部の視点：地域比較の前に課題を持って相手を探す\n\n小規模チームは説明できる利用場面を一つ選び、利用者、課題、現行の解決策、検証方法、求める資源を記録できる。園区、企業、研究チームと話すときは、相手が提供できるものと未解決の需要を先に確かめ、協力方法を考えたい。\n\n空間やプラットフォームの比較では、話題性だけでなく、産業との適合、サービス範囲、意思疎通の費用、交通、後続投資も記録する。評価できる小さな検証から始め、結果に応じて投資を調整したい。技術交流は契約ではなく、展示も一般的な効果保証ではない。以上は編集上の分析だ。\n\n## 読み方のヒント\n\n活動事例で交流を理解し、公式原文で具体的事項を確認し、自らの利用場面の証拠で協力価値を判断する。本稿は園区推薦、投資収益、案件参加の約束ではない。",
+      "category": "innovation",
+      "kind": "insight",
+      "language": "ja",
+      "source": "HEX CUBES編集 · 日本語訳",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-innovation-connections",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "中国語の編集記事を基にしたAI支援翻訳（2026年10月21日作成）です。母語専門家による確認は未実施で、公式訳ではありません。照合のため資料の原題とリンクを保持しています。具体的な事項は原文と担当機関の最新発表をご確認ください。",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-tech-for-people-1.webp",
+              "alt": "AI生成 · 架空の研究協業場面。南山、前海の施設やAPEC活動の実写ではありません。",
+              "caption": "AI生成 · 架空の研究協業場面。南山、前海の施設やAPEC活動の実写ではありません。",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "南山启动全球共创计划 邀青年创客来深“造物”",
+              "publisher": "南山区；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+              "publishedAt": "2026-05-08",
+              "supports": "5月の来訪、若者の交流、共創計画の開始。現在の募集継続は推測していません。"
+            },
+            {
+              "title": "APEC技术向善研讨会在前海开幕",
+              "publisher": "深圳市前海深港现代服务业合作区管理局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/bmdt/content/post_12884461.html",
+              "publishedAt": "2026-07-09",
+              "supports": "セミナー開幕と議論の方向性。後続予定を完了済みの成果としていません。"
+            },
+            {
+              "title": "投资前海",
+              "publisher": "深圳市前海深港现代服务业合作区管理局",
+              "url": "https://qh.sz.gov.cn/tzqh/",
+              "publishedAt": "",
+              "supports": "参入、企業支援、申請ガイドへの入口のみ紹介。案件の優遇は判断していません。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-business-preparation-ko",
+      "title": "APEC의 관심을 사업으로 잇기: 선전 진출 전에 준비할 세 가지",
+      "summary": "국제 전시와 실제 경영 사이에는 사업 방향, 등기 준비, 일상 운영이 있다. 선전 공식 산업계획과 투자 자료, 기업 설립 창구를 바탕으로 소규모 팀이 시작할 준비를 정리한다.",
+      "body": "## 관심을 구체적인 사업 질문으로 바꾸기\n\n선전 AI 행동계획은 APEC 회의를 활용한 솔루션 전시와 국제 협력을 언급한다.[1] 선전 진출을 검토하는 기업에는 산업 방향을 살펴볼 단서지만, 수주·행사 참가 자격·진출 혜택이 자동으로 생기는 것은 아니다. 목표 고객, 제품 용도, 서비스 범위를 먼저 정리해야 공개 정보와 자사 사업의 관계를 판단하기 쉽다.\n\n해결하는 문제, 검증 가능한 사례, 찾는 협력사를 한 장의 역량 소개로 만들 수 있다. 국경 간 소통에서는 제품명, 가격 조건, 납품 범위를 언어별로 일치시키는 것이 좋다. 이는 편집 제안이며 정부가 요구하는 신청 서류가 아니다.\n\n## 투자 자료, 등기, 일상 운영은 나누어 보기\n\n시 상무국은 2026년 중국어판 투자 가이드의 게시 페이지와 첨부파일을 제공한다.[2] 도시를 이해하는 출발점으로 활용하되 판본을 확인해야 한다. 이 글은 게시 페이지만 확인했으며 전체를 읽지 않은 PDF에서 정책 금액이나 자격을 추출하지 않았다.\n\n시 시장감독관리국의 기업 설립 원스톱 페이지는 설립 창구와 연계 서비스 안내를 모아 제공한다.[3] 구체적인 사항은 기업 유형에 맞는 가이드를 확인해야 한다. 같은 창구가 있다고 모든 업무가 적용되거나 개별 절차를 생략할 수 있는 것은 아니다.\n\n## 편집 관점: 예산이 한정돼 있다면 준비 목록부터\n\n준비를 세 칸으로 나눌 수 있다. 사업 칸에는 고객·제품·예상 수익원, 절차 칸에는 확인 사항·공식 창구·담당자, 운영 칸에는 사무 공간·인력·회계 및 세무 서비스·지속 비용을 적는다. 미확인 질문을 먼저 표시한 뒤 어느 기관이나 전문가에게 문의할지 정하는 편이 좋다.\n\n계약이나 투자 확대 전에 좁은 범위의 서비스 사례를 검증하고 수요 기록과 실제 납품 결과를 남기는 것을 권한다. 행사 인기에 기대어 미확정 고객, 공간, 보조금을 확보된 자원으로 기재하지 않아야 한다. 자료는 소통을 돕지만 등기, 승인, 거래 성공을 보장하지 않는다.\n\n## 읽기 안내\n\n산업 방향은 단서로, 공식 업무 가이드는 확인 창구로 활용하고 경영 판단은 자사 조건에 맞춰 내려야 한다. 이 글은 편집 정리이며 통합 절차나 혜택 자격에 대한 결론을 제공하지 않는다.",
+      "category": "business",
+      "kind": "insight",
+      "language": "ko",
+      "source": "HEX CUBES 편집 · 한국어 번역",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-business-preparation",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "중국어 편집 기사를 바탕으로 2026년 10월 21일 작성한 AI 보조 번역입니다. 원어민 전문가 검토를 거치지 않았으며 공식 번역이 아닙니다. 확인을 위해 자료의 원제와 링크를 유지했습니다. 구체적인 사항은 원문과 담당 기관의 최신 발표를 확인해 주세요.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-sme-cooperation-1.webp",
+              "alt": "AI 생성 · 가상의 기업 협업 장면입니다. 본문 기업, 등기 창구 또는 APEC 현장 사진이 아닙니다.",
+              "caption": "AI 생성 · 가상의 기업 협업 장면입니다. 본문 기업, 등기 창구 또는 APEC 현장 사진이 아닙니다.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "关于印发《深圳市推动人工智能与应用发展行动计划（2026—2028年）》的通知",
+              "publisher": "深圳市工业和信息化局、深圳市发展和改革委员会、深圳市科技创新局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+              "publishedAt": "2026-09-04",
+              "supports": "AI 행동계획과 APEC 전시·국제 협력의 관련성. 기업 자격이나 지원 금액을 판단하지 않습니다."
+            },
+            {
+              "title": "投资深圳（2026年中文版）",
+              "publisher": "深圳市商务局",
+              "url": "https://commerce.sz.gov.cn/tzfw/tzzn/content/post_12849198.html",
+              "publishedAt": "2026-06-18",
+              "supports": "2026년 투자 가이드 게시와 첨부파일 창구만 확인했으며 PDF 전체는 읽지 않았습니다."
+            },
+            {
+              "title": "开办企业一窗通",
+              "publisher": "深圳市市场监督管理局",
+              "url": "https://amr.sz.gov.cn/xxgk/qt/ztlm/qykb/index.html",
+              "publishedAt": "",
+              "supports": "기업 설립 및 연계 서비스 창구. 구체적인 요건은 해당 가이드를 확인해야 합니다."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-talent-work-ko",
+      "title": "APEC의 역량 의제에서 선전 취업까지: 능력 준비와 행정 요건 구분하기",
+      "summary": "국경 간 협업에는 언어, 디지털 역량, 명확한 직무 소통이 필요하다. 선전에서 일하려면 적용되는 행정 절차도 확인해야 한다. APEC 성명과 선전 공식 창구로 구직자와 채용팀을 위한 틀을 정리한다.",
+      "body": "## 지역 논의는 역량을 다루고 직무는 구체적인 적합성을 요구한다\n\nAPEC 디지털·AI 장관 성명은 디지털 문해력과 역량을 논의 주제로 제시한다.[1] 구직자는 도구 활용, 정보 처리, 팀 협업을 구체적인 사례로 설명할 수 있는지 생각해 볼 수 있다. 성명은 채용공고 목록도, 채용·인재 인정·보조금 약속도 아니다.\n\n이력서는 목표 직무에 맞는 사례를 골라 자신의 역할, 행동, 결과 확인 방법을 적고 언어별 내용이 일치하는 짧은 소개도 준비할 수 있다. 채용팀은 ‘국제 인재’ 같은 포괄적인 표현보다 업무 내용, 소통 언어, 납품 기준을 명확히 하는 편이 유용하다. 이는 편집 제안이다.\n\n## 구직 서비스와 국경 간 행정 업무는 각각의 창구로\n\n선전시 인력자원사회보장국 홈페이지는 취업·인재·사회보험 등의 창구를 제공한다.[2] 각 서비스의 용도가 다르므로 대상자, 서류, 최신 통지를 확인해야 한다. 하나의 서비스가 모든 신분에 적용된다고 생각해서는 안 된다.\n\n시 과학기술혁신국의 취업허가 FAQ는 입국 및 신청 상황을 구분한다.[3] 시 공안국도 체류증명이 근로에 필요한 허가를 대신할 수 없다고 명시한다.[4] 외국인이 선전에서 일하려면 취업허가와 관련 거류 사항을 구분하고 본인 상황에 맞춰 담당 기관에 확인해야 한다. 행사 초청이나 교류 보도만으로 취업이 가능하다고 추정해서는 안 된다.\n\n## 편집 관점: 직무 질문과 절차 질문을 따로 기록하기\n\n구직자는 두 표를 만들 수 있다. 하나는 직무 요건·프로젝트 사례·언어·보완할 역량, 다른 하나는 문의 사항·담당 기관·공식 링크·증명서 유효기간을 기록한다. 이는 자료 정리 방법이며 완전한 서류 목록이나 개인의 처리 결과를 판단하는 기준이 아니다.\n\n기업이 단기 교류자를 초청하거나 직원을 채용할 때도 실제 활동, 장소, 예상 기간부터 분명히 하고 적용 절차를 확인하는 편이 좋다. 비즈니스 교류, 인턴십, 정식 고용을 동일하게 취급하지 않아야 한다. 불확실하다면 계획 전에 문의하고, 역량 준비와 절차 확인을 함께 진행해야 팀의 협업도 수월해진다.\n\n## 읽기 안내\n\n지역 논의로 역량 방향을 이해하고 직무는 고용주와 확인하며 허가·거류 사항은 선전 담당 기관의 최신 가이드를 확인해야 한다. 이 글은 개인 취업 자격 판단이나 법률 의견이 아니다.",
+      "category": "talent",
+      "kind": "insight",
+      "language": "ko",
+      "source": "HEX CUBES 편집 · 한국어 번역",
+      "sourceUrl": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-talent-work",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "중국어 편집 기사를 바탕으로 2026년 10월 21일 작성한 AI 보조 번역입니다. 원어민 전문가 검토를 거치지 않았으며 공식 번역이 아닙니다. 확인을 위해 자료의 원제와 링크를 유지했습니다. 구체적인 사항은 원문과 담당 기관의 최신 발표를 확인해 주세요.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-shenzhen-official-navigation-1.webp",
+              "alt": "AI 생성 · 가상의 자료 준비 장면입니다. 채용 행사, 정부 업무 화면 또는 허가 결과가 아닙니다.",
+              "caption": "AI 생성 · 가상의 자료 준비 장면입니다. 채용 행사, 정부 업무 화면 또는 허가 결과가 아닙니다.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "2026 APEC Digital and AI Ministerial Statement",
+              "publisher": "APEC秘书处",
+              "url": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+              "publishedAt": "2026-07-23",
+              "supports": "디지털 문해력과 역량의 지역 논의 방향. 선전 인재 인정이나 채용 정책이 아닙니다."
+            },
+            {
+              "title": "深圳市人力资源和社会保障局：在线办理与就业创业入口",
+              "publisher": "深圳市人力资源和社会保障局",
+              "url": "https://hrss.sz.gov.cn/",
+              "publishedAt": "",
+              "supports": "공식 취업·인재·사회보험 창구만 소개하며 개인 자격을 추정하지 않습니다."
+            },
+            {
+              "title": "持工作签证入境的外国人怎样办理工作许可证？",
+              "publisher": "深圳市科技创新局",
+              "url": "https://stic.sz.gov.cn/gkmlpt/content/12/12762/post_12762826.html?jump=true",
+              "publishedAt": "2026-04-30",
+              "supports": "입국 및 취업허가 신청 상황의 구분. 구체적인 절차는 최신 가이드 확인이 필요합니다."
+            },
+            {
+              "title": "我持停留证件，可以工作吗？",
+              "publisher": "深圳市公安局",
+              "url": "https://ga.sz.gov.cn/gkmlpt/content/12/12366/post_12366883.html",
+              "publishedAt": "2025-09-08",
+              "supports": "체류증명이 근로에 필요한 허가를 대체하지 못한다는 안내. 개인 상황은 평가하지 않습니다."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-innovation-connections-ko",
+      "title": "난산에서 첸하이까지: APEC 교류 사례로 혁신 협력의 출발점 찾기",
+      "summary": "청년 공동 창작과 ‘기술의 선한 활용’ 교류는 선전 혁신을 관찰하는 두 방식이다. 난산·첸하이 공식 보도와 자료 창구를 통해 소규모 팀이 지역 명성보다 실제 문제에서 협력을 시작하는 방법을 살펴본다.",
+      "body": "## 난산의 교류는 사람과 제품을 연결한다\n\n난산구 공식 보도는 APEC 사무국 대표단의 5월 방문, 청년 혁신 교류, 글로벌 공동 창작 계획 출범을 소개했다.[1] 이미 진행된 활동에 관한 보도이며 현재 모집·방문·프로젝트 발표 신청이 열려 있다고 판단할 근거는 아니다.\n\n혁신 생태계를 살피는 독자라면 방문 장소뿐 아니라 어떤 문제를 중심으로 교류했는지 질문할 필요가 있다. 배경이 다른 사람에게 제품을 어떻게 설명하는가, 기술 수요를 어떻게 표현하는가, 결과를 검증할 수 있는가. 지역의 특징은 관찰 범위를 정하는 데 도움이 되지만 구체적인 협력에는 양측 수요의 일치가 필요하다.\n\n## 첸하이의 논의는 기술 활용의 한계도 살피게 한다\n\n첸하이관리국은 7월 개막한 APEC 기술의 선한 활용 세미나에서 혁신, AI, 디지털 경제, 기술 윤리를 논의했다고 소개했다.[2] 이 글은 개막 보도의 계획을 완료된 협력 성과로 쓰거나 모든 기업에 열린 사업 참여 자리가 있다고 추정하지 않는다.\n\n공식 ‘첸하이 투자’에는 진입 허용 목록, 기업 지원정책, 신청 가이드 등의 창구가 있다.[3] 행사 보도로 논의 방향을 이해하고 구체적인 정책과 업무는 개별 문서로 확인해야 한다. 두 자료는 목적이 다르므로 서로 대신할 수 없다.\n\n## 편집 관점: 지역 비교 전에 질문을 가지고 파트너 찾기\n\n소규모 팀은 설명할 수 있는 활용 사례 하나를 선택하고 사용자, 문제, 기존 해결책, 검증 방식, 필요한 자원을 기록할 수 있다. 단지·기업·연구팀과 소통할 때는 상대가 제공할 수 있는 것과 아직 충족되지 않은 수요를 먼저 묻고 협력 방식을 논의하는 편이 좋다.\n\n공간이나 플랫폼을 비교할 때는 홍보의 인기뿐 아니라 산업 적합성, 서비스 범위, 소통 비용, 교통, 후속 지출도 기록할 수 있다. 평가 가능한 소규모 검증부터 시작해 결과에 맞춰 투자를 조정해야 한다. 기술 교류는 계약 체결이 아니며 전시도 보편적인 효과 보장이 아니다. 이는 편집 분석이다.\n\n## 읽기 안내\n\n행사 사례로 혁신 교류를 이해하고 공식 원문으로 구체적 사항을 확인하며 자사의 활용 근거로 협력 가치를 판단하자. 이 글은 단지 추천, 투자 수익 또는 사업 참여 보장이 아니다.",
+      "category": "innovation",
+      "kind": "insight",
+      "language": "ko",
+      "source": "HEX CUBES 편집 · 한국어 번역",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-innovation-connections",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "중국어 편집 기사를 바탕으로 2026년 10월 21일 작성한 AI 보조 번역입니다. 원어민 전문가 검토를 거치지 않았으며 공식 번역이 아닙니다. 확인을 위해 자료의 원제와 링크를 유지했습니다. 구체적인 사항은 원문과 담당 기관의 최신 발표를 확인해 주세요.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-tech-for-people-1.webp",
+              "alt": "AI 생성 · 가상의 연구 협업 장면입니다. 난산·첸하이 시설이나 APEC 활동의 실제 사진이 아닙니다.",
+              "caption": "AI 생성 · 가상의 연구 협업 장면입니다. 난산·첸하이 시설이나 APEC 활동의 실제 사진이 아닙니다.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "南山启动全球共创计划 邀青年创客来深“造物”",
+              "publisher": "南山区；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+              "publishedAt": "2026-05-08",
+              "supports": "5월 방문, 청년 혁신 교류, 공동 창작 출범. 현재 신청 가능 여부는 추정하지 않습니다."
+            },
+            {
+              "title": "APEC技术向善研讨会在前海开幕",
+              "publisher": "深圳市前海深港现代服务业合作区管理局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/bmdt/content/post_12884461.html",
+              "publishedAt": "2026-07-09",
+              "supports": "세미나 개막과 논의 방향. 후속 계획을 완료된 성과로 취급하지 않습니다."
+            },
+            {
+              "title": "投资前海",
+              "publisher": "深圳市前海深港现代服务业合作区管理局",
+              "url": "https://qh.sz.gov.cn/tzqh/",
+              "publishedAt": "",
+              "supports": "진입·기업 지원·신청 가이드 등의 창구만 소개하며 사업 혜택은 추정하지 않습니다."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-business-preparation-es",
+      "title": "Después de la atención de APEC: tres preparativos para establecerse en Shenzhen",
+      "summary": "Entre una exposición internacional y la actividad diaria están la orientación del negocio, el registro y la operación. Los planes oficiales, las guías de inversión y los portales de Shenzhen ofrecen un punto de partida para equipos pequeños.",
+      "body": "## Convertir la atención en preguntas concretas de negocio\n\nEl plan de acción de IA de Shenzhen menciona aprovechar APEC para mostrar soluciones e impulsar la cooperación internacional.[1] Para empresas que consideran establecerse en la ciudad, es una pista sobre la orientación industrial, no una fuente automática de pedidos, acceso a eventos o incentivos. Definir clientes, usos del producto y alcance del servicio ayuda a valorar la relevancia de la información pública.\n\nUna presentación de capacidades de una página puede explicar el problema que se resuelve, los casos verificables y los socios buscados. En la comunicación transfronteriza, conviene mantener coherentes los nombres de productos, las condiciones de precios y los límites de entrega entre idiomas. Es una sugerencia editorial, no un documento de solicitud exigido por el gobierno.\n\n## Separar información de inversión, registro y funcionamiento diario\n\nLa Oficina Municipal de Comercio publicó una entrada con el adjunto de la guía de inversión en chino de 2026.[2] Sirve para empezar a conocer la ciudad, comprobando la edición. Este artículo solo confirma la página de publicación y no extrae importes ni requisitos de un PDF que no se ha leído íntegramente.\n\nLa ventanilla única de creación de empresas del regulador del mercado reúne accesos y servicios relacionados.[3] Hay que consultar la guía correspondiente al tipo de empresa. Compartir un portal no significa que todos los servicios sean aplicables ni que puedan omitirse trámites individuales.\n\n## Perspectiva editorial: una lista de preparación antes de ampliar el presupuesto\n\nLos preparativos pueden dividirse en tres columnas: negocio, con clientes, productos y fuentes de ingresos previstas; trámites, con asuntos por confirmar, portales oficiales y responsables; y operación, con espacio, personal, servicios contables y fiscales y costes recurrentes. Marcar primero las dudas ayuda a decidir qué organismo o profesional consultar.\n\nAntes de asumir compromisos o invertir más, conviene validar un caso de servicio acotado y guardar las consultas recibidas y los resultados de entrega. La popularidad de un evento no convierte clientes, locales o ayudas sin confirmar en recursos asegurados. Una documentación completa facilita el diálogo, pero no garantiza registro, autorización ni acuerdos comerciales.\n\n## Clave de lectura\n\nTratar la orientación industrial como pista, las guías oficiales como puntos de comprobación y las decisiones de negocio según las condiciones propias. Esta recopilación editorial no ofrece un procedimiento universal ni determina el derecho a incentivos.",
+      "category": "business",
+      "kind": "insight",
+      "language": "es",
+      "source": "HEX CUBES editorial · Traducción al español",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-business-preparation",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "Traducción asistida por IA del artículo editorial chino, preparada el 21 de octubre de 2026. No ha sido revisada por un especialista nativo ni es una traducción oficial. Se conservan los títulos originales y enlaces de las fuentes. Para asuntos concretos, consulte los originales y las publicaciones más recientes de los organismos competentes.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-sme-cooperation-1.webp",
+              "alt": "Generada por IA · Escena ficticia de colaboración empresarial; no muestra una empresa del artículo, una oficina de registro ni un evento de APEC.",
+              "caption": "Generada por IA · Escena ficticia de colaboración empresarial; no muestra una empresa del artículo, una oficina de registro ni un evento de APEC.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "关于印发《深圳市推动人工智能与应用发展行动计划（2026—2028年）》的通知",
+              "publisher": "深圳市工业和信息化局、深圳市发展和改革委员会、深圳市科技创新局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+              "publishedAt": "2026-09-04",
+              "supports": "Relación del plan de IA con APEC y la cooperación internacional; sin determinar requisitos empresariales ni importes de apoyo."
+            },
+            {
+              "title": "投资深圳（2026年中文版）",
+              "publisher": "深圳市商务局",
+              "url": "https://commerce.sz.gov.cn/tzfw/tzzn/content/post_12849198.html",
+              "publishedAt": "2026-06-18",
+              "supports": "Solo publicación y acceso al adjunto de la guía de 2026; el PDF no se leyó íntegramente."
+            },
+            {
+              "title": "开办企业一窗通",
+              "publisher": "深圳市市场监督管理局",
+              "url": "https://amr.sz.gov.cn/xxgk/qt/ztlm/qykb/index.html",
+              "publishedAt": "",
+              "supports": "Portales de creación de empresas y servicios relacionados; consultar cada guía para requisitos concretos."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-talent-work-es",
+      "title": "De la agenda de capacidades de APEC al trabajo en Shenzhen: preparación y trámites",
+      "summary": "La colaboración transfronteriza exige idiomas, capacidades digitales y comunicación clara del puesto. Trabajar en Shenzhen también requiere comprobar los trámites aplicables. Una declaración de APEC y fuentes oficiales de Shenzhen ofrecen un marco para candidatos y empleadores.",
+      "body": "## El debate regional trata capacidades; el puesto exige una correspondencia concreta\n\nLa Declaración Ministerial Digital y de IA de APEC incluye alfabetización y competencias digitales entre sus temas.[1] Para un candidato, surge una pregunta práctica: ¿puede demostrar con ejemplos cómo utiliza herramientas, gestiona información y colabora? La declaración no es una lista de vacantes ni promete contratación, reconocimiento de talento o ayudas.\n\nAl preparar el currículo, conviene elegir ejemplos adecuados al puesto y explicar la responsabilidad, las acciones y cómo verificar el resultado. También puede prepararse una presentación breve coherente entre idiomas. Para los empleadores, concretar tareas, idiomas y criterios de entrega ayuda más que etiquetas amplias como «talento internacional». Es una sugerencia editorial.\n\n## Buscar por separado servicios de empleo y trámites transfronterizos\n\nEl sitio de recursos humanos y seguridad social de Shenzhen ofrece accesos a empleo, talento y seguridad social.[2] Cada sección tiene una finalidad; hay que comprobar destinatarios, documentos y avisos recientes, sin suponer que un servicio cubre todas las situaciones personales.\n\nLas preguntas frecuentes del organismo municipal de innovación científica distinguen circunstancias de entrada y solicitud de permisos de trabajo.[3] Seguridad pública aclara también que un documento de estancia no sustituye los permisos necesarios para trabajar.[4] Las personas extranjeras deben comprobar por separado trabajo y residencia con los organismos competentes según su situación. Una invitación o noticia de intercambio no acredita autorización para trabajar.\n\n## Perspectiva editorial: registrar por separado dudas del puesto y de los trámites\n\nLos candidatos pueden mantener dos listas: una con requisitos del puesto, proyectos, idiomas y capacidades por desarrollar; otra con asuntos por consultar, organismos, enlaces oficiales y vigencia de documentos. Es un método de organización, no una lista completa de documentos ni una valoración del resultado individual.\n\nAl recibir visitantes de intercambio o contratar empleados, la empresa debe aclarar primero las actividades reales, los lugares y la duración prevista, y después verificar el procedimiento aplicable. Intercambio empresarial, prácticas y empleo formal no deben confundirse. Ante dudas, consultar antes de planificar; preparar capacidades y revisar trámites a la vez facilita la coordinación.\n\n## Clave de lectura\n\nEl debate regional orienta sobre capacidades; los puestos se confirman con el empleador, y permisos y residencia con las guías actuales de Shenzhen. Este artículo no evalúa la elegibilidad individual ni constituye asesoramiento jurídico.",
+      "category": "talent",
+      "kind": "insight",
+      "language": "es",
+      "source": "HEX CUBES editorial · Traducción al español",
+      "sourceUrl": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-talent-work",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "Traducción asistida por IA del artículo editorial chino, preparada el 21 de octubre de 2026. No ha sido revisada por un especialista nativo ni es una traducción oficial. Se conservan los títulos originales y enlaces de las fuentes. Para asuntos concretos, consulte los originales y las publicaciones más recientes de los organismos competentes.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-shenzhen-official-navigation-1.webp",
+              "alt": "Generada por IA · Escena ficticia de preparación de documentos; no es un evento de contratación, una interfaz administrativa ni un resultado de permiso.",
+              "caption": "Generada por IA · Escena ficticia de preparación de documentos; no es un evento de contratación, una interfaz administrativa ni un resultado de permiso.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "2026 APEC Digital and AI Ministerial Statement",
+              "publisher": "APEC秘书处",
+              "url": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+              "publishedAt": "2026-07-23",
+              "supports": "Debate regional sobre competencias digitales; no es una política de contratación o reconocimiento de talento de Shenzhen."
+            },
+            {
+              "title": "深圳市人力资源和社会保障局：在线办理与就业创业入口",
+              "publisher": "深圳市人力资源和社会保障局",
+              "url": "https://hrss.sz.gov.cn/",
+              "publishedAt": "",
+              "supports": "Solo accesos oficiales de empleo, talento y seguridad social; sin inferir elegibilidad individual."
+            },
+            {
+              "title": "持工作签证入境的外国人怎样办理工作许可证？",
+              "publisher": "深圳市科技创新局",
+              "url": "https://stic.sz.gov.cn/gkmlpt/content/12/12762/post_12762826.html?jump=true",
+              "publishedAt": "2026-04-30",
+              "supports": "Diferentes situaciones de entrada y solicitud de permisos; los trámites requieren consultar la guía actual."
+            },
+            {
+              "title": "我持停留证件，可以工作吗？",
+              "publisher": "深圳市公安局",
+              "url": "https://ga.sz.gov.cn/gkmlpt/content/12/12366/post_12366883.html",
+              "publishedAt": "2025-09-08",
+              "supports": "Aviso de que un documento de estancia no sustituye los permisos de trabajo necesarios; no evalúa casos individuales."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-innovation-connections-es",
+      "title": "De Nanshan a Qianhai: encontrar oportunidades de innovación en los intercambios de APEC",
+      "summary": "La cocreación juvenil y los encuentros sobre tecnología para el bien ofrecen dos perspectivas de la innovación en Shenzhen. Las noticias y los portales oficiales de Nanshan y Qianhai ayudan a empezar por problemas reales, más allá de las etiquetas territoriales.",
+      "body": "## Los intercambios de Nanshan conectan personas y productos\n\nUna noticia oficial de Nanshan describe la visita de una delegación de la Secretaría de APEC en mayo, intercambios de innovación juvenil y el lanzamiento de una iniciativa global de cocreación.[1] Es una actividad ya realizada; no demuestra que sigan abiertas inscripciones para participar, visitar o presentar proyectos.\n\nPara conocer el ecosistema innovador, importa preguntar no solo dónde se estuvo, sino qué problemas organizaron el intercambio: cómo explicar productos a personas de distintos entornos, cómo expresar necesidades técnicas y si los resultados son verificables. El perfil de un distrito ayuda a delimitar la observación, pero la cooperación exige necesidades compatibles entre las partes.\n\n## Qianhai también invita a considerar los límites de uso de la tecnología\n\nLa autoridad de Qianhai informó de que el seminario APEC Tech for Good abrió en julio con debates sobre innovación, IA, economía digital y ética tecnológica.[2] Este artículo no convierte los planes de una noticia de apertura en resultados ya logrados ni supone plazas de proyectos abiertas a cualquier empresa.\n\nLa sección oficial «Invertir en Qianhai» ofrece entradas a catálogos de acceso, políticas de apoyo y guías de solicitud.[3] Las noticias de eventos ayudan a entender orientaciones del debate; las políticas y los trámites requieren verificar sus documentos. Son materiales con fines diferentes y no se sustituyen entre sí.\n\n## Perspectiva editorial: definir el problema antes de comparar zonas\n\nUn equipo pequeño puede elegir un caso de uso que sepa explicar y registrar usuarios, problema, solución actual, forma de validación y recursos buscados. Al hablar con parques, empresas o investigadores, conviene preguntar qué pueden ofrecer y qué necesidades quedan sin cubrir antes de discutir la forma de colaborar.\n\nAl comparar espacios o plataformas, registrar compatibilidad industrial, servicios, costes de comunicación, transporte e inversión posterior, además de su notoriedad. Empezar con una validación pequeña y evaluable permite ajustar la inversión según los resultados. Un intercambio técnico no es un contrato y una exposición no garantiza resultados universales. Son observaciones editoriales.\n\n## Clave de lectura\n\nUsar los casos para comprender intercambios, los textos oficiales para asuntos concretos y las pruebas propias para evaluar la cooperación. No se recomienda un parque ni se prometen rentabilidad o admisión a proyectos.",
+      "category": "innovation",
+      "kind": "insight",
+      "language": "es",
+      "source": "HEX CUBES editorial · Traducción al español",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-innovation-connections",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "Traducción asistida por IA del artículo editorial chino, preparada el 21 de octubre de 2026. No ha sido revisada por un especialista nativo ni es una traducción oficial. Se conservan los títulos originales y enlaces de las fuentes. Para asuntos concretos, consulte los originales y las publicaciones más recientes de los organismos competentes.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-tech-for-people-1.webp",
+              "alt": "Generada por IA · Escena ficticia de colaboración científica; no es una fotografía de instalaciones de Nanshan, Qianhai ni de actividades de APEC.",
+              "caption": "Generada por IA · Escena ficticia de colaboración científica; no es una fotografía de instalaciones de Nanshan, Qianhai ni de actividades de APEC.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "南山启动全球共创计划 邀青年创客来深“造物”",
+              "publisher": "南山区；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+              "publishedAt": "2026-05-08",
+              "supports": "Visita de mayo, intercambios juveniles y lanzamiento de cocreación; sin inferir que continúe la inscripción."
+            },
+            {
+              "title": "APEC技术向善研讨会在前海开幕",
+              "publisher": "深圳市前海深港现代服务业合作区管理局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/bmdt/content/post_12884461.html",
+              "publishedAt": "2026-07-09",
+              "supports": "Apertura del seminario y temas; no se tratan planes posteriores como resultados concluidos."
+            },
+            {
+              "title": "投资前海",
+              "publisher": "深圳市前海深港现代服务业合作区管理局",
+              "url": "https://qh.sz.gov.cn/tzqh/",
+              "publishedAt": "",
+              "supports": "Solo entradas de acceso, apoyo y solicitudes; sin deducir beneficios de proyectos."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-business-preparation-pt",
+      "title": "Depois da atenção da APEC: três preparativos para estabelecer uma empresa em Shenzhen",
+      "summary": "Entre uma apresentação internacional e a operação diária estão o posicionamento do negócio, o registo e a organização operacional. Planos oficiais, materiais de investimento e serviços de Shenzhen dão um ponto de partida a equipas pequenas.",
+      "body": "## Transformar a atenção em perguntas concretas de negócio\n\nO plano de ação de IA de Shenzhen menciona aproveitar a APEC para apresentar soluções e promover cooperação internacional.[1] Para empresas que ponderam a cidade, é uma pista sobre a orientação industrial, não uma fonte automática de encomendas, acesso a eventos ou incentivos. Definir clientes, utilização do produto e âmbito do serviço ajuda a relacionar a informação pública com o negócio.\n\nUma apresentação de capacidades de uma página pode explicar o problema resolvido, exemplos verificáveis e os parceiros procurados. Na comunicação transfronteiriça, nomes de produtos, condições de preços e limites da entrega devem ser coerentes entre idiomas. É uma sugestão editorial, não um documento de candidatura exigido pelo governo.\n\n## Separar pesquisa de investimento, registo e operação diária\n\nO Gabinete Municipal de Comércio publicou uma entrada com o anexo do guia de investimento em chinês de 2026.[2] É um ponto de partida para conhecer a cidade, verificando a edição. Este artigo confirma apenas a página de publicação e não extrai montantes ou requisitos de um PDF que não foi lido integralmente.\n\nO balcão único de criação de empresas do regulador do mercado reúne acessos e serviços relacionados.[3] É necessário consultar o guia correspondente ao tipo de empresa. Um portal comum não significa que todos os serviços sejam aplicáveis ou que se possam omitir procedimentos individuais.\n\n## Perspetiva editorial: uma lista de preparação antes de aumentar o orçamento\n\nOs preparativos podem ser divididos em três colunas: negócio, com clientes, produtos e receitas previstas; procedimentos, com questões a confirmar, entradas oficiais e responsáveis; e operação, com espaço, pessoal, serviços contabilísticos e fiscais e custos recorrentes. Assinalar primeiro as dúvidas ajuda a escolher o organismo ou profissional a consultar.\n\nAntes de assumir compromissos ou aumentar o investimento, convém validar um cenário de serviço restrito e guardar pedidos e resultados efetivos de entrega. A notoriedade de um evento não transforma clientes, instalações ou apoios não confirmados em recursos garantidos. Documentação completa ajuda a comunicar, mas não garante registo, aprovação ou cooperação comercial.\n\n## Dica de leitura\n\nTratar a orientação industrial como pista, os guias oficiais como pontos de verificação e as decisões de negócio segundo as condições próprias. Esta compilação editorial não oferece um procedimento universal nem determina a elegibilidade para incentivos.",
+      "category": "business",
+      "kind": "insight",
+      "language": "pt",
+      "source": "HEX CUBES editorial · Tradução portuguesa",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-business-preparation",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "Tradução assistida por IA do artigo editorial chinês, preparada em 21 de outubro de 2026. Não foi revista por um especialista nativo e não é uma tradução oficial. Mantêm-se os títulos originais e as ligações das fontes para verificação. Para assuntos concretos, consulte os originais e as publicações mais recentes dos organismos competentes.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-sme-cooperation-1.webp",
+              "alt": "Gerada por IA · Cena fictícia de colaboração empresarial; não mostra uma empresa descrita, um balcão de registo ou um evento da APEC.",
+              "caption": "Gerada por IA · Cena fictícia de colaboração empresarial; não mostra uma empresa descrita, um balcão de registo ou um evento da APEC.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "关于印发《深圳市推动人工智能与应用发展行动计划（2026—2028年）》的通知",
+              "publisher": "深圳市工业和信息化局、深圳市发展和改革委员会、深圳市科技创新局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/mpost_12966979.html",
+              "publishedAt": "2026-09-04",
+              "supports": "Ligação do plano de IA à APEC e cooperação internacional; sem determinar elegibilidade empresarial ou montantes de apoio."
+            },
+            {
+              "title": "投资深圳（2026年中文版）",
+              "publisher": "深圳市商务局",
+              "url": "https://commerce.sz.gov.cn/tzfw/tzzn/content/post_12849198.html",
+              "publishedAt": "2026-06-18",
+              "supports": "Apenas publicação e acesso ao anexo do guia de 2026; o PDF não foi lido integralmente."
+            },
+            {
+              "title": "开办企业一窗通",
+              "publisher": "深圳市市场监督管理局",
+              "url": "https://amr.sz.gov.cn/xxgk/qt/ztlm/qykb/index.html",
+              "publishedAt": "",
+              "supports": "Entradas de criação de empresas e serviços relacionados; consultar cada guia para requisitos concretos."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-talent-work-pt",
+      "title": "Da agenda de competências da APEC ao trabalho em Shenzhen: preparação e procedimentos",
+      "summary": "A colaboração transfronteiriça exige idiomas, competências digitais e comunicação clara sobre funções. Trabalhar em Shenzhen também requer verificar os procedimentos aplicáveis. Uma declaração da APEC e fontes oficiais da cidade orientam candidatos e empregadores.",
+      "body": "## O debate regional aborda competências; o posto exige uma correspondência concreta\n\nA Declaração Ministerial Digital e de IA da APEC inclui literacia e competências digitais nos seus temas.[1] Para candidatos, surge uma pergunta prática: conseguem demonstrar com exemplos como usam ferramentas, tratam informação e colaboram? A declaração não é uma lista de vagas nem promete contratação, reconhecimento de talento ou apoios.\n\nAo preparar um currículo, convém escolher exemplos adequados à função e explicar responsabilidades, ações e como verificar o resultado. Pode preparar-se uma apresentação breve coerente entre idiomas. Para empregadores, especificar tarefas, línguas de trabalho e critérios de entrega ajuda mais do que rótulos amplos como «talento internacional». É uma sugestão editorial.\n\n## Procurar separadamente serviços de emprego e procedimentos transfronteiriços\n\nO site de recursos humanos e segurança social de Shenzhen oferece acessos a emprego, talento e segurança social.[2] Cada secção tem uma finalidade; é preciso verificar destinatários, documentos e avisos recentes, sem pressupor que um serviço cobre todas as situações pessoais.\n\nAs perguntas frequentes do organismo municipal de inovação científica distinguem circunstâncias de entrada e pedido de autorizações de trabalho.[3] A segurança pública também esclarece que um documento de estada não substitui as autorizações necessárias para trabalhar.[4] Cidadãos estrangeiros devem verificar trabalho e residência separadamente com os organismos competentes, segundo a sua situação. Um convite ou notícia de intercâmbio não estabelece autorização para trabalhar.\n\n## Perspetiva editorial: registar separadamente dúvidas da função e dos procedimentos\n\nOs candidatos podem manter duas listas: uma com requisitos do posto, projetos, idiomas e competências a desenvolver; outra com assuntos a consultar, organismos, ligações oficiais e validade dos documentos. É um método de organização, não uma lista completa de documentos nem uma avaliação do resultado individual.\n\nAo receber visitantes de intercâmbio ou contratar trabalhadores, a empresa deve esclarecer primeiro as atividades reais, os locais e a duração prevista e depois verificar o procedimento aplicável. Intercâmbio empresarial, estágio e emprego formal não devem ser tratados como a mesma situação. Na dúvida, consultar antes de planear; preparar competências e verificar procedimentos em paralelo facilita a coordenação.\n\n## Dica de leitura\n\nO debate regional orienta sobre competências; as funções confirmam-se com o empregador, e as autorizações e residência com os guias atuais de Shenzhen. Este artigo não avalia elegibilidade individual nem constitui aconselhamento jurídico.",
+      "category": "talent",
+      "kind": "insight",
+      "language": "pt",
+      "source": "HEX CUBES editorial · Tradução portuguesa",
+      "sourceUrl": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-talent-work",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "Tradução assistida por IA do artigo editorial chinês, preparada em 21 de outubro de 2026. Não foi revista por um especialista nativo e não é uma tradução oficial. Mantêm-se os títulos originais e as ligações das fontes para verificação. Para assuntos concretos, consulte os originais e as publicações mais recentes dos organismos competentes.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-shenzhen-official-navigation-1.webp",
+              "alt": "Gerada por IA · Cena fictícia de preparação documental; não é um evento de recrutamento, uma interface administrativa ou um resultado de autorização.",
+              "caption": "Gerada por IA · Cena fictícia de preparação documental; não é um evento de recrutamento, uma interface administrativa ou um resultado de autorização.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "2026 APEC Digital and AI Ministerial Statement",
+              "publisher": "APEC秘书处",
+              "url": "https://www.apec.org/meeting-papers/sectoral-ministerial-meetings/telecommunicationsandinformation/2026-apec-digital-and-ai-ministerial-statement",
+              "publishedAt": "2026-07-23",
+              "supports": "Debate regional sobre competências digitais; não é uma política de contratação ou reconhecimento de talento de Shenzhen."
+            },
+            {
+              "title": "深圳市人力资源和社会保障局：在线办理与就业创业入口",
+              "publisher": "深圳市人力资源和社会保障局",
+              "url": "https://hrss.sz.gov.cn/",
+              "publishedAt": "",
+              "supports": "Apenas entradas oficiais de emprego, talento e segurança social; sem inferir elegibilidade individual."
+            },
+            {
+              "title": "持工作签证入境的外国人怎样办理工作许可证？",
+              "publisher": "深圳市科技创新局",
+              "url": "https://stic.sz.gov.cn/gkmlpt/content/12/12762/post_12762826.html?jump=true",
+              "publishedAt": "2026-04-30",
+              "supports": "Diferentes situações de entrada e pedido de autorização; os procedimentos exigem consultar o guia atual."
+            },
+            {
+              "title": "我持停留证件，可以工作吗？",
+              "publisher": "深圳市公安局",
+              "url": "https://ga.sz.gov.cn/gkmlpt/content/12/12366/post_12366883.html",
+              "publishedAt": "2025-09-08",
+              "supports": "Aviso de que um documento de estada não substitui as autorizações de trabalho necessárias; não avalia casos individuais."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "apec-shenzhen-innovation-connections-pt",
+      "title": "De Nanshan a Qianhai: encontrar parceiros de inovação nos intercâmbios da APEC",
+      "summary": "A cocriação juvenil e os encontros sobre tecnologia para o bem oferecem duas perspetivas da inovação em Shenzhen. Notícias e portais oficiais de Nanshan e Qianhai ajudam equipas pequenas a começar por problemas reais, além dos rótulos territoriais.",
+      "body": "## Os intercâmbios de Nanshan ligam pessoas e produtos\n\nUma notícia oficial de Nanshan descreve a visita de uma delegação do Secretariado da APEC em maio, intercâmbios de inovação juvenil e o lançamento de uma iniciativa global de cocriação.[1] É uma atividade já realizada; não demonstra que continuem abertas inscrições para participar, visitar ou apresentar projetos.\n\nPara conhecer o ecossistema de inovação, importa perguntar não apenas onde se esteve, mas que problemas organizaram o intercâmbio: como explicar produtos a pessoas de origens diferentes, como expressar necessidades técnicas e se os resultados são verificáveis. O perfil de um distrito ajuda a delimitar a observação, mas a cooperação exige necessidades compatíveis entre as partes.\n\n## Qianhai também convida a considerar os limites da utilização tecnológica\n\nA autoridade de Qianhai informou que o seminário APEC Tech for Good abriu em julho, com debates sobre inovação, IA, economia digital e ética tecnológica.[2] Este artigo não transforma planos de uma notícia de abertura em resultados concluídos nem pressupõe vagas em projetos abertas a qualquer empresa.\n\nA secção oficial «Investir em Qianhai» oferece entradas para catálogos de acesso, políticas de apoio e guias de candidatura.[3] Notícias de eventos ajudam a compreender orientações do debate; políticas e procedimentos concretos exigem verificar os respetivos documentos. São materiais com finalidades diferentes e não se substituem entre si.\n\n## Perspetiva editorial: definir o problema antes de comparar zonas\n\nUma equipa pequena pode escolher um caso de uso que saiba explicar e registar utilizadores, problema, solução atual, método de validação e recursos procurados. Ao falar com parques, empresas ou investigadores, convém perguntar o que podem oferecer e que necessidades continuam por satisfazer antes de discutir a forma de cooperação.\n\nAo comparar espaços ou plataformas, registar compatibilidade industrial, serviços, custos de comunicação, transportes e investimento posterior, além da notoriedade. Começar com uma validação pequena e avaliável permite ajustar o investimento aos resultados. Um intercâmbio técnico não é um contrato e uma apresentação não garante resultados universais. São observações editoriais.\n\n## Dica de leitura\n\nUsar casos para compreender intercâmbios, textos oficiais para questões concretas e provas próprias para avaliar a cooperação. Não se recomenda um parque nem se prometem retorno do investimento ou admissão a projetos.",
+      "category": "innovation",
+      "kind": "insight",
+      "language": "pt",
+      "source": "HEX CUBES editorial · Tradução portuguesa",
+      "sourceUrl": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+      "date": "2026-10-21",
+      "status": "published",
+      "featured": false,
+      "demo": false,
+      "updatedAt": "2026-10-21T03:00:00.000Z",
+      "guide": {
+        "groupId": "apec-shenzhen-innovation-connections",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "Tradução assistida por IA do artigo editorial chinês, preparada em 21 de outubro de 2026. Não foi revista por um especialista nativo e não é uma tradução oficial. Mantêm-se os títulos originais e as ligações das fontes para verificação. Para assuntos concretos, consulte os originais e as publicações mais recentes dos organismos competentes.",
+        "faqs": [],
+        "reviewedAt": "",
+        "reviewDue": "2026-11-01",
+        "reviewState": "pending",
+        "editorial": {
+          "preparedAt": "2026-10-21",
+          "figures": [
+            {
+              "file": "/article-images/apec-2026-tech-for-people-1.webp",
+              "alt": "Gerada por IA · Cena fictícia de colaboração científica; não é uma fotografia de instalações de Nanshan, Qianhai ou de atividades da APEC.",
+              "caption": "Gerada por IA · Cena fictícia de colaboração científica; não é uma fotografia de instalações de Nanshan, Qianhai ou de atividades da APEC.",
+              "aiGenerated": true,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "南山启动全球共创计划 邀青年创客来深“造物”",
+              "publisher": "南山区；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12768284.html",
+              "publishedAt": "2026-05-08",
+              "supports": "Visita de maio, intercâmbios juvenis e lançamento de cocriação; sem inferir que continuem abertas inscrições."
+            },
+            {
+              "title": "APEC技术向善研讨会在前海开幕",
+              "publisher": "深圳市前海深港现代服务业合作区管理局；深圳政府在线",
+              "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/bmdt/content/post_12884461.html",
+              "publishedAt": "2026-07-09",
+              "supports": "Abertura do seminário e temas; planos posteriores não são tratados como resultados concluídos."
+            },
+            {
+              "title": "投资前海",
+              "publisher": "深圳市前海深港现代服务业合作区管理局",
+              "url": "https://qh.sz.gov.cn/tzqh/",
+              "publishedAt": "",
+              "supports": "Apenas entradas de acesso, apoio e candidaturas; sem deduzir benefícios de projetos."
+            }
+          ]
+        }
+      }
     }
   ],
   "contact": {

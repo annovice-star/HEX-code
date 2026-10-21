@@ -5,9 +5,11 @@ import { requireApiAccess,sameOrigin } from "./auth";
 import { emptyContact, type Article, type Contact } from "./content";
 import {importLaunchArticles} from "./import-launch-articles";
 import {importArticleTranslations} from "./import-article-translations";
+import {importSectionArticles} from "./import-section-articles";
 export async function listArticles(publishedOnly = true): Promise<Article[]> {
   await importLaunchArticles();
   await importArticleTranslations();
+  await importSectionArticles();
   const query = getDb().select().from(articles);
   const rows=await (publishedOnly ? query.where(eq(articles.status,"published")) : query).orderBy(desc(articles.date));
   return rows.map(row=>({...row,guide:row.guide??undefined})) as Article[];
