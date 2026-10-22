@@ -53,7 +53,7 @@ test('archived launch edition retains source citations and labelled local images
 });
 test('empty content and oversized bodies cannot be published',()=>{
   assert.equal(articleSchema.safeParse({...base,title:'   '}).success,false);
-  assert.equal(articleSchema.safeParse({...base,body:'x'.repeat(30001)}).success,false);
+  assert.equal(articleSchema.safeParse({...base,body:'x'.repeat(200001)}).success,false);
 });
 test('language selection groups translations without hiding unrelated guides',()=>{
  const cn={...base,guide:{groupId:'same-topic'}},en={...base,id:'english',language:'en',guide:{groupId:'same-topic'}},other={...base,id:'other'};

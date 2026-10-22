@@ -5,6 +5,7 @@ import { articleSchema, settingsSchema } from "../../../lib/content";
 import { requireAdmin,listArticles,contactSettings } from "../../../lib/server";
 import { requireApiAccess,session } from "../../../lib/auth";
 import { env } from "cloudflare:workers";
+import {readLimitedText} from '../../../lib/gateway';
 export async function GET(request:Request){
   const denied=await requireApiAccess(request,true);if(denied)return denied;
   const current=await session(request);
@@ -14,8 +15,7 @@ export async function GET(request:Request){
 export async function POST(request: Request) {
   const denied = await requireAdmin(request); if (denied) return denied;
   try {
-    const text = await request.text();
-    if (text.length > 80000) return Response.json({error:"内容过长。"},{status:413});
+    const text = await readLimitedText(request,1300000);
     const input = JSON.parse(text);
     if (input.action === "settings") {
       const value = settingsSchema.parse(input.value);

@@ -1,5 +1,6 @@
 "use client";
 import {Fragment} from "react";
+import MarkdownContent from './markdown-content';
 import {assetHref} from "../lib/client-runtime";
 import {guideUiCopy} from "../lib/guide-ui-copy";
 import type {Article,Language} from "../lib/content";
@@ -21,10 +22,10 @@ export default function EditorialContent({article,lang}:{article:Article;lang:La
  });}
  return <>
   {editorial?.figures.filter(f=>f.afterParagraph===-1).map(f=><EditorialFigure key={f.file} figure={f} lang={lang}/>)}
-  <div className="article-prose">{article.body.split(/\n\n+/).map((paragraph,i)=><Fragment key={i}>
+  {article.guide?.format==='markdown'?<MarkdownContent body={article.body} id={article.id}/>:<div className="article-prose">{article.body.split(/\n\n+/).map((paragraph,i)=><Fragment key={i}>
    {paragraph.startsWith("## ")?<h2>{text(paragraph.slice(3))}</h2>:<p>{text(paragraph)}</p>}
    {editorial?.figures.filter(f=>f.afterParagraph===i).map(f=><EditorialFigure key={f.file} figure={f} lang={lang}/>)}
-  </Fragment>)}</div>
+  </Fragment>)}</div>}
   {!!editorial?.sources.length&&<section className="editorial-references" lang={lang}><h2>{ui.references}</h2><p className="editorial-source-note">{ui.sourceNote.replace("{date}",editorial.preparedAt)}</p><ol>{editorial.sources.map((source,i)=><li lang={article.language} id={`${prefix}-${i+1}`} key={source.url}>
    <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} ↗</a><p>{source.publisher}{source.publishedAt&&` · ${source.publishedAt}`}</p><p>{source.supports}</p>
   </li>)}</ol></section>}

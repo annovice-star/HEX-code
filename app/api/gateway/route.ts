@@ -8,10 +8,13 @@ import {GET as admin,POST as save} from "../admin/route";
 import {GET as search} from "../search/route";
 import {GET as inquiries,POST as inquire} from "../inquiries/route";
 import {POST as chat} from "../chat/route";
+import {POST as markdownImport} from '../admin/markdown-import/route';
+import {GET as markdownImage} from '../admin/markdown-image/route';
 const handlers:Record<string,(request:Request)=>Promise<Response>>={
   "POST /api/auth/login":login,"POST /api/auth/logout":logout,"POST /api/auth/password":password,
   "GET /api/content":content,"GET /api/admin":admin,"POST /api/admin":save,
   "GET /api/search":search,"GET /api/inquiries":inquiries,"POST /api/inquiries":inquire,"POST /api/chat":chat,
+  'POST /api/admin/markdown-import':markdownImport,'GET /api/admin/markdown-image':markdownImage,
 };
 export async function POST(request:Request){
   const headers=corsHeaders(request);

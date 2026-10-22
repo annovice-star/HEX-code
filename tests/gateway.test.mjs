@@ -1,18 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validateGatewayInput,readGatewayInput} from '../lib/gateway.ts';
+import {validateGatewayInput,readGatewayInput,readLimitedText} from '../lib/gateway.ts';
 import {configurePages,apiFetch,setClientToken,getClientToken} from '../lib/client-runtime.ts';
 test('gateway rejects arbitrary destinations, methods and malformed credentials',()=>{
   for(const path of ['https://evil.example/api/content','//evil.example/api/content','/api/gateway','/api/../api/admin','/api/search#x','/api/toString','/api/search\\x'])assert.throws(()=>validateGatewayInput({path,method:'GET'}));
   assert.throws(()=>validateGatewayInput({path:'/api/admin',method:'DELETE'}));
   assert.throws(()=>validateGatewayInput({path:'/api/content',method:'GET',token:'bad'}));
   assert.throws(()=>validateGatewayInput({path:'/api/content',method:'GET',body:'x'}));
-  assert.throws(()=>validateGatewayInput({path:'/api/admin',method:'POST',body:'x'.repeat(80001)}));
+  assert.throws(()=>validateGatewayInput({path:'/api/admin',method:'POST',body:'x'.repeat(1300001)}));
+  assert.throws(()=>validateGatewayInput({path:'/api/auth/login',method:'POST',body:'x'.repeat(80001)}));
+  assert.equal(validateGatewayInput({path:'/api/admin/markdown-import',method:'POST',body:'x'.repeat(900000)}).method,'POST');
   assert.equal(validateGatewayInput({path:'/api/search?q=test%20hello',method:'GET'}).path,'/api/search?q=test%20hello');
 });
 test('gateway bounds streamed input before parsing',async()=>{
   const req=new Request('https://backend.example/api/gateway',{method:'POST',body:'x'.repeat(512001)});
-  await assert.rejects(readGatewayInput(req),/too_large/);
+  await assert.rejects(readLimitedText(req,512000),/too_large/);
   await assert.rejects(readGatewayInput(new Request('https://backend.example/api/gateway',{method:'POST',body:'not json'})));
 });
 test('Pages transport avoids preflight headers and keeps token out of URL; blocked storage keeps tab session',async()=>{

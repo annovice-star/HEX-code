@@ -16,6 +16,8 @@ export const editorialSchema = z.object({
   })).max(30),
 });
 export const guideSchema = z.object({
+  format:z.literal('markdown').optional(),
+  markdown:z.object({sourceFile:z.string().max(250),cover:z.string().max(1500).optional()}).optional(),
   groupId:z.string().max(80).regex(/^[a-zA-Z0-9_-]*$/).default(""),
   audience:z.string().max(1000).default(""),steps:z.string().max(6000).default(""),
   materials:z.string().max(6000).default(""),notes:z.string().max(4000).default(""),
@@ -27,7 +29,7 @@ export const guideSchema = z.object({
 export type Guide = z.infer<typeof guideSchema>;
 export const articleSchema = z.object({
   id: z.string().min(1).max(80).regex(/^[a-zA-Z0-9_-]+$/),
-  title: z.string().trim().min(1).max(180),summary: z.string().trim().min(1).max(700),body: z.string().trim().min(1).max(30000),
+  title: z.string().trim().min(1).max(180),summary: z.string().trim().min(1).max(700),body: z.string().trim().min(1).max(200000),
   category: z.enum(["apec", "business", "talent", "innovation"]),kind: z.enum(["news", "insight", "service", "event"]),language: languageSchema,
   source: z.string().max(120),sourceUrl: z.string().max(1000).refine(v => !v || /^https?:\/\//.test(v), "链接须以 https:// 或 http:// 开头"),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),status: z.enum(["draft", "published"]),featured: z.boolean(),demo: z.boolean(),updatedAt: z.string().optional(),guide:guideSchema.optional(),

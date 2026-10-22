@@ -3,7 +3,7 @@ let runtime:ClientRuntime|null=null;
 let memoryToken:string|null|undefined;
 const TOKEN_KEY="apec-pages-session";
 export function configurePages(apiOrigin:string,assetBase="/"){runtime={apiOrigin,assetBase};}
-export function assetHref(path:string){return `${runtime?.assetBase??"/"}${path.replace(/^\/+/,"")}`;}
+export function assetHref(path:string){if(path.startsWith('/api/article-images/'))return `${runtime?.apiOrigin??''}${path}`;return `${runtime?.assetBase??"/"}${path.replace(/^\/+/,"")}`;}
 export function isPages(){return runtime!==null;}
 export function getClientToken(){
   if(memoryToken!==undefined)return memoryToken;
