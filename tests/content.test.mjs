@@ -26,7 +26,7 @@ test('source links reject executable URL protocols',()=>{
   assert.equal(articleSchema.safeParse({...base,sourceUrl:'javascript:alert(1)'}).success,false);
   assert.equal(articleSchema.safeParse({...base,sourceUrl:'https://example.com/article'}).success,true);
 });
-test('published launch edition retains source citations and labelled local images',()=>{
+test('archived launch edition retains source citations and labelled local images',()=>{
  const bundle=JSON.parse(readFileSync(new URL('../lib/launch-articles.json',import.meta.url),'utf8'));
  const snapshot=publicContentSchema.parse(JSON.parse(readFileSync(new URL('../github-pages/public-content.json',import.meta.url),'utf8')));
  assert.equal(bundle.length,5);
@@ -34,7 +34,7 @@ test('published launch edition retains source citations and labelled local image
  assert.equal(bundle.flatMap(a=>a.guide.editorial.figures).length,7);
  for(const raw of bundle){
   const a=articleSchema.parse(raw);
-  assert.deepEqual(snapshot.articles.find(b=>b.id===a.id),a);
+  assert.equal(snapshot.articles.length,0);
   assert.equal(a.status,'published');assert.equal(a.demo,false);
   for(const match of a.body.matchAll(/\[(\d+)\]/g))assert.ok(a.guide.editorial.sources[Number(match[1])-1]);
   for(const figure of a.guide.editorial.figures){

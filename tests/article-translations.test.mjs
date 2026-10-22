@@ -8,7 +8,9 @@ import {selectLanguage,translationOf} from '../lib/guides.ts';
 const read=async path=>JSON.parse(await readFile(new URL(path,import.meta.url),'utf8'));
 const originals=await read('../lib/launch-articles.json');
 const translations=await read('../lib/article-translations.json');
-const snapshot=publicContentSchema.parse(await read('../github-pages/public-content.json'));
+// Historic editions remain recoverable source material, not public content.
+const sectionEdition=await read('../lib/section-articles.json');
+const snapshot=publicContentSchema.parse({articles:[...originals,...translations,...sectionEdition],contact:{email:'',phone:'',wechat:'',address:''},aiEnabled:false});
 const editionIds=new Set([...originals,...translations].map(a=>a.id));
 const launchSnapshot=snapshot.articles.filter(a=>editionIds.has(a.id));
 

@@ -6,8 +6,7 @@ import Login from "../app/login/ui";
 import Admin from "../app/admin/ui";
 import AccountBar from "../app/account-bar";
 import PasswordForm from "../app/admin/security/ui";
-import {demos,publicContentSchema,type Article,type Contact} from "../lib/content";
-import {guideSamples} from "../lib/guides";
+import {publicContentSchema,type Article,type Contact} from "../lib/content";
 import publicSnapshot from "./public-content.json";
 import "../app/globals.css";
 
@@ -37,7 +36,7 @@ function App(){
   if(!data)return <main className="editor" style={{maxWidth:600,margin:"60px auto"}}><p role="status">{admin?"正在验证管理员登录…":"正在加载内容…"}</p></main>;
   if(admin)return <><AccountBar username={data.username}/>{url.pathname==="/admin/security"?<PasswordForm/>:<Admin key={path} initialArticles={data.articles} initialContact={data.contact} aiEnabled={data.aiEnabled}/>}</>;
   const id=url.pathname.startsWith("/article/")?decodeURIComponent(url.pathname.slice(9)):null;
-  const article=id?[...data.articles,...demos,...guideSamples].find(a=>a.id===id):undefined;
+  const article=id?data.articles.find(a=>a.id===id&&a.status==='published'&&!a.demo):undefined;
   if(id&&!article)return <main className="editor"><h1>文章不存在或尚未发布</h1><a href={siteHref("/")}>返回首页</a></main>;
   if(url.pathname!=="/"&&!id){navigate("/");return null;}
   return <><Hub previewNotice={snapshot} key={path} articles={data.articles} contact={data.contact} aiEnabled={data.aiEnabled} initialArticle={article}/></>;
