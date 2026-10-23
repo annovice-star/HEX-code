@@ -11,6 +11,7 @@
 .company-brand{display:inline-flex;flex-direction:column;align-items:flex-start;gap:4px;flex-shrink:0;line-height:1}
 .company-logo{display:block;width:204px;height:54px;object-fit:cover;object-position:center;background:transparent;border-radius:0}
 .company-edition{font-size:8px;font-weight:500;letter-spacing:2.6px;color:#557b83;padding-left:12px}
+.guide-hero-panel .topic-description{display:block;margin-top:7px;font-size:12px;line-height:1.65;color:#b6c9c7;letter-spacing:0;overflow-wrap:anywhere}
 .login-intro .company-logo{width:246px;height:72px;border-radius:0}
 .login-intro .company-edition{color:#b9d0cb;margin-top:5px;padding-left:2px;letter-spacing:3px}
 .footer-top .company-logo{width:204px;height:54px}

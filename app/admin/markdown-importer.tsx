@@ -5,8 +5,9 @@ import {languageCodes,languageLabels,isLanguage} from '../../lib/languages';
 import type {Article,Language} from '../../lib/content';
 import {parseMarkdownDocument,markdownImages,rewriteMarkdownImages,normalizeImagePath,decodeImageData,MAX_IMAGE_BYTES,MAX_TOTAL_IMAGE_BYTES,MAX_MARKDOWN} from '../../lib/markdown';
 import MarkdownContent from '../markdown-content';
+import {adminTopics} from '../../lib/topics';
 
-const categories={apec:'了解深圳',business:'企业落地',talent:'人才与工作',innovation:'区域与创新'};
+const categories=adminTopics;
 type Parsed=ReturnType<typeof parseMarkdownDocument>;
 export default function MarkdownImporter({onImported,onCancel}:{onImported:(a:Article)=>void;onCancel:()=>void}){
  const [document,setDocument]=useState<Parsed|null>(null),[fileName,setFileName]=useState(''),[files,setFiles]=useState<File[]>([]),[title,setTitle]=useState(''),[summary,setSummary]=useState(''),[category,setCategory]=useState<keyof typeof categories>('apec'),[language,setLanguage]=useState<Language>('zh-CN'),[date,setDate]=useState(new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Shanghai'})),[source,setSource]=useState('立方匯'),[sourceUrl,setSourceUrl]=useState(''),[preview,setPreview]=useState(''),[busy,setBusy]=useState(false),[error,setError]=useState('');
@@ -68,7 +69,7 @@ export default function MarkdownImporter({onImported,onCancel}:{onImported:(a:Ar
   }catch(e){setError((e as Error).message);}finally{setBusy(false);}
  }
  function template(){
-  const text='---\ntitle: 我的文章标题\nsummary: 用一两句话介绍文章。\ncategory: business\nlanguage: zh-CN\n---\n\n## 第一部分\n\n这里是正文，可以使用 **粗体**、*斜体* 和 [原文链接](https://example.com)。\n\n- 第一项\n- 第二项\n\n> 这是一段引用。\n\n| 项目 | 说明 |\n| --- | --- |\n| 示例 | 表格内容 |\n\n![图片说明](images/photo.jpg "图片来源或 AI 生成说明")\n';
+  const text='---\ntitle: 我的文章标题\nsummary: 用一两句话介绍文章。\ncategory: business\n# apec=APEC 与深圳；innovation=产业与创新；business=经贸与营商；talent=城市与生活\nlanguage: zh-CN\n---\n\n## 第一部分\n\n这里是正文，可以使用 **粗体**、*斜体* 和 [原文链接](https://example.com)。\n\n- 第一项\n- 第二项\n\n> 这是一段引用。\n\n| 项目 | 说明 |\n| --- | --- |\n| 示例 | 表格内容 |\n\n![图片说明](images/photo.jpg "图片来源或 AI 生成说明")\n';
   const url=URL.createObjectURL(new Blob([text],{type:'text/markdown;charset=utf-8'})),a=window.document.createElement('a');a.href=url;a.download='文章导入模板.md';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
  }
  return <section className="editor markdown-importer"><div className="section-head"><div><h2>导入 Markdown 文章</h2><p className="editor-note">选择文件 → 检查图片和预览 → 保存草稿。之后在编辑器内发布。</p></div><button className="button light" type="button" disabled={busy} onClick={onCancel}>关闭</button></div>

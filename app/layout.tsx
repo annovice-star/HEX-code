@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "立方匯 · 深圳多语言服务指引",
-  description: "面向港商、外商与人才的深圳多语言指引、资料分享与服务咨询。",
+  title: "立方匯 · APEC 深圳信息精选",
+  description: "面向 APEC 来深商务人士与国际访客的多语言信息精选，汇总深圳产业、经贸及城市生活资讯，附来源链接。",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
