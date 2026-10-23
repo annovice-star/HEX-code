@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,access} from 'node:fs/promises';
 import {articleSchema,publicContentSchema} from '../lib/content.ts';
-import {languageCodes} from '../lib/languages.ts';
+// The withdrawn historical edition predates the separate Hong Kong locale.
+const languageCodes=['zh-CN','zh-TW','en','ja','ko','es','pt'];
 import {selectLanguage,translationOf} from '../lib/guides.ts';
 
 const read=async path=>JSON.parse(await readFile(new URL(path,import.meta.url),'utf8'));
