@@ -34,7 +34,7 @@ test('archived launch edition retains source citations and labelled local images
  assert.equal(bundle.flatMap(a=>a.guide.editorial.figures).length,7);
  for(const raw of bundle){
   const a=articleSchema.parse(raw);
-  assert.equal(snapshot.articles.length,0);
+  assert.equal(snapshot.articles.some(current=>current.id===a.id),false);
   assert.equal(a.status,'published');assert.equal(a.demo,false);
   for(const match of a.body.matchAll(/\[(\d+)\]/g))assert.ok(a.guide.editorial.sources[Number(match[1])-1]);
   for(const figure of a.guide.editorial.figures){

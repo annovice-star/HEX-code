@@ -4,8 +4,10 @@ import { articles, settings } from "../db/schema";
 import { requireApiAccess,sameOrigin } from "./auth";
 import { emptyContact, type Article, type Contact } from "./content";
 import {withdrawExistingContent} from "./withdraw-content";
+import {importFirstVisitArticle} from './import-first-visit-article';
 export async function listArticles(publishedOnly = true): Promise<Article[]> {
   await withdrawExistingContent();
+  await importFirstVisitArticle();
   const query = getDb().select().from(articles);
   const rows=await (publishedOnly ? query.where(eq(articles.status,"published")) : query).orderBy(desc(articles.date));
   return rows.map(row=>({...row,guide:row.guide??undefined})) as Article[];
