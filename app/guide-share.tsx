@@ -1,6 +1,5 @@
 "use client";
-import {useEffect,useRef,useState} from "react";
-import qrcode from "../vendor/qrcode-generator/qrcode.mjs";
+import {useRef,useState} from "react";
 import {siteHref,isPages,assetHref} from "../lib/client-runtime";
 import {guideUiCopy} from "../lib/guide-ui-copy";
 import {guideCopy} from "../lib/guide-copy";
@@ -8,8 +7,7 @@ import {reviewDue} from "../lib/guides";
 import type {Article,Language} from "../lib/content";
 export function absoluteGuideUrl(a:Article,lang:Language){return new URL(siteHref(`/article/${a.id}?lang=${lang}`),location.href).href;}
 export default function GuideShare({article:a,lang}:{article:Article;lang:Language}){
- const t=guideCopy[lang],ui=guideUiCopy[lang],[qr,setQr]=useState(""),[busy,setBusy]=useState(false),[message,setMessage]=useState(""),[exportPreview,setExportPreview]=useState(""),dialog=useRef<HTMLDialogElement>(null),exportDialog=useRef<HTMLDialogElement>(null);
- useEffect(()=>{try{const code=qrcode(0,"M");code.addData(absoluteGuideUrl(a,lang));code.make();setQr(code.createDataURL(6,24));}catch{setQr("");}},[a.id,lang]);
+ const t=guideCopy[lang],ui=guideUiCopy[lang],[busy,setBusy]=useState(false),[message,setMessage]=useState(""),[exportPreview,setExportPreview]=useState(""),exportDialog=useRef<HTMLDialogElement>(null);
  async function download(){setBusy(true);setMessage("");try{
   if(a.guide?.edition){
    const response=await fetch(assetHref(a.guide.edition.html),{cache:'no-store'});if(!response.ok)throw Error();
@@ -38,16 +36,15 @@ export default function GuideShare({article:a,lang}:{article:Article;lang:Langua
   if(a.guide?.editorial){add(ui.references,true);a.guide.editorial.sources.forEach((source,i)=>{add(`[${i+1}] ${source.title}`);add(`${source.publisher} · ${source.publishedAt}`);add(source.url);});add(ui.textImageNote);}
   if(reviewDue(a))add(t.outdated);add(`${t.source}: ${a.source||t.sourceMissing}`);if(a.sourceUrl)add(a.sourceUrl);
   add(`${t.published}: ${a.date}`);add(`${t.reviewed}: ${g?.reviewedAt||t.pending}`);if(g?.reviewDue)add(`${t.due}: ${g.reviewDue}`);
-  add(t.disclaimer);add(isPages()?ui.publicQrHint:t.qrHint);
+  add(t.disclaimer);
   const parts=[];for(let i=0;i<rows.length;i+=200)parts.push(rows.slice(i,i+200));
   for(let i=0;i<parts.length;i++){
    canvas.height=150+parts[i].length*40+250;ctx.fillStyle="#f7f8f4";ctx.fillRect(0,0,900,canvas.height);ctx.fillStyle="#17635d";ctx.fillRect(0,0,900,12);
    parts[i].forEach((row,n)=>{ctx.font=row.title?'bold 30px Arial,"Microsoft YaHei",sans-serif':'24px Arial,"Microsoft YaHei",sans-serif';ctx.fillStyle=row.title?"#17635d":"#17313a";ctx.fillText(row.text,64,80+n*40);});
-   if(qr){const img=new Image();img.src=qr;await img.decode();ctx.drawImage(img,64,canvas.height-215,180,180);}
    ctx.font="20px Arial";ctx.fillStyle="#718080";ctx.fillText(`${a.language} · ${i+1}/${parts.length}`,290,canvas.height-90);
    const blob=await new Promise<Blob>((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error()),"image/png"));const url=URL.createObjectURL(blob),link=document.createElement("a");link.href=url;link.download=`${a.id}-${i+1}.png`;document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
   }
  }catch{setMessage(t.exportFailed);}finally{setBusy(false);}}
- return <div className="share-block"><div className="article-tools">{!a.demo&&<a className="button primary" href="#topic-contact" onClick={event=>{event.preventDefault();document.getElementById("topic-contact")?.scrollIntoView({behavior:"smooth"});}}>{t.consult}</a>}{a.sourceUrl&&<a className="button primary" href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{t.original} ↗</a>}<button className="button light" onClick={async()=>{try{await navigator.clipboard.writeText(absoluteGuideUrl(a,lang));setMessage(t.copied);}catch{setMessage(absoluteGuideUrl(a,lang));}}}>{t.copy}</button><button className="button light" disabled={!qr} onClick={()=>dialog.current?.showModal()}>{t.qr}</button><button className="button light" disabled={busy} onClick={download}>{busy?t.exporting:a.guide?.edition?t.download:a.guide?.editorial?ui.textDownload:t.download}</button><button className="button light" onClick={()=>window.print()}>{t.print}</button></div><p className="editor-note">{a.guide?.edition?(lang==="zh-CN"?"按固定版式现场导出，保留完整文字与照片，可长按保存转发。":t.shareHint):isPages()?ui.publicShareHint:t.shareHint}</p>{message&&<p role="status" className="notice">{message}</p>}<dialog className="share-dialog export-image-preview" ref={exportDialog}><h2>{t.download}</h2>{exportPreview&&<img src={exportPreview} alt={a.title} />}<p>{lang==="zh-CN"?"长按图片可保存，或使用浏览器下载的 PNG 文件。":t.shareHint}</p><button className="button primary" onClick={()=>exportDialog.current?.close()}>{t.close}</button></dialog><dialog className="share-dialog" ref={dialog}><h2>{t.qr}</h2><p>{a.title}</p>{qr&&<img src={qr} width={240} height={240} alt={t.qr}/>}<p>{isPages()?ui.publicQrHint:t.qrHint}</p><button className="button primary" onClick={()=>dialog.current?.close()}>{t.close}</button></dialog></div>;
+ return <div className="share-block"><div className="article-tools">{a.sourceUrl&&<a className="button primary" href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{t.original} ↗</a>}<button className="button light" onClick={async()=>{try{await navigator.clipboard.writeText(absoluteGuideUrl(a,lang));setMessage(t.copied);}catch{setMessage(absoluteGuideUrl(a,lang));}}}>{t.copy}</button><button className="button light" disabled={busy} onClick={download}>{busy?t.exporting:a.guide?.edition?t.download:a.guide?.editorial?ui.textDownload:t.download}</button><button className="button light" onClick={()=>window.print()}>{t.print}</button></div><p className="editor-note">{a.guide?.edition?(lang==="zh-CN"?"按固定版式现场导出，保留完整文字与照片，可长按保存转发。":t.shareHint):isPages()?ui.publicShareHint:t.shareHint}</p>{message&&<p role="status" className="notice">{message}</p>}<dialog className="share-dialog export-image-preview" ref={exportDialog}><h2>{t.download}</h2>{exportPreview&&<img src={exportPreview} alt={a.title} />}<p>{lang==="zh-CN"?"长按图片可保存，或使用浏览器下载的 PNG 文件。":t.shareHint}</p><button className="button primary" onClick={()=>exportDialog.current?.close()}>{t.close}</button></dialog></div>;
 }
 
