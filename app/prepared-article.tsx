@@ -1,6 +1,7 @@
 "use client";
 import {useEffect,useRef,useState} from 'react';
 import {assetHref} from '../lib/client-runtime';
+import MarkdownContent from './markdown-content';
 import type {Article} from '../lib/content';
 
 export default function PreparedArticle({article}:{article:Article}){
@@ -20,6 +21,7 @@ export default function PreparedArticle({article}:{article:Article}){
  },[edition.html]);
  return <div className="prepared-article">
   <iframe ref={frame} src={assetHref(edition.html)} title={article.title} height={height} sandbox="allow-scripts allow-popups" style={{display:fallback?'none':'block'}}/>
-  {fallback&&<><img className="prepared-fallback" src={assetHref(edition.image)} alt={article.title}/><div className="sr-only">{article.body}</div></>}
+  {fallback&&<MarkdownContent body={article.body} id={article.id}/>}
  </div>;
 }
+

@@ -18,7 +18,7 @@ export const editorialSchema = z.object({
 export const guideSchema = z.object({
   edition:z.object({
     html:z.string().regex(/^\/article-editions\/[a-zA-Z0-9_-]+\/index\.html$/),
-    image:z.string().regex(/^\/article-editions\/[a-zA-Z0-9_-]+\/share\.png$/),
+    image:z.string().regex(/^\/article-editions\/[a-zA-Z0-9_-]+\/share\.png$/).optional(),
   }).optional(),
   format:z.literal('markdown').optional(),
   markdown:z.object({sourceFile:z.string().max(250),cover:z.string().max(1500).optional()}).optional(),
@@ -61,3 +61,4 @@ export function retrieve(query: string, all: Article[], language: Language, limi
     return {a,score:expanded.reduce((s,t)=>s+(title.includes(t)?5:0)+(summary.includes(t)?3:0)+(body.includes(t)?1:0),0)};
   }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score || Number(b.a.language===language)-Number(a.a.language===language)).slice(0,limit).map(x=>x.a);
 }
+

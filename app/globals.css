@@ -29,3 +29,6 @@
 
 /* Preserve approved, preformatted article editions and their full-image exports. */
 .prepared-article iframe{width:100%;border:0;overflow:hidden;background:#f0f5f8}.prepared-fallback{display:block;width:100%;height:auto}.prepared-page .article-heading>h1,.prepared-page .article-heading>p:not(.notice),.prepared-page .guide-section:has(.prepared-article)>h2{display:none}.prepared-page .article-heading{padding:20px 0;margin-bottom:18px}.prepared-page .guide-section:has(.prepared-article){padding:0;border:0}.prepared-page .prepared-article{max-width:620px;margin:0 auto}.prepared-page .source-panel{margin-top:22px}@media(max-width:650px){.prepared-page.container{width:100%}.prepared-page>.text-link,.prepared-page>.article-heading,.prepared-page>.share-block,.prepared-page>#topic-contact,.prepared-page .source-panel{margin-left:20px;margin-right:20px}}
+
+.export-image-preview img{display:block;max-width:100%;width:auto;height:auto;max-height:65vh;margin:16px auto;object-fit:contain}.export-image-preview p{max-width:360px;margin:12px 0;font-size:12px}
+
