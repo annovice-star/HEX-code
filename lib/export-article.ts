@@ -5,12 +5,13 @@ export const ARTICLE_EXPORT_IMAGE_WIDTH=1080;
 
 // The same HTML supplies both the reading view and the image. No image endpoint
 // or model API is involved; each click renders a fresh, fixed-width document.
-export async function exportArticleHtml(html:string):Promise<Blob>{
+export async function exportArticleHtml(html:string,documentUrl=location.href):Promise<Blob>{
  const source=new DOMParser().parseFromString(html,'text/html');
  source.querySelectorAll('script,iframe,object,embed,base,dialog,meta[http-equiv],.actions').forEach(node=>node.remove());
  for(const node of source.querySelectorAll('*'))for(const attribute of [...node.attributes]){
   if(attribute.name.toLowerCase().startsWith('on'))node.removeAttribute(attribute.name);
  }
+ for(const image of source.querySelectorAll('img[src]'))image.setAttribute('src',new URL(image.getAttribute('src')!,documentUrl).href);
  if(!source.querySelector('main'))throw Error('Article body unavailable');
  const style=source.createElement('style');
  style.textContent=`html,body{margin:0!important;padding:0!important;width:${ARTICLE_EXPORT_LAYOUT_WIDTH}px!important;background:#f7f8f4!important}main{margin:0!important;box-shadow:none!important}.actions{display:none!important}.source a{text-decoration:none!important}`;

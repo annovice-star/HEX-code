@@ -1,24 +1,24 @@
 "use client";
 import {useEffect,useRef,useState} from 'react';
-import {assetHref} from '../lib/client-runtime';
+import {loadArticleHtml,watchArticleHtml,articleDocumentUrl} from '../lib/article-cache';
 import type {Article} from '../lib/content';
 
 export default function PreparedArticle({article}:{article:Article}){
  const html=article.guide!.edition!.html,host=useRef<HTMLDivElement>(null);
  const [loading,setLoading]=useState(true),[failed,setFailed]=useState(false),[attempt,setAttempt]=useState(0);
  useEffect(()=>{
-  const controller=new AbortController(),element=host.current!;
+  let active=true;const element=host.current!;
   const root=element.shadowRoot??element.attachShadow({mode:'open'});
   root.replaceChildren();setLoading(true);setFailed(false);
-  (async()=>{
-   const response=await fetch(assetHref(html),{cache:'no-store',signal:controller.signal});
-   if(!response.ok)throw Error('Article unavailable');
-   const source=new DOMParser().parseFromString(await response.text(),'text/html');
+  function render(markup:string){
+   if(!active)return;
+   const source=new DOMParser().parseFromString(markup,'text/html');
    const main=source.querySelector('main');if(!main)throw Error('Article body unavailable');
    main.querySelectorAll('script,iframe,object,embed,base').forEach(node=>node.remove());
    for(const node of main.querySelectorAll('*'))for(const attribute of [...node.attributes]){
     if(attribute.name.toLowerCase().startsWith('on')||(['href','src','xlink:href'].includes(attribute.name)&&/^\s*javascript:/i.test(attribute.value)))node.removeAttribute(attribute.name);
    }
+   for(const image of main.querySelectorAll('img[src]')){image.setAttribute('src',new URL(image.getAttribute('src')!,articleDocumentUrl(html)).href);}
    // Keep the approved markup and photos directly in the page DOM, while
    // isolating its styles from the site's heading and paragraph rules.
    const style=document.createElement('style');
@@ -29,10 +29,12 @@ export default function PreparedArticle({article}:{article:Article}){
      .replace(/@media\s*\(\s*max-width\s*:\s*(\d+px)\s*\)/g,'@container article-edition (max-width:$1)');
    const wrapper=document.createElement('div');wrapper.className='edition-document';wrapper.lang=article.language;
    wrapper.appendChild(document.importNode(main,true));
-   if(controller.signal.aborted)return;
-   root.replaceChildren(style,wrapper);setLoading(false);
-  })().catch(()=>{if(!controller.signal.aborted){setFailed(true);setLoading(false);}});
-  return()=>controller.abort();
+   if(!active)return;
+   root.replaceChildren(style,wrapper);setLoading(false);setFailed(false);
+  }
+  const unwatch=watchArticleHtml(html,render);
+  loadArticleHtml(html,attempt>0).then(render).catch(()=>{if(active){setFailed(true);setLoading(false);}});
+  return()=>{active=false;unwatch();};
  },[html,article.language,attempt]);
  return <div className="prepared-article">
   <div ref={host} className="prepared-html" aria-label={article.title}/>

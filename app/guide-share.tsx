@@ -1,6 +1,7 @@
 "use client";
 import {useRef,useState} from "react";
-import {siteHref,isPages,assetHref} from "../lib/client-runtime";
+import {siteHref,isPages} from "../lib/client-runtime";
+import {loadArticleHtml,articleDocumentUrl} from '../lib/article-cache';
 import {guideUiCopy} from "../lib/guide-ui-copy";
 import {guideCopy} from "../lib/guide-copy";
 import {reviewDue} from "../lib/guides";
@@ -10,9 +11,9 @@ export default function GuideShare({article:a,lang}:{article:Article;lang:Langua
  const t=guideCopy[lang],ui=guideUiCopy[lang],[busy,setBusy]=useState(false),[message,setMessage]=useState(""),[exportPreview,setExportPreview]=useState(""),exportDialog=useRef<HTMLDialogElement>(null);
  async function download(){setBusy(true);setMessage("");try{
   if(a.guide?.edition){
-   const response=await fetch(assetHref(a.guide.edition.html),{cache:'no-store'});if(!response.ok)throw Error();
+   const html=await loadArticleHtml(a.guide.edition.html);
    const {exportArticleHtml}=await import('../lib/export-article');
-   const blob=await exportArticleHtml(await response.text());
+   const blob=await exportArticleHtml(html,articleDocumentUrl(a.guide.edition.html));
    const preview=await new Promise<string>((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result as string);reader.onerror=reject;reader.readAsDataURL(blob);});
    setExportPreview(preview);exportDialog.current?.showModal();
    const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=`${a.id}.png`;
