@@ -13,7 +13,7 @@ export async function exportArticleHtml(html:string):Promise<Blob>{
  }
  if(!source.querySelector('main'))throw Error('Article body unavailable');
  const style=source.createElement('style');
- style.textContent=`html,body{margin:0!important;padding:0!important;width:${ARTICLE_EXPORT_LAYOUT_WIDTH}px!important;background:#f0f5f8!important}main{margin:0!important;box-shadow:none!important}.actions{display:none!important}.source a{text-decoration:none!important}`;
+ style.textContent=`html,body{margin:0!important;padding:0!important;width:${ARTICLE_EXPORT_LAYOUT_WIDTH}px!important;background:#f7f8f4!important}main{margin:0!important;box-shadow:none!important}.actions{display:none!important}.source a{text-decoration:none!important}`;
  source.head.appendChild(style);
  const frame=document.createElement('iframe');
  frame.setAttribute('sandbox','allow-same-origin');
@@ -51,7 +51,7 @@ export async function exportArticleHtml(html:string):Promise<Blob>{
   await html2canvas(main,{
    canvas,scale,width:ARTICLE_EXPORT_LAYOUT_WIDTH,height,
    windowWidth:ARTICLE_EXPORT_LAYOUT_WIDTH,windowHeight:height+4,
-   backgroundColor:'#f0f5f8',logging:false,useCORS:true,allowTaint:false,
+   backgroundColor:'#f7f8f4',logging:false,useCORS:true,allowTaint:false,
    scrollX:0,scrollY:0,imageTimeout:15000,removeContainer:true,
   });
   return await new Promise<Blob>((resolve,reject)=>canvas.toBlob(blob=>blob?resolve(blob):reject(Error('Image export failed')),'image/png'));
