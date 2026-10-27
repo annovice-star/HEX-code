@@ -1,6 +1,59 @@
 {
   "articles": [
     {
+      "id": "shenzhen-auto-export-20261027-zh-CN",
+      "title": "从工厂到港口，深圳新车怎样出海？",
+      "summary": "在深汕，新车下线后，最快5分钟就能驶入小漠港。工厂与港口靠近，让我们看见深圳汽车连接海外市场的一条路径。",
+      "body": "# 从工厂到港口，深圳新车怎样出海？\n\n在深汕，新车下线后，最快5分钟就能驶入小漠港。工厂与港口靠近，让我们看见深圳汽车连接海外市场的一条路径。\n\n工厂造车 → 新车进港 → 装船出海\n\n## 01 在工厂，完成汽车生产\n\n深汕是深圳市深汕特别合作区的简称，也是比亚迪在国内的制造基地之一。这里的项目既包括整车生产，也涉及电池等关键零部件。\n\n## 02 出厂后，新车直接开往港口\n\n工厂靠近小漠港。按原文介绍，新车下线后可直接开往港口，最快5分钟到达。\n\n> 5分钟仅指工厂到港口这一段，不是完成出口或运到海外所需的时间。\n\n## 03 装上船，驶向海外市场\n\n截至原文发布，小漠港累计开通13条汽车外贸航线。2026年9月21日，“长沙号”从这里驶往阿联酋，运载6154辆国产新能源汽车。\n\n## 与本次 APEC 的联系\n\n原文介绍，比亚迪于2026年10月16日成为2026年APEC会议官方合作伙伴，旗下多款车型将为参会嘉宾提供出行服务。\n\n## 唯一来源\n\n[前港后厂 港产联动！“深圳造”新能源汽车驶向全球](https://www.szss.gov.cn/sstbhzq/ssw/tzss/qccxxzl/content/post_13031888.html)\n\n深汕发布 · 深汕特别合作区官网 · 2026-10-20\n\n立方匯整理于 2026-10-27。信息截至原文发布日期。\n",
+      "category": "innovation",
+      "kind": "insight",
+      "language": "zh-CN",
+      "source": "立方匯整理｜深汕发布",
+      "sourceUrl": "https://www.szss.gov.cn/sstbhzq/ssw/tzss/qccxxzl/content/post_13031888.html",
+      "date": "2026-10-27",
+      "status": "published",
+      "featured": true,
+      "demo": false,
+      "updatedAt": "2026-10-27T03:30:00.000Z",
+      "guide": {
+        "format": "markdown",
+        "groupId": "shenzhen-auto-export-20261027",
+        "audience": "",
+        "steps": "",
+        "materials": "",
+        "notes": "",
+        "faqs": [],
+        "reviewedAt": "2026-10-27",
+        "reviewDue": "",
+        "reviewState": "verified",
+        "edition": {
+          "html": "/article-editions/shenzhen-auto-export-20261027/index.html",
+          "image": "/article-editions/shenzhen-auto-export-20261027/share.png"
+        },
+        "editorial": {
+          "preparedAt": "2026-10-27",
+          "figures": [
+            {
+              "file": "/article-images/shenzhen-auto-export-20261027-cover.webp",
+              "alt": "汽车制造基地的厂房与停放车辆的航拍照片",
+              "caption": "从制造基地开始，认识一辆车的出海之路。 图片取自深汕发布原文。",
+              "aiGenerated": false,
+              "afterParagraph": -1
+            }
+          ],
+          "sources": [
+            {
+              "title": "前港后厂 港产联动！“深圳造”新能源汽车驶向全球",
+              "publisher": "深汕发布 · 深汕特别合作区官网",
+              "url": "https://www.szss.gov.cn/sstbhzq/ssw/tzss/qccxxzl/content/post_13031888.html",
+              "publishedAt": "2026-10-20",
+              "supports": "本篇全部事实和两张现场照片的唯一原文来源。"
+            }
+          ]
+        }
+      }
+    },
+    {
       "id": "shenzhen-first-visit-20261026-zh-CN",
       "title": "第一次来深圳，先认识这三面",
       "summary": "从产业、商务交流到城市日常，一篇写给初访者的简短入门。",

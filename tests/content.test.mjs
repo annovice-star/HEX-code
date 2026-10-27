@@ -26,6 +26,18 @@ test('source links reject executable URL protocols',()=>{
   assert.equal(articleSchema.safeParse({...base,sourceUrl:'javascript:alert(1)'}).success,false);
   assert.equal(articleSchema.safeParse({...base,sourceUrl:'https://example.com/article'}).success,true);
 });
+
+test('prepared editions only embed local article assets, and retain searchable text',()=>{
+ const edition=JSON.parse(readFileSync(new URL('../lib/auto-export-article.json',import.meta.url),'utf8'));
+ const article=articleSchema.parse(edition);
+ assert.equal(article.category,'innovation');
+ assert.equal(article.guide.editorial.sources.length,1);
+ assert.ok(searchable(article).includes('阿联酋'));
+ for(const file of Object.values(article.guide.edition))assert.ok(existsSync(new URL('../public'+file,import.meta.url)));
+ for(const html of ['https://example.com/index.html','javascript:alert(1)','/article-editions/../admin/index.html']){
+  assert.equal(articleSchema.safeParse({...edition,guide:{...edition.guide,edition:{...edition.guide.edition,html}}}).success,false);
+ }
+});
 test('archived launch edition retains source citations and labelled local images',()=>{
  const bundle=JSON.parse(readFileSync(new URL('../lib/launch-articles.json',import.meta.url),'utf8'));
  const snapshot=publicContentSchema.parse(JSON.parse(readFileSync(new URL('../github-pages/public-content.json',import.meta.url),'utf8')));

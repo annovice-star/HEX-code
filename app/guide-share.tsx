@@ -1,7 +1,7 @@
 "use client";
 import {useEffect,useRef,useState} from "react";
 import qrcode from "../vendor/qrcode-generator/qrcode.mjs";
-import {siteHref,isPages} from "../lib/client-runtime";
+import {siteHref,isPages,assetHref} from "../lib/client-runtime";
 import {guideUiCopy} from "../lib/guide-ui-copy";
 import {guideCopy} from "../lib/guide-copy";
 import {reviewDue} from "../lib/guides";
@@ -11,6 +11,12 @@ export default function GuideShare({article:a,lang}:{article:Article;lang:Langua
  const t=guideCopy[lang],ui=guideUiCopy[lang],[qr,setQr]=useState(""),[busy,setBusy]=useState(false),[message,setMessage]=useState(""),dialog=useRef<HTMLDialogElement>(null);
  useEffect(()=>{try{const code=qrcode(0,"M");code.addData(absoluteGuideUrl(a,lang));code.make();setQr(code.createDataURL(6,24));}catch{setQr("");}},[a.id,lang]);
  async function download(){setBusy(true);setMessage("");try{
+  if(a.guide?.edition){
+   const response=await fetch(assetHref(a.guide.edition.image));if(!response.ok)throw Error();
+   const blob=await response.blob();if(blob.type!=='image/png')throw Error();
+   const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=`${a.id}.png`;
+   document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);return;
+  }
   await document.fonts.ready;
   const canvas=document.createElement("canvas"),ctx=canvas.getContext("2d");if(!ctx)throw Error();canvas.width=900;
   const rows:{text:string;title?:boolean}[]=[];
@@ -39,5 +45,5 @@ export default function GuideShare({article:a,lang}:{article:Article;lang:Langua
    const blob=await new Promise<Blob>((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error()),"image/png"));const url=URL.createObjectURL(blob),link=document.createElement("a");link.href=url;link.download=`${a.id}-${i+1}.png`;document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
   }
  }catch{setMessage(t.exportFailed);}finally{setBusy(false);}}
- return <div className="share-block"><div className="article-tools">{!a.demo&&<a className="button primary" href="#topic-contact" onClick={event=>{event.preventDefault();document.getElementById("topic-contact")?.scrollIntoView({behavior:"smooth"});}}>{t.consult}</a>}{a.sourceUrl&&<a className="button primary" href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{t.original} ↗</a>}<button className="button light" onClick={async()=>{try{await navigator.clipboard.writeText(absoluteGuideUrl(a,lang));setMessage(t.copied);}catch{setMessage(absoluteGuideUrl(a,lang));}}}>{t.copy}</button><button className="button light" disabled={!qr} onClick={()=>dialog.current?.showModal()}>{t.qr}</button><button className="button light" disabled={busy} onClick={download}>{busy?t.exporting:a.guide?.editorial?ui.textDownload:t.download}</button><button className="button light" onClick={()=>window.print()}>{t.print}</button></div><p className="editor-note">{isPages()?ui.publicShareHint:t.shareHint}</p>{message&&<p role="status" className="notice">{message}</p>}<dialog className="share-dialog" ref={dialog}><h2>{t.qr}</h2><p>{a.title}</p>{qr&&<img src={qr} width={240} height={240} alt={t.qr}/>}<p>{isPages()?ui.publicQrHint:t.qrHint}</p><button className="button primary" onClick={()=>dialog.current?.close()}>{t.close}</button></dialog></div>;
+ return <div className="share-block"><div className="article-tools">{!a.demo&&<a className="button primary" href="#topic-contact" onClick={event=>{event.preventDefault();document.getElementById("topic-contact")?.scrollIntoView({behavior:"smooth"});}}>{t.consult}</a>}{a.sourceUrl&&<a className="button primary" href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{t.original} ↗</a>}<button className="button light" onClick={async()=>{try{await navigator.clipboard.writeText(absoluteGuideUrl(a,lang));setMessage(t.copied);}catch{setMessage(absoluteGuideUrl(a,lang));}}}>{t.copy}</button><button className="button light" disabled={!qr} onClick={()=>dialog.current?.showModal()}>{t.qr}</button><button className="button light" disabled={busy} onClick={download}>{busy?t.exporting:a.guide?.edition?t.download:a.guide?.editorial?ui.textDownload:t.download}</button><button className="button light" onClick={()=>window.print()}>{t.print}</button></div><p className="editor-note">{a.guide?.edition?(lang==="zh-CN"?"分享长图包含本篇完整文字与照片，可直接保存转发。":t.shareHint):isPages()?ui.publicShareHint:t.shareHint}</p>{message&&<p role="status" className="notice">{message}</p>}<dialog className="share-dialog" ref={dialog}><h2>{t.qr}</h2><p>{a.title}</p>{qr&&<img src={qr} width={240} height={240} alt={t.qr}/>}<p>{isPages()?ui.publicQrHint:t.qrHint}</p><button className="button primary" onClick={()=>dialog.current?.close()}>{t.close}</button></dialog></div>;
 }

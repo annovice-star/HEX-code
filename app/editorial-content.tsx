@@ -1,6 +1,7 @@
 "use client";
 import {Fragment} from "react";
 import MarkdownContent from './markdown-content';
+import PreparedArticle from './prepared-article';
 import {assetHref} from "../lib/client-runtime";
 import {guideUiCopy} from "../lib/guide-ui-copy";
 import type {Article,Language} from "../lib/content";
@@ -16,6 +17,7 @@ export default function EditorialContent({article,lang}:{article:Article;lang:La
  const editorial=article.guide?.editorial;
  const ui=guideUiCopy[lang];
  const prefix=`references-${article.id}`;
+ if(article.guide?.edition)return <PreparedArticle article={article}/>;
  function text(value:string){return value.split(/(\[\d+\])/g).map((part,i)=>{
   const match=/^\[(\d+)\]$/.exec(part),number=match?Number(match[1]):0;
   return number&&editorial?.sources[number-1]?<a className="inline-citation" href={`#${prefix}-${number}`} onClick={event=>{event.preventDefault();document.getElementById(`${prefix}-${number}`)?.scrollIntoView({behavior:"smooth"});}} key={i} aria-label={`${ui.reference} ${number}`}>{part}</a>:part;

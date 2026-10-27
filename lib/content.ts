@@ -16,6 +16,10 @@ export const editorialSchema = z.object({
   })).max(30),
 });
 export const guideSchema = z.object({
+  edition:z.object({
+    html:z.string().regex(/^\/article-editions\/[a-zA-Z0-9_-]+\/index\.html$/),
+    image:z.string().regex(/^\/article-editions\/[a-zA-Z0-9_-]+\/share\.png$/),
+  }).optional(),
   format:z.literal('markdown').optional(),
   markdown:z.object({sourceFile:z.string().max(250),cover:z.string().max(1500).optional()}).optional(),
   groupId:z.string().max(80).regex(/^[a-zA-Z0-9_-]*$/).default(""),
