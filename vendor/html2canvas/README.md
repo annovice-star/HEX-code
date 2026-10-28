@@ -11,3 +11,7 @@ visitor's browser and renders article HTML, including its embedded photographs,
 to a fixed-width PNG. No model API, server-side rendering service, or prebuilt
 article image is used for this export.
 
+Local compatibility patch (2026-10-28): bound cloned-document font/image waits,
+poll clone readiness without requiring the iframe load event, and clean up the
+polling interval on removal or timeout. Original MIT notices are retained.
+

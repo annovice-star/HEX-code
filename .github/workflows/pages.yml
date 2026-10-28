@@ -27,6 +27,8 @@ jobs:
         run: node --test --test-isolation=none tests/content.test.mjs tests/password.test.mjs tests/gateway.test.mjs tests/languages.test.mjs tests/article-translations.test.mjs tests/markdown.test.mjs
       - name: Validate article caching and image integrity
         run: node --test tests/article-cache.test.mjs
+      - name: Validate export timeouts and mobile memory limits
+        run: node --test tests/export-safety.test.mjs
       - name: Build static frontend
         run: pnpm run build:pages
         env:

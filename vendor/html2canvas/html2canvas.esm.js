@@ -5239,13 +5239,13 @@ var DocumentCloner = /** @class */ (function () {
                             return [2 /*return*/, Promise.reject("Error finding the " + this.referenceElement.nodeName + " in the cloned document")];
                         }
                         if (!(documentClone.fonts && documentClone.fonts.ready)) return [3 /*break*/, 2];
-                        return [4 /*yield*/, documentClone.fonts.ready];
+                        return [4 /*yield*/, boundedCloneWait(documentClone.fonts.ready, 5000, "fonts")];
                     case 1:
                         _a.sent();
                         _a.label = 2;
                     case 2:
                         if (!/(AppleWebKit)/g.test(navigator.userAgent)) return [3 /*break*/, 4];
-                        return [4 /*yield*/, imagesReady(documentClone)];
+                        return [4 /*yield*/, boundedCloneWait(imagesReady(documentClone), 10000, "images")];
                     case 3:
                         _a.sent();
                         _a.label = 4;
@@ -5573,6 +5573,13 @@ var createIFrameContainer = function (ownerDocument, bounds) {
     ownerDocument.body.appendChild(cloneIframeContainer);
     return cloneIframeContainer;
 };
+// Local compatibility patch: cloned WebView documents must not wait forever.
+var boundedCloneWait = function (work, milliseconds, stage) {
+    return new Promise(function (resolve, reject) {
+        var timer = setTimeout(function () { reject(new Error('Article clone timed out: ' + stage)); }, milliseconds);
+        Promise.resolve(work).then(function (value) { clearTimeout(timer); resolve(value); }, function (error) { clearTimeout(timer); reject(error); });
+    });
+};
 var imageReady = function (img) {
     return new Promise(function (resolve) {
         if (img.complete) {
@@ -5593,19 +5600,26 @@ var imagesReady = function (document) {
 var iframeLoader = function (iframe) {
     return new Promise(function (resolve, reject) {
         var cloneWindow = iframe.contentWindow;
-        if (!cloneWindow) {
-            return reject("No window assigned for iframe");
-        }
+        if (!cloneWindow) { reject(new Error('No window assigned for iframe')); return; }
         var documentClone = cloneWindow.document;
-        cloneWindow.onload = iframe.onload = function () {
-            cloneWindow.onload = iframe.onload = null;
-            var interval = setInterval(function () {
-                if (documentClone.body.childNodes.length > 0 && documentClone.readyState === 'complete') {
-                    clearInterval(interval);
-                    resolve(iframe);
-                }
-            }, 50);
+        var done = false;
+        var interval, timeout;
+        var finish = function (error) {
+            if (done) return;
+            done = true;
+            clearInterval(interval); clearTimeout(timeout);
+            iframe.onload = iframe.onerror = cloneWindow.onload = null;
+            error ? reject(error) : resolve(iframe);
         };
+        var check = function () {
+            if (!iframe.parentNode) { finish(new Error('Article clone removed')); return; }
+            if (documentClone.body && documentClone.body.childNodes.length > 0 && documentClone.readyState === 'complete') finish();
+        };
+        // Poll independently of load: some embedded browsers omit this event.
+        cloneWindow.onload = iframe.onload = check;
+        iframe.onerror = function () { finish(new Error('Article clone failed')); };
+        interval = setInterval(check, 50);
+        timeout = setTimeout(function () { finish(new Error('Article clone timed out')); }, 10000);
     });
 };
 var ignoredStyleProperties = [
