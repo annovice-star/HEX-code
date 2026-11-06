@@ -1,0 +1,65 @@
+name: Prepare initial public files
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/bootstrap.yml']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          path: display
+      - uses: actions/checkout@v6
+        with:
+          repository: annovice-star/HEX-code
+          ref: 23f39288de3ceef3dbad41d07e18a2cd662b5b3b
+          path: source
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Build public display from the current release
+        working-directory: source
+        env:
+          VITE_PAGES_BASE: /HEX-code-display/
+          VITE_API_ORIGIN: https://lifanghui-apec-hub.huangjiayu916.chatgpt.site
+        run: |
+          corepack enable
+          corepack prepare pnpm@11.25.0 --activate
+          pnpm install --frozen-lockfile
+          pnpm run build:pages
+          node scripts/verify-pages-snapshot.mjs pages-dist
+      - name: Commit only the built public files
+        run: |
+          mkdir -p display/public
+          cp -a source/pages-dist/. display/public/
+          test -s display/public/published-snapshot/index.json
+          if find display/public -type f \( -name '.env*' -o -name '.dev.vars*' -o -name '*.ts' -o -name '*.tsx' -o -name '*.map' -o -name '*.sqlite' -o -name '*.pem' \) | grep -q .; then
+            echo "Unexpected source or credential file in public build"
+            exit 1
+          fi
+          git -C display add -- public
+          git -C display -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m 'Stage public website and published articles'
+          git -C display push origin HEAD:main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: display/public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
